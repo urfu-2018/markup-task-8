@@ -253,25 +253,6 @@ ul
     background: rgba(255, 255, 255, .8);
 }
 
-.smoke-2
-{
-    left: .4rem;
-
-    animation-delay: .1s;
-}
-
-.smoke-3
-{
-    left: .6rem;
-
-    animation-delay: .2s;
-}
-
-.smoke-4
-{
-    left: .8rem;
-}
-
 .engine-body
 {
     position: absolute;
@@ -676,104 +657,66 @@ ul
     height: 120px;
 }
 
-@keyframes cloud-1
+@keyframes cloud
 {
     0%
     {
-        left: 0;
+        left: -200px;
     }
 
     100%
     {
-        left: 400px;
+        left: 900px;
     }
 }
 
 .cloud:nth-of-type(1)
 {
-    animation: cloud-1 20s linear forwards;
-}
-
-@keyframes cloud-2
-{
-    0%
-    {
-        left: 400px;
-        transform: scale(.5);
-    }
-
-    100%
-    {
-        left: 0;
-        transform: scale(.5);
-    }
+    animation: cloud 20s infinite linear;
+    animation-delay: -2s;
 }
 
 .cloud:nth-of-type(2)
 {
+    transform: scale(.5);
     top: 100px;
-    animation: cloud-2 35s linear forwards;
+    animation: cloud 35s infinite linear;
+    animation-delay: -20s;
 
-}
-
-@keyframes cloud-3
-{
-    0%
-    {
-        left: 200px;
-        transform: scale(.3);
-    }
-
-    100%
-    {
-        left: -100px;
-        transform: scale(.3);
-    }
 }
 
 .cloud:nth-of-type(3)
 {
     top: 250px;
-    animation: cloud-3 30s linear forwards;
-}
-
-@keyframes cloud-4
-{
-    0%
-    {
-        left: 500px;
-        transform: scale(.8);
-    }
-
-    100%
-    {
-        left: 800px;
-        transform: scale(.8);
-    }
+    transform: scale(.3);
+    animation: cloud 60s infinite linear alternate-reverse;
+    animation-delay: -15s;
 }
 
 .cloud:nth-of-type(4)
 {
     top: 200px;
-    animation: cloud-4 25s linear forwards;
+    transform: scale(.8);
+    animation: cloud 25s infinite linear;
+    animation-delay: -5s;
 }
 
 @keyframes train
 {
     0%
     {
-        left: 100px;
+        left: 1000px;
     }
 
     100%
     {
-        left: -400px;
+        left: -500px;
     }
 }
 
 .train
 {
-    animation: train 12s linear forwards;
+    animation: train 24s infinite linear;
 }
 
 @keyframes wheel
@@ -786,7 +729,12 @@ ul
 
 .wheel
 {
-    animation: wheel 2s 6 linear forwards;
+    animation: wheel 2.8s infinite linear;
+}
+
+.wheel-3
+{
+    animation: wheel 3.8s infinite linear;
 }
 
 @keyframes wheel-joint
@@ -799,7 +747,7 @@ ul
 
 .wheel-joint
 {
-    animation: wheel-joint 2s 6 linear forwards;
+    animation: wheel-joint 2.8s infinite linear;
 }
 
 @keyframes moon
@@ -826,6 +774,16 @@ ul
 
 @keyframes smoke
 {
+    0%
+    {
+        opacity: 0;
+    }
+
+    5%
+    {
+        opacity: 1;
+    }
+
     100%
     {
         opacity: 0;
@@ -835,7 +793,7 @@ ul
 
 .smoke
 {
-    animation: smoke 4s linear forwards;
+    animation: smoke 4s infinite linear;
 }
 
 .smoke-2
@@ -887,10 +845,11 @@ ul
 .hill3
 {
     animation: hill-tremble .05s 10 linear;
+    animation-delay: 8s;
 }
 
 .hill
 {
     animation: hill-fall 2s 1 forwards;
-    animation-delay: 4s;
+    animation-delay: 12s;
 }
