@@ -675,3 +675,222 @@ ul
     width: 120px;
     height: 120px;
 }
+
+@keyframes cloud-1
+{
+    0%
+    {
+        left: 0;
+    }
+
+    100%
+    {
+        left: 400px;
+    }
+}
+
+.cloud:nth-of-type(1)
+{
+    animation: cloud-1 20s linear forwards;
+}
+
+@keyframes cloud-2
+{
+    0%
+    {
+        left: 400px;
+        transform: scale(.5);
+    }
+
+    100%
+    {
+        left: 0;
+        transform: scale(.5);
+    }
+}
+
+.cloud:nth-of-type(2)
+{
+    top: 100px;
+    animation: cloud-2 35s linear forwards;
+
+}
+
+@keyframes cloud-3
+{
+    0%
+    {
+        left: 200px;
+        transform: scale(.3);
+    }
+
+    100%
+    {
+        left: -100px;
+        transform: scale(.3);
+    }
+}
+
+.cloud:nth-of-type(3)
+{
+    top: 250px;
+    animation: cloud-3 30s linear forwards;
+}
+
+@keyframes cloud-4
+{
+    0%
+    {
+        left: 500px;
+        transform: scale(.8);
+    }
+
+    100%
+    {
+        left: 800px;
+        transform: scale(.8);
+    }
+}
+
+.cloud:nth-of-type(4)
+{
+    top: 200px;
+    animation: cloud-4 25s linear forwards;
+}
+
+@keyframes train
+{
+    0%
+    {
+        left: 100px;
+    }
+
+    100%
+    {
+        left: -400px;
+    }
+}
+
+.train
+{
+    animation: train 12s linear forwards;
+}
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel
+{
+    animation: wheel 2s 6 linear forwards;
+}
+
+@keyframes wheel-joint
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 2s 6 linear forwards;
+}
+
+@keyframes moon
+{
+    0%
+    {
+        transform: scale(.8);
+        left: 100px;
+        top: 200px;
+    }
+
+    100%
+    {
+        transform: scale(1);
+        top: 100px;
+        left: 200px;
+    }
+}
+
+.moon
+{
+    animation: moon 10s linear forwards;
+}
+
+@keyframes smoke
+{
+    100%
+    {
+        opacity: 0;
+        transform: translate(20px, -100px);
+    }
+}
+
+.smoke
+{
+    animation: smoke 4s linear forwards;
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+@keyframes hill-tremble
+{
+    25%
+    {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+
+    50%
+    {
+        transform: rotate(45deg) translate(0);
+    }
+
+    75%
+    {
+        transform: rotate(45deg) translate(-2px, -2px);
+    }
+
+    100%
+    {
+        transform: rotate(45deg) translate(0);
+    }
+}
+
+@keyframes hill-fall
+{
+    100%
+    {
+        transform: rotate(45deg) translate(1000px, 1000px);
+    }
+}
+
+.hill3
+{
+    animation: hill-tremble .05s 10 linear;
+}
+
+.hill
+{
+    animation: hill-fall 2s 1 forwards;
+    animation-delay: 4s;
+}
