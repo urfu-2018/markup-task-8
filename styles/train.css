@@ -1,6 +1,6 @@
 .train
 {
-    animation: train 10s linear infinite;
+    animation: train 20s linear infinite;
 }
 
 @keyframes train
@@ -14,5 +14,59 @@
     60%
     {
         transform: translateX(190%);
+    }
+}
+
+.wheel
+{
+    animation: wheel-rotation 2s linear infinite reverse;
+}
+
+@keyframes wheel-rotation
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 2s linear infinite;
+}
+
+@keyframes wheel-joint
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint-2 2s linear infinite;
+}
+
+@keyframes wheel-joint-2
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    50%
+    {
+        transform: rotate(165deg);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
     }
 }
