@@ -1,6 +1,6 @@
 .train
 {
-    animation: train 20s linear infinite;
+    animation: train 50s linear infinite;
 }
 
 @keyframes train
@@ -68,5 +68,80 @@
     to
     {
         transform: rotate(1turn);
+    }
+}
+
+.smoke-1
+{
+    transform: translateY(100%);
+    animation: smoke-1 6s ease-out 2s infinite;
+}
+
+@keyframes smoke-1
+{
+    to
+    {
+        transform: translate(500%, -550%) scaleX(2);
+        opacity: 0;
+    }
+}
+
+.smoke-2
+{
+    transform: translateY(100%);
+    animation: smoke-2 6s ease-out .5s infinite;
+}
+
+@keyframes smoke-2
+{
+    40%
+    {
+        transform: translate(450%, -500%) scale(1.5);
+    }
+
+    to
+    {
+        transform: translate(550%, -550%) scale(1.8);
+        opacity: 0;
+    }
+}
+
+.smoke-3
+{
+    animation: smoke-3 6s ease-out infinite;
+}
+
+@keyframes smoke-3
+{
+    45%
+    {
+        transform: translate(250%, -550%) scale(1.7, 1.2);
+    }
+
+    to
+    {
+        transform: translate(400%, -700%) scale(1.9, 1.5);
+        opacity: 0;
+    }
+}
+
+
+.smoke-4
+{
+    transform: translateY(100%);
+    animation: smoke-4 6s ease-out 1s infinite;
+}
+
+@keyframes smoke-4
+{
+    50%
+    {
+        transform: translate(350%, -550%) scale(2, 1.5);
+    }
+
+    to
+    {
+        transform: translate(550%, -650%) scale(3, 2);
+        opacity: 0;
     }
 }
