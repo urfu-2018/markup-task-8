@@ -1,0 +1,18 @@
+.train
+{
+    animation: train 10s linear infinite;
+}
+
+@keyframes train
+{
+    50%
+    {
+        transform: translateX(-210%);
+    }
+
+    50.0000001%,
+    60%
+    {
+        transform: translateX(190%);
+    }
+}
