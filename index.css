@@ -680,7 +680,7 @@ ul
 {
     animation-name: cloud1Move;
     animation-duration: 15s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes cloud1Move
@@ -741,7 +741,7 @@ ul
 {
     animation-name: cloud2Move;
     animation-duration: 35s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes cloud2Move
@@ -802,7 +802,7 @@ ul
 {
     animation-name: cloud3Move;
     animation-duration: 25s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
 }
 
 @keyframes cloud3Move
@@ -814,4 +814,61 @@ ul
     to {
         left: 100%;
     }
+}
+
+
+.train
+{
+    animation-name: trainMove;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes trainMove
+{
+    from {
+        right: 0;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.wheel
+{
+    animation: wheelMove 5s linear infinite;
+}
+
+@keyframes wheelMove
+{
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-jointMove 1s linear infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wheel-jointMove
+{
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-15deg)
+    }
+}
+
+
+.wheel-2
+{
+    animation-name: none;
 }
