@@ -92,7 +92,6 @@ ul
     width: 120px;
     height: 120px;
 
-    opacity: 1;
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
@@ -635,23 +634,24 @@ ul
     transform: rotate(45deg);
 }
 
-.cloud
+.cloud1
 {
     position: absolute;
-    z-index: 1;
-    top: 0;
+    top: 100px;
     left: 0;
 
     width: 200px;
     height: 60px;
 
+    z-index: auto;
     opacity: .8;
+
     border-radius: 200px;
     background: #fff;
 }
 
-.cloud:before,
-.cloud:after
+.cloud1:before,
+.cloud1:after
 {
     position: absolute;
     top: -15px;
@@ -666,7 +666,7 @@ ul
     background: #fff;
 }
 
-.cloud:after
+.cloud1:after
 {
     top: -55px;
     right: 15px;
@@ -674,4 +674,144 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud1
+{
+    animation-name: cloud1Move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud1Move
+{
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.cloud2
+{
+    position: absolute;
+    z-index: 10 ;
+    top: 200px;
+    left: 0;
+
+    width: 90px;
+    height: 40px;
+
+    z-index: auto;
+    opacity: .8;
+
+    border-radius: 200px;
+    background: #fff;
+}
+
+.cloud2:before,
+.cloud2:after
+{
+    position: absolute;
+    top: -15px;
+    left: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 60px;
+    background: #fff;
+}
+
+.cloud2:after
+{
+    top: 0px;
+    right: 0px;
+    left: auto;
+
+    width: 90px;
+    height: 30px;
+}
+
+.cloud2
+{
+    animation-name: cloud2Move;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud2Move
+{
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+.cloud3
+{
+    position: absolute;
+    z-index: 10 ;
+    top: 20px;
+    left: 0;
+
+    width: 140px;
+    height: 40px;
+
+    z-index: auto;
+    opacity: .8;
+
+    border-radius: 50px;
+    background: #fff;
+}
+
+.cloud3:before,
+.cloud3:after
+{
+    position: absolute;
+    top: -15px;
+    left: 5px;
+
+    width: 120px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 70px;
+    background: #fff;
+}
+
+.cloud3:after
+{
+    top: 0px;
+    right: 30px;
+    left: auto;
+
+    width: 90px;
+    height: 50px;
+}
+
+.cloud3
+{
+    animation-name: cloud3Move;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud3Move
+{
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
 }
