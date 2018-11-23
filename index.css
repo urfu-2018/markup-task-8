@@ -244,32 +244,13 @@ ul
     position: absolute;
     z-index: -1;
     top: -1.5rem;
-    left: .2rem;
+    left: -.1rem;
 
-    width: .8rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 1.2rem;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
-}
-
-.smoke-2
-{
-    left: .4rem;
-
-    animation-delay: .1s;
-}
-
-.smoke-3
-{
-    left: .6rem;
-
-    animation-delay: .2s;
-}
-
-.smoke-4
-{
-    left: .8rem;
 }
 
 .engine-body
@@ -674,4 +655,229 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+@keyframes train
+{
+    0%
+    {
+        left: -500px;
+        transform: scale(-1, 1);
+    }
+
+    49%
+    {
+        left: 1000px;
+        transform: scale(-1, 1);
+    }
+    
+    50%
+    {
+        left: 1000px;
+        transform: scale(1, 1);
+    }
+    
+    51%
+    {
+        left: 1001px;
+        transform: scale(1, 1);
+    }
+    
+    100%
+    {
+        left: -500px;
+        transform: scale(1, 1);
+    }
+}
+
+.train
+{
+    animation: train 20s infinite linear forwards;
+}
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel
+{
+    animation: wheel 2s infinite linear forwards;
+}
+
+@keyframes wheel-joint
+{
+    100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 2s infinite linear forwards;
+}
+
+@keyframes cloud-1
+{
+    0%
+    {
+        transform: scale(-.5);
+        left: 30px;
+    }
+    
+    100%
+    {
+        transform: scale(-.5);
+        left: 666px;
+    }
+}
+
+.cloud-1
+{
+    top: 200px;
+    animation: cloud-1 40s infinite alternate forwards;
+}
+
+@keyframes cloud-2
+{
+    0%
+    {
+        left: 700px;
+    }
+    
+    100%
+    {
+        left: 40px;
+    }
+}
+
+.cloud-2
+{
+    top: 300px;
+    animation: cloud-2 15s infinite alternate forwards;
+}
+
+@keyframes cloud-3
+{
+    0%
+    {
+        transform: scale(.25);
+        left: 400px;
+    }
+    
+    100%
+    {
+        transform: scale(.25);
+        left: 50px;
+    }
+}
+
+.cloud-3
+{
+    top: 100px;
+    animation: cloud-3 50s infinite alternate forwards;
+}
+
+@keyframes cloud-4
+{
+    0%
+    {
+        transform: scale(-.75, .75);
+        left: 100px;
+    }
+    
+    100%
+    {
+        transform: scale(-.75, .75);
+        left: 400px;
+    }
+}
+
+.cloud-4
+{
+    top: 50px;
+    animation: cloud-4 20s infinite alternate forwards;
+}
+
+@keyframes moon
+{
+    0%
+    {
+        left: 100px;
+        top: 200px;
+        transform: scale(1);
+    }
+    
+    100%
+    {
+        left: 400px;
+        top: 50px;
+        transform: scale(.75);
+    }
+}
+
+.moon
+{
+    animation: moon 20s 1 linear forwards;
+}
+
+.moon::before
+{
+    content: 'Я';
+    font-size: 100px;
+    color: red;
+    position: absolute;
+    left: 25px;
+    opacity: 0;
+}
+
+@keyframes moon-before
+{
+    50%
+    {
+        opacity: 0;
+    }
+    
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.moon::before
+{
+    animation: moon-before 40s 1 linear forwards;
+}
+
+@keyframes smoke
+{
+    100%
+    {
+        transform: translate(30px, -60px);
+        opacity: 0;
+    }
+}
+
+.smoke
+{
+    animation: smoke 1s infinite linear .75s forwards;
+}
+
+.smoke-2
+{
+    animation: smoke 1s infinite linear .5s forwards;
+}
+
+.smoke-3
+{
+    animation: smoke 1s infinite linear .25s forwards;
+}
+
+.smoke-4
+{
+    animation: smoke 1s infinite linear forwards;
 }
