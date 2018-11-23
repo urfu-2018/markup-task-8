@@ -70,19 +70,6 @@ ul
     content: '';
 }
 
-.canvas
-{
-    position: relative;
-
-    overflow: hidden;
-
-    width: 900px;
-    height: 600px;
-    margin: auto;
-
-    background: linear-gradient(#013971, #000c18 60%);
-}
-
 .moon
 {
     position: absolute;
