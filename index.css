@@ -79,7 +79,7 @@ ul
     width: 900px;
     height: 600px;
     margin: auto;
-    transition-duration: 1s;
+    transition-duration: 2s;
     transform-style: preserve-3d;
     perspective: 900px;
     background: linear-gradient(#013971, #000c18 60%);
