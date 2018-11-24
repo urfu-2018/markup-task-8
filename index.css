@@ -709,38 +709,43 @@ ul
 
 .cloud
 {
-    animation: cloud-movement 30s infinite linear;
+    animation: cloud-movement 1s linear,
+        cloud-movement-cycled 1s infinite linear;
 }
 
 .cloud-1
 {
-    animation-duration: 65s;
+    animation-duration: 45s, 65s;
+    animation-delay: 0s, 45s;
     top: 110px;
-    left: 90px;
+    left: 400px;
     transform: scale(.25);
 }
 
 .cloud-2
 {
-    animation-duration: 50s;
+    animation-duration: 36s, 50s;
+    animation-delay: 0s, 36s;
     top: 50px;
-    left: 20px;
+    left: 250px;
     transform: scale(.3) rotateY(180deg);
 }
 
 .cloud-3
 {
-    animation-duration: 42s;
+    animation-duration: 28s, 42s;
+    animation-delay: 0s, 28s;
     top: 80px;
-    left: 290px;
+    left: 70px;
     transform: scale(.4);
 }
 
 .cloud-4
 {
-    animation-duration: 32s;
+    animation-duration: 12.5s, 32s;
+    animation-delay: 0s, 12.5s;
     top: 150px;
-    left: 200px;
+    left: 550px;
     transform: scale(.5)  rotateY(180deg);
 }
 
@@ -773,14 +778,22 @@ ul
 
 @keyframes cloud-movement
 {
+    100%
+    {
+        left: calc(100% + 150px);
+    }
+}
+
+@keyframes cloud-movement-cycled
+{
     0%
     {
-        margin-left: -100px; /*-600px*/
+        left: -180px;
     }
 
     100%
     {
-        margin-left: 100%;
+        left: calc(100% + 150px);
     }
 }
 
