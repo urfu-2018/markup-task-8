@@ -3418,3 +3418,88 @@
         opacity: .3;
     }
 }
+
+.star:nth-child(2)
+{
+    animation: star-fall-1 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+.star:nth-child(18)
+{
+    animation: star-fall-2 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+.star:nth-child(3)
+{
+    animation: star-fall-3 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 2.25s;
+}
+
+.star:nth-child(45)
+{
+    animation: star-fall-1 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+
+}
+
+.star:nth-child(25)
+{
+    animation: star-fall-2 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 5.5s;
+}
+
+.star:nth-child(80)
+{
+    animation: star-fall-3 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+}
+
+.star:nth-child(73)
+{
+    animation: star-fall-2 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+}
+
+.star:nth-child(7)
+{
+    animation: star-fall-3 2s cubic-bezier(1,0,.84,.54);
+    animation-fill-mode: forwards;
+    animation-delay: 13s;
+}
+
+@keyframes star-fall-1
+{
+    to
+    {
+        margin-top: 600px;
+        margin-left: 450px;
+    }
+}
+
+@keyframes star-fall-2
+{
+    to
+    {
+        margin-top: 600px;
+        margin-left: 100px;
+    }
+}
+
+@keyframes star-fall-3
+{
+    to
+    {
+        margin-top: 600px;
+        margin-left: 30px;
+    }
+}
+
