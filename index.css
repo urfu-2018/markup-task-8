@@ -66,6 +66,7 @@ ul
 .center::after
 {
     position: absolute;
+    z-index: -1; /* TODO: del it */
 
     content: '';
 }
@@ -73,8 +74,6 @@ ul
 .canvas
 {
     position: relative;
-
-    overflow: hidden;
 
     width: 900px;
     height: 600px;
@@ -674,4 +673,144 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.center
+{
+    perspective: 600px;
+}
+
+.canvas
+{
+    transition: transform 1s linear;
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+
+/*
+
+.center:hover .canvas
+{
+
+    transform: rotateY(25deg) rotateX(0);
+}
+
+.clouds
+{
+    position: absolute;
+    width: 900px;
+    height: 250px;
+    top: 0;
+
+    transform: translateZ(40px);
+    transform-origin: 0 0;
+}
+
+.moon
+{
+    transform: translateZ(25px);
+}
+
+.train,
+.bridge
+{
+    transform: translateZ(70px) scale(.8);
+}
+
+*/
+
+.train
+{
+    animation: train-movement 18s infinite linear;
+}
+
+.wheel
+{
+    animation: wheel-rotation 1800ms infinite linear;
+
+}
+
+.wheel-joint
+{
+    animation: wheel-joint-rotation 1800ms infinite linear;
+}
+
+.cloud
+{
+    animation: cloud-movement 30s infinite linear;
+}
+
+.cloud-1
+{
+    animation-duration: 65s;
+    top: 110px;
+    left: 90px;
+    transform: scale(.25);
+}
+
+.cloud-2
+{
+    animation-duration: 50s;
+    top: 50px;
+    left: 20px;
+    transform: scale(.3) rotateY(180deg);
+}
+
+.cloud-3
+{
+    animation-duration: 42s;
+    top: 80px;
+    left: 290px;
+    transform: scale(.4);
+}
+
+.cloud-4
+{
+    animation-duration: 32s;
+    top: 150px;
+    left: 200px;
+    transform: scale(.5)  rotateY(180deg);
+}
+
+@keyframes cloud-movement
+{
+    0%
+    {
+        margin-left: -100px; /*-600px*/
+    }
+
+    100%
+    {
+        margin-left: 100%;
+    }
+}
+
+@keyframes train-movement
+{
+    0%
+    {
+        margin-right: -440px;
+    }
+
+    100%
+    {
+        margin-right: 100%;
+    }
+}
+
+@keyframes wheel-rotation
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes wheel-joint-rotation
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+
 }
