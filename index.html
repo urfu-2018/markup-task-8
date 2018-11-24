@@ -5,23 +5,7 @@
     <title>Задача «Мультик»</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="stars.css">
-    <script>
-        var width = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
-        var height = window.innerHeight
-        || document.documentElement.clientHeight
-        || document.body.clientHeight;
-        var mouseY = 0;
-        var mouseX = 0;
-        function mouseCoords(e) {
-            x = e.pageX; // Координата X курсора
-            y = e.pageY; // Координата Y курсора
-            document.getElementById("canvas").style.transform = "perspective(960px) rotateX("
-                + -((y - height / 2) / (height / 360) / 10) + "deg) rotateY("
-                + (x - width / 2) / (width / 360) / 10 + "deg)";
-            }
-    </script>
+    <script src="perspective.js"></script>
 </head>
 <body onmousemove="mouseCoords(event)">
 
