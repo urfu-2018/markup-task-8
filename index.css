@@ -776,6 +776,77 @@ ul
 
 }
 
+.smoke
+{
+    animation: smoke-animation-clockwise 900ms linear infinite;
+    animation-delay: .65s;
+}
+
+.smoke-2
+{
+    animation-name: smoke-animation-anti-clockwise;
+    animation-delay: .8s;
+}
+
+.smoke-3
+{
+    animation-delay: 1.15s;
+}
+
+.smoke-4
+{
+    animation-name: smoke-animation-anti-clockwise;
+    animation-delay: 1.25s;
+}
+
+.smoke-5
+{
+    animation-name: smoke-animation-anti-clockwise;
+    animation-delay: .98s;
+}
+
+.smoke-6
+{
+    animation-delay: 1.12s;
+}
+
+.smoke-7
+{
+    animation-name: smoke-animation-anti-clockwise;
+    animation-delay: 1.38s;
+}
+
+.smoke-8
+{
+    animation-name: smoke-animation-anti-clockwise;
+    animation-delay: .7s;
+}
+
+.smoke-9
+{
+    animation-delay: .95s;
+}
+
+@keyframes smoke-animation-clockwise
+{
+    100%
+    {
+        top: -60px;
+        opacity: 0;
+        transform: rotate(120deg);
+    }
+}
+
+@keyframes smoke-animation-anti-clockwise
+{
+    100%
+    {
+        top: -60px;
+        opacity: 0;
+        transform: rotate(-120deg);
+    }
+}
+
 @keyframes cloud-movement
 {
     100%
