@@ -1,0 +1,31 @@
+.moon
+{
+    position: absolute;
+    top: 150px;
+    width: 140px;
+    height: 140px;
+    margin-left: -140px;
+
+    border-radius: 50%;
+    background: #fefce6;
+    box-shadow: 0 1px 30px 0 #fff;
+    animation: moon-slide 20s linear infinite;
+}
+
+@keyframes moon-slide
+{
+    40%,
+    60%
+    {
+        transform: translate(560px, -100px);
+        width: 100px;
+        height: 100px;
+    }
+
+    100%
+    {
+        transform: translate(1040px, 0);
+        width: 140px;
+        height: 140px;
+    }
+}

@@ -1,0 +1,57 @@
+@keyframes train-ride
+{
+    from
+    {
+        right: 0;
+        margin-right: -440px;
+    }
+
+    to
+    {
+        right: 120%;
+    }
+}
+
+.train
+{
+    animation: train-ride 10s linear infinite;
+}
+
+@keyframes wheel-rotation
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel
+{
+    animation: wheel-rotation 1s linear infinite;
+}
+
+@keyframes wheel-joint-1-rotation
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint-1
+{
+    animation: wheel-joint-1-rotation 1s linear infinite;
+}
+
+@keyframes wheel-joint-2-rotation
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint-2-rotation 1s linear infinite;
+}

@@ -1,0 +1,224 @@
+@keyframes cloud-fly-1
+{
+    from
+    {
+        left: 0;
+        margin-left: -200px;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+.cloud:nth-child(1)
+{
+    position: absolute;
+    top: 250px;
+    left: 0;
+
+    width: 200px;
+    height: 60px;
+
+    opacity: .8;
+    z-index: 10;
+    border-radius: 200px;
+    background: #fff;
+
+    animation: 15s linear cloud-fly-1 infinite;
+}
+
+.cloud:nth-child(1):before,
+.cloud:nth-child(1):after
+{
+    position: absolute;
+    top: -15px;
+    left: 10px;
+
+    width: 100px;
+    height: 80px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:nth-child(1):after
+{
+    top: -55px;
+    right: 15px;
+    left: auto;
+
+    width: 120px;
+    height: 120px;
+}
+
+@keyframes cloud-fly-2
+{
+    from
+    {
+        left: 0;
+        margin-left: -150px;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+.cloud:nth-child(2)
+{
+    position: absolute;
+    top: 150px;
+    left: 0;
+
+    width: 150px;
+    height: 50px;
+
+    opacity: .8;
+    z-index: 9;
+    border-radius: 200px;
+    background: #fff;
+
+    animation: 20s linear cloud-fly-2 infinite;
+}
+
+.cloud:nth-child(2):before,
+.cloud:nth-child(2):after
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 60px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:nth-child(2):after
+{
+    top: -15px;
+    left: 25px;
+
+    width: 85px;
+    height: 85px;
+}
+
+@keyframes cloud-fly-3
+{
+    from
+    {
+        left: 0;
+        margin-left: -100px;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+.cloud:nth-child(3)
+{
+    position: absolute;
+    top: 100px;
+    left: 0;
+
+    width: 120px;
+    height: 40px;
+
+    opacity: .8;
+    z-index: 8;
+    border-radius: 200px;
+    background: #fff;
+
+    animation: 25s linear cloud-fly-2 infinite;
+}
+
+.cloud:nth-child(3):before,
+.cloud:nth-child(3):after
+{
+    position: absolute;
+    top: -15px;
+    right: 5px;
+
+    width: 80px;
+    height: 80px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:nth-child(3):after
+{
+    top: -10px;
+    left: 7px;
+
+    width: 75px;
+    height: 70px;
+}
+
+@keyframes cloud-fly-4
+{
+    from
+    {
+        left: 0;
+        margin-left: -80px;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+.cloud:nth-child(4)
+{
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 80px;
+    height: 40px;
+
+    opacity: .8;
+    z-index: 7;
+    border-radius: 200px;
+    background: #fff;
+
+    animation: 30s linear cloud-fly-4 infinite;
+}
+
+.cloud:nth-child(4):before,
+.cloud:nth-child(4):after
+{
+    position: absolute;
+    top: -15px;
+    right: 20px;
+
+    width: 40px;
+    height: 70px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:nth-child(4):after
+{
+    top: -10px;
+    left: 10px;
+
+    width: 60px;
+    height: 60px;
+}

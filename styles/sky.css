@@ -1,0 +1,25 @@
+@keyframes sky-gradient
+{
+    0%
+    {
+        background-position: 0 50%;
+    }
+
+    30%,
+    70%
+    {
+        background-position: 100% 50%;
+    }
+
+    100%
+    {
+        background-position: 0 50%;
+    }
+}
+
+.canvas
+{
+    background: linear-gradient(-90deg, #bb315f, #012449, #bb315f);
+    background-size: 200% 200%;
+    animation: sky-gradient 20s ease infinite;
+}

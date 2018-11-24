@@ -79,23 +79,6 @@ ul
     width: 900px;
     height: 600px;
     margin: auto;
-
-    background: linear-gradient(#013971, #000c18 60%);
-}
-
-.moon
-{
-    position: absolute;
-    top: 100px;
-    left: calc(50% - 60px);
-
-    width: 120px;
-    height: 120px;
-
-    opacity: 1;
-    border-radius: 50%;
-    background: #fefce6;
-    box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
 }
 
 .center::after
@@ -152,7 +135,6 @@ ul
 {
     position: absolute;
     z-index: 1;
-    right: 0;
     bottom: 12.6rem;
 
     width: 44rem;
@@ -237,39 +219,6 @@ ul
     border-left: .5rem solid transparent;
 
     transform: translate(-50%, 0);
-}
-
-.smoke
-{
-    position: absolute;
-    z-index: -1;
-    top: -1.5rem;
-    left: .2rem;
-
-    width: .8rem;
-    height: 1.4rem;
-
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .8);
-}
-
-.smoke-2
-{
-    left: .4rem;
-
-    animation-delay: .1s;
-}
-
-.smoke-3
-{
-    left: .6rem;
-
-    animation-delay: .2s;
-}
-
-.smoke-4
-{
-    left: .8rem;
 }
 
 .engine-body
@@ -440,7 +389,7 @@ ul
     left: 25rem;
 }
 
-.compartment-three
+.disco-compartment
 {
     left: 35rem;
 }
@@ -633,45 +582,4 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
-}
-
-.cloud
-{
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-
-    width: 200px;
-    height: 60px;
-
-    opacity: .8;
-    border-radius: 200px;
-    background: #fff;
-}
-
-.cloud:before,
-.cloud:after
-{
-    position: absolute;
-    top: -15px;
-    left: 10px;
-
-    width: 100px;
-    height: 80px;
-
-    content: '';
-
-    border-radius: 100px;
-    background: #fff;
-}
-
-.cloud:after
-{
-    top: -55px;
-    right: 15px;
-    left: auto;
-
-    width: 120px;
-    height: 120px;
 }
