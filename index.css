@@ -86,7 +86,7 @@ ul
 .moon
 {
     position: absolute;
-    top: 100px;
+    top: 200px;
     left: calc(50% - 60px);
 
     width: 120px;
@@ -96,6 +96,8 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    animation: moon-up 2s linear;
+    animation-fill-mode: forwards;
 }
 
 .center::after
@@ -157,6 +159,7 @@ ul
 
     width: 44rem;
     height: 10rem;
+    animation: train-move-left 10s linear infinite;
 }
 
 .engine-front,
@@ -347,6 +350,7 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+    animation: wheel 1s linear infinite;
 }
 
 .wheel-2
@@ -679,18 +683,15 @@ ul
 .clouds .cloud:nth-child(1)
 {
     animation: cloud1-move 15s linear infinite;
-    animation-fill-mode: forwards;
 }
 
 .clouds .cloud:nth-child(3)
 {
     animation: cloud3-move 25s linear infinite;
-    animation-fill-mode: forwards;
 }
 .clouds .cloud:nth-child(2)
 {
     animation: cloud2-move 20s linear infinite;
-    animation-fill-mode: forwards;
 }
 .clouds .cloud:nth-child(4)
 {
@@ -721,11 +722,11 @@ ul
     {
         transform: translate(300%, 200%) scale(-.6, .6);
     }
-    50%
+    20%
     {
-        transform: translate(700%, 200%) scale(-.6, .6);
+        transform: translate(450%, 200%) scale(-.6, .6);
     }
-    50.000001%
+    20.000001%
     {
         transform: translate(-100%, 200%) scale(-.6, .6);
     }
@@ -740,11 +741,11 @@ ul
     {
         transform: translate(350%, 70%) scale(.4);
     }
-    50%
+    30%
     {
         transform: translate(800%, 70%) scale(.4);
     }
-    50.000001%
+    30.000001%
     {
         transform: translate(-100%, 70%) scale(.4);
     }
@@ -759,16 +760,50 @@ ul
     {
         transform: translate(300%, 10%) scale(-.3, .3);
     }
-    50%
+    20%
     {
-        transform: translate(700%, 10%) scale(-.3, .3);
+        transform: translate(450%, 10%) scale(-.3, .3);
     }
-    50.000001%
+    20.000001%
     {
         transform: translate(-100%, 10%) scale(-.3, .3);
     }
     100%
     {
         transform: translate(300%, 10%) scale(-.3, .3);
+    }
+}
+
+@keyframes moon-up {
+    to
+    {
+        transform: translate(0, -175%) scale(.7);
+    }
+}
+
+@keyframes train-move-left
+{
+    0%
+    {
+        transform: translate(0, 0);
+    }
+    50%
+    {
+        transform: translate(-250%, 0);
+    }
+    50.000001%
+    {
+        transform: translate(250%, 0);
+    }
+    100%
+    {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes wheel {
+    to
+    {
+        transform: rotate(-1turn);
     }
 }
