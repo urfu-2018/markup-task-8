@@ -79,7 +79,9 @@ ul
     width: 900px;
     height: 600px;
     margin: auto;
-
+    transition-duration: 1s;
+    transform-style: preserve-3d;
+    perspective: 900px;
     background: linear-gradient(#013971, #000c18 60%);
 }
 
@@ -970,4 +972,56 @@ ul
  {
     animation: cat2 15s linear infinite;
     top: 150px;
+}
+
+.fragment
+ {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    z-index: 100;
+}
+
+.left-top
+ {
+    top: 47px;
+    left: 232px;
+}
+
+.left-bottom
+ {
+    bottom: 47px;
+    left: 232px;
+}
+
+.right-top
+ {
+    top: 47px;
+    right: 232px;
+}
+
+.right-bottom
+ {
+    bottom: 47px;
+    right: 232px;
+}
+
+.left-top:hover ~ .canvas
+ {
+    transform: rotateX(10deg) rotateY(-30deg) rotateZ(10deg);
+}
+
+.left-bottom:hover ~ .canvas
+ {
+    transform: rotateX(-30deg) rotateY(-10deg) rotateZ(-10deg);
+}
+
+.right-top:hover ~ .canvas
+ {
+    transform: rotateX(30deg) rotateY(-10deg) rotateZ(-10deg);
+}
+
+.right-bottom:hover ~ .canvas
+ {
+    transform: rotateX(-30deg) rotateY(-10deg) rotateZ(10deg);
 }
