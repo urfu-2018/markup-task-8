@@ -2,7 +2,7 @@
 *,
 *:before,
 *:after
-{
+ {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -11,14 +11,14 @@
 }
 
 html
-{
+ {
     height: 100%;
 
     font-size: 10px;
 }
 
 body
-{
+ {
     height: 100%;
 
     font-size: 1.6rem;
@@ -28,31 +28,31 @@ body
 
 header,
 footer
-{
+ {
     display: block;
 }
 
 a,
 a:link,
 a:visited
-{
+ {
     text-decoration: none;
 
     color: #4d4d4d;
 }
 
 img
-{
+ {
     border: 0;
 }
 
 ul
-{
+ {
     list-style: none;
 }
 
 .center
-{
+ {
     position: relative;
 
     display: flex;
@@ -64,14 +64,14 @@ ul
 
 .center::before,
 .center::after
-{
+ {
     position: absolute;
 
     content: '';
 }
 
 .canvas
-{
+ {
     position: relative;
 
     overflow: hidden;
@@ -84,7 +84,7 @@ ul
 }
 
 .moon
-{
+ {
     position: absolute;
     top: 100px;
     left: calc(50% - 60px);
@@ -99,13 +99,13 @@ ul
 }
 
 .center::after
-{
+ {
     width: 100%;
     height: 100%;
 }
 
 .stars
-{
+ {
     position: relative;
 
     overflow: hidden;
@@ -116,7 +116,7 @@ ul
 }
 
 .star-1
-{
+ {
     position: absolute;
     z-index: 1;
 
@@ -134,7 +134,7 @@ ul
 }
 
 .bridge
-{
+ {
     position: absolute;
     z-index: 1;
     bottom: 10rem;
@@ -145,11 +145,26 @@ ul
     border-top: .3rem solid white;
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
-    background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+    background: linear-gradient(
+        55deg,
+        transparent 46%,
+        white 46%,
+        white 54%,
+        transparent 54%
+    )
+        left/1.6rem 2.2rem,
+        linear-gradient(
+        -55deg,
+        transparent 46%,
+        white 46%,
+        white 54%,
+        transparent 54%
+    )
+        left/1.6rem 2.2rem;
 }
 
 .train
-{
+ {
     position: absolute;
     z-index: 1;
     right: 0;
@@ -162,7 +177,7 @@ ul
 .engine-front,
 .engine-front::before,
 .engine-front::after
-{
+ {
     border: .1rem solid rgba(255, 255, 255, .15);
     border-right: none;
     border-radius: 50% 0 0 50%;
@@ -170,7 +185,7 @@ ul
 }
 
 .engine-front
-{
+ {
     position: absolute;
     bottom: 1.4rem;
     left: 0;
@@ -183,7 +198,7 @@ ul
 
 .engine-front::before,
 .engine-front::after
-{
+ {
     position: absolute;
     top: 50%;
     left: -.9rem;
@@ -197,7 +212,7 @@ ul
 }
 
 .engine-front::after
-{
+ {
     left: -1.4rem;
 
     width: .5rem;
@@ -205,7 +220,7 @@ ul
 }
 
 .chimney
-{
+ {
     position: absolute;
     top: -2.3rem;
     left: 2.5rem;
@@ -218,14 +233,14 @@ ul
 
 .chimney::before,
 .chimney::after
-{
+ {
     position: absolute;
 
     content: '';
 }
 
 .chimney::before
-{
+ {
     top: -.9rem;
     left: 50%;
 
@@ -240,7 +255,7 @@ ul
 }
 
 .smoke
-{
+ {
     position: absolute;
     z-index: -1;
     top: -1.5rem;
@@ -254,26 +269,26 @@ ul
 }
 
 .smoke-2
-{
+ {
     left: .4rem;
 
     animation-delay: .1s;
 }
 
 .smoke-3
-{
+ {
     left: .6rem;
 
     animation-delay: .2s;
 }
 
 .smoke-4
-{
+ {
     left: .8rem;
 }
 
 .engine-body
-{
+ {
     position: absolute;
     bottom: 1.4rem;
     left: 8rem;
@@ -287,7 +302,7 @@ ul
 
 .engine-body::before,
 .engine-body::after
-{
+ {
     position: absolute;
     left: 50%;
 
@@ -297,7 +312,7 @@ ul
 }
 
 .engine-body::before
-{
+ {
     top: -1.2rem;
 
     width: 130%;
@@ -308,7 +323,7 @@ ul
 }
 
 .engine-body::after
-{
+ {
     top: 1rem;
 
     width: 45%;
@@ -320,7 +335,7 @@ ul
 
 .wheel::before,
 .wheel::after
-{
+ {
     top: 50%;
     left: 50%;
 
@@ -328,7 +343,7 @@ ul
 }
 
 .wheel-holder
-{
+ {
     position: absolute;
     bottom: 0;
 
@@ -337,7 +352,7 @@ ul
 }
 
 .wheel
-{
+ {
     position: absolute;
     left: 1rem;
 
@@ -350,12 +365,12 @@ ul
 }
 
 .wheel-2
-{
+ {
     left: 4.5rem;
 }
 
 .wheel-3
-{
+ {
     top: -1.1rem;
     left: 8.7rem;
 
@@ -366,45 +381,45 @@ ul
 }
 
 .wheel-4
-{
+ {
     left: 15.7rem;
 }
 
 .wheel-5
-{
+ {
     left: 19.5rem;
 }
 
 .wheel-6
-{
+ {
     left: 25.7rem;
 }
 
 .wheel-7
-{
+ {
     left: 29.5rem;
 }
 
 .wheel-8
-{
+ {
     left: 35.7rem;
 }
 
 .wheel-9
-{
+ {
     left: 39.5rem;
 }
 
 .wheel::before,
 .wheel::after
-{
+ {
     position: absolute;
 
     content: '';
 }
 
 .wheel::before
-{
+ {
     width: .2rem;
     height: 86%;
 
@@ -412,7 +427,7 @@ ul
 }
 
 .wheel::after
-{
+ {
     width: 40%;
     height: 40%;
 
@@ -421,7 +436,7 @@ ul
 }
 
 .compartment
-{
+ {
     position: absolute;
     bottom: 1.4rem;
     left: 15rem;
@@ -436,18 +451,18 @@ ul
 }
 
 .compartment-two
-{
+ {
     left: 25rem;
 }
 
 .compartment-three
-{
+ {
     left: 35rem;
 }
 
 .compartment::before,
 .compartment::after
-{
+ {
     position: absolute;
     bottom: .4rem;
 
@@ -462,42 +477,46 @@ ul
 }
 
 .compartment::before
-{
+ {
     left: -.9rem;
 
     border-left: .4rem solid rgba(255, 255, 255, .3);
 }
 
 .compartment::after
-{
+ {
     left: -2rem;
 
     border-right: .4rem solid rgba(255, 255, 255, .3);
 }
 
 .compartment-window
-{
+ {
     position: absolute;
     top: .7rem;
 
     width: 100%;
     height: 40%;
 
-    background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
+    background-image: linear-gradient(
+        90deg,
+        transparent .8rem,
+        skyblue .8rem
+    );
     background-position: left;
     background-size: 2.4rem 100%;
 }
 
 .compartment-window::before,
 .compartment-window::after
-{
+ {
     position: absolute;
 
     content: '';
 }
 
 .compartment-window::before
-{
+ {
     top: -1.4rem;
     left: 50%;
 
@@ -511,7 +530,7 @@ ul
 }
 
 .wheel-joint
-{
+ {
     position: absolute;
     z-index: 1;
     top: calc(50% - .2rem);
@@ -528,7 +547,7 @@ ul
 
 .wheel-joint::before,
 .wheel-joint::after
-{
+ {
     position: absolute;
     top: 50%;
 
@@ -545,17 +564,17 @@ ul
 }
 
 .wheel-joint::before
-{
+ {
     left: -.4rem;
 }
 
 .wheel-joint::after
-{
+ {
     right: -.4rem;
 }
 
 .wheel-joint-2
-{
+ {
     right: auto;
     left: 1.8rem;
 
@@ -566,13 +585,13 @@ ul
 }
 
 .wheel-joint-2::before
-{
+ {
     width: 1.1rem;
     height: 1.1rem;
 }
 
 .h-con
-{
+ {
     position: absolute;
     z-index: 1;
     bottom: 0;
@@ -585,7 +604,7 @@ ul
 }
 
 .hill
-{
+ {
     position: absolute;
     z-index: 130;
 
@@ -602,7 +621,7 @@ ul
 }
 
 .hill2
-{
+ {
     position: absolute;
     z-index: 130;
 
@@ -619,7 +638,7 @@ ul
 }
 
 .hill3
-{
+ {
     position: absolute;
     z-index: 130;
 
@@ -636,7 +655,7 @@ ul
 }
 
 .cloud
-{
+ {
     position: absolute;
     z-index: 1;
     top: 0;
@@ -652,7 +671,7 @@ ul
 
 .cloud:before,
 .cloud:after
-{
+ {
     position: absolute;
     top: -15px;
     left: 10px;
@@ -667,11 +686,288 @@ ul
 }
 
 .cloud:after
-{
+ {
     top: -55px;
     right: 15px;
     left: auto;
 
     width: 120px;
     height: 120px;
+}
+
+.cloud:first-child
+ {
+    top: 200px;
+    animation: cloud1 20s linear -5s infinite;
+}
+
+@keyframes cloud1
+ {
+    from
+ {
+        transform: translateX(-210px) scale(.9);
+    }
+
+    to
+ {
+        transform: translateX(950px) scale(.9);
+    }
+}
+
+.cloud:nth-child(2)
+ {
+    top: 70px;
+    animation: cloud2 28s linear -15s infinite;
+}
+
+@keyframes cloud2
+ {
+    from
+ {
+        transform: translateX(-210px) scale(-.7, .7);
+    }
+
+    to
+ {
+        transform: translateX(950px) scale(-.7, .7);
+    }
+}
+
+.cloud:nth-child(3)
+ {
+    top: 120px;
+    animation: cloud3 35s linear -10s infinite;
+    animation-name: cloud3;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: -10s;
+}
+
+@keyframes cloud3
+ {
+    from
+ {
+        transform: translateX(-210px) scale(.6);
+    }
+
+    to
+ {
+        transform: translateX(950px) scale(.5);
+    }
+}
+
+.cloud:last-child
+ {
+    top: 25px;
+    animation: cloud4 40s linear infinite;
+}
+
+@keyframes cloud4
+ {
+    from
+ {
+        transform: translateX(-150px) scale(-.5, .5);
+    }
+
+    to
+ {
+        transform: translateX(950px) scale(-.5, .5);
+    }
+}
+
+.moon
+ {
+    animation: moon 10s linear forwards;
+}
+
+@keyframes moon
+ {
+    from
+ {
+        transform: translateY(150px);
+    }
+
+    to
+ {
+        transform: translateY(-70px) scale(.5);
+    }
+}
+
+.train
+ {
+    animation: train 40s linear -10s infinite;
+}
+
+@keyframes train
+ {
+    from
+ {
+        transform: translateX(450px);
+    }
+
+    to
+ {
+        transform: translateX(-900px);
+    }
+}
+
+@keyframes wheel
+ {
+    to
+ {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel
+ {
+    animation: wheel 3s linear infinite;
+}
+
+@keyframes joint1
+ {
+    from
+ {
+        transform: rotate(0turn);
+    }
+
+    to
+ {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint
+ {
+    animation: joint1 3s linear infinite;
+}
+
+@keyframes joint2
+ {
+    0%
+ {
+        transform: rotate(0turn);
+    }
+
+    50%
+ {
+        transform: rotate(165deg);
+    }
+
+    100%
+ {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint-2
+ {
+    animation: joint2 3s linear infinite;
+}
+
+@keyframes smoke
+ {
+    from
+ {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    to
+ {
+        transform: translateY(-70px) scale(2);
+        opacity: 0;
+    }
+}
+
+.smoke
+ {
+    animation: smoke 3s linear infinite;
+}
+
+.smoke-2
+ {
+    animation-delay: 1s;
+}
+
+.smoke-3
+ {
+    animation-delay: .5s;
+}
+
+.smoke-4
+ {
+    animation-delay: 1.5s;
+}
+
+@keyframes cat1
+ {
+    0%
+ {
+        transform: translateX(-80px);
+    }
+
+    25%
+ {
+        transform: translate(165px, 40px);
+    }
+
+    50%
+ {
+        transform: translate(410px, 0);
+    }
+
+    75%
+ {
+        transform: translate(655px, -40px);
+    }
+
+    100%
+ {
+        transform: translate(900px, 0);
+    }
+}
+
+.cat
+ {
+    position: absolute;
+    z-index: 100;
+    width: 80px;
+    top: 40px;
+    animation: cat1 15s linear infinite;
+}
+
+@keyframes cat2
+ {
+    0%
+ {
+        transform: translateX(900px) scaleX(-1);
+    }
+
+    25%
+ {
+        transform: translate(655px, -40px) scaleX(-1);
+    }
+
+    50%
+ {
+        transform: translate(410px, 0) scaleX(-1);
+    }
+
+    75%
+ {
+        transform: translate(165px, 40px) scaleX(-1);
+    }
+
+    100%
+ {
+        transform: translate(-80px, 0) scaleX(-1);
+    }
+}
+
+.cat2
+ {
+    animation: cat2 15s linear infinite;
+    top: 150px;
 }
