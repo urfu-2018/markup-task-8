@@ -80,7 +80,9 @@ ul
     height: 600px;
     margin: auto;
 
-    background: linear-gradient(#013971, #000c18 60%);
+    background: linear-gradient(45deg,  #000c18, #002142, #013971);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
 }
 
 .center::after
@@ -630,18 +632,20 @@ ul
 
 .cloud1
 {
-    animation-name: cloud1Move;
+    animation-name: cloudMove;
     animation-duration: 15s;
     animation-iteration-count: infinite;
 }
 
-@keyframes cloud1Move
+@keyframes cloudMove
 {
-    from {
+    from
+    {
         left: 0;
     }
 
-    to {
+    to
+    {
         left: 100%;
     }
 }
@@ -656,7 +660,6 @@ ul
     width: 90px;
     height: 40px;
 
-    z-index: auto;
     opacity: .8;
 
     border-radius: 200px;
@@ -681,8 +684,8 @@ ul
 
 .cloud2:after
 {
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     left: auto;
 
     width: 90px;
@@ -691,26 +694,14 @@ ul
 
 .cloud2
 {
-    animation-name: cloud2Move;
+    animation-name: cloudMove;
     animation-duration: 35s;
     animation-iteration-count: infinite;
-}
-
-@keyframes cloud2Move
-{
-    from {
-        left: 0;
-    }
-
-    to {
-        left: 100%;
-    }
 }
 
 .cloud3
 {
     position: absolute;
-    z-index: 10 ;
     top: 20px;
     left: 0;
 
@@ -720,7 +711,7 @@ ul
     z-index: auto;
     opacity: .8;
 
-    border-radius: 50px;
+    border-radius: 40px;
     background: #fff;
 }
 
@@ -728,7 +719,7 @@ ul
 .cloud3:after
 {
     position: absolute;
-    top: -15px;
+    top: -25px;
     left: 5px;
 
     width: 120px;
@@ -742,47 +733,87 @@ ul
 
 .cloud3:after
 {
-    top: 0px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
     left: auto;
 
-    width: 90px;
-    height: 50px;
+    width: 80px;
+    height: 30px;
 }
 
 .cloud3
 {
-    animation-name: cloud3Move;
+    animation-name: cloudMove;
     animation-duration: 25s;
     animation-iteration-count: infinite;
 }
 
-@keyframes cloud3Move
+.cloud4
 {
-    from {
-        left: 0;
-    }
+    position: absolute;
+    top: 150px;
+    left: -30px;
 
-    to {
-        left: 100%;
-    }
+    width: 100px;
+    height: 50px;
+
+    z-index: auto;
+    opacity: .7;
+
+    border-radius: 30px;
+    background: #fff;
 }
 
+.cloud4:before,
+.cloud4:after
+{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+
+    width: 60px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 70px;
+    background: #fff;
+}
+
+.cloud4:after
+{
+    top: 25px;
+    right: 15px;
+    left: auto;
+
+    width: 60px;
+    height: 30px;
+}
+
+.cloud4
+{
+    animation-name: cloudMove;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+}
 
 .train
 {
     animation-name: trainMove;
     animation-duration: 25s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
 @keyframes trainMove
 {
-    from {
+    from
+    {
         right: 0;
     }
 
-    to {
+    to
+    {
         right: 100%;
     }
 }
@@ -794,27 +825,31 @@ ul
 
 @keyframes wheelMove
 {
-    0% {
-        transform: rotate(0deg)
+    0%
+    {
+        transform: rotate(0deg);
     }
-    100% {
-        transform: rotate(-360deg)
+
+    100%
+    {
+        transform: rotate(-360deg);
     }
 }
 
- .wheel-joint
+.wheel-joint
 {
     animation: wheel-jointMove 5s linear forwards;
     animation-iteration-count: infinite;
     z-index: 120;
 }
 
-
 @keyframes wheel-jointMove
 {
-    0% {
-        transform: rotate(0deg)
+    0%
+    {
+        transform: rotate(0deg);
     }
+
     100%
     {
         transform: rotate(360deg);
@@ -830,7 +865,6 @@ ul
     z-index: 1200000;
 }
 
-
 @keyframes wheel-joint2Move
 {
     100%
@@ -839,6 +873,72 @@ ul
     }
 }
 
+.smoke
+{
+    position: absolute;
+    top: -1.5rem;
+    left: .2rem;
+
+    width: .8rem;
+    height: 1.4rem;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .8);
+    animation: smokeMove 2s linear forwards infinite;
+}
+
+.smoke-2
+{
+    left: .4rem;
+    animation: smokeMove 2s linear infinite;
+    animation-delay: 400ms;
+}
+
+.smoke-3
+{
+    left: .6rem;
+    animation: smokeMove 2s linear infinite;
+    animation-delay: 800ms;
+}
+
+@keyframes smokeMove
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translate(40px, -80px);
+        opacity: .5;
+    }
+}
+
+.smoke-4
+{
+    animation: smokeMove 2s  linear infinite;
+    left: .8rem;
+    animation-delay: 1200ms;
+}
+
+@keyframes Gradient
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+
+    50%
+    {
+        background-position: 100% 50%;
+    }
+
+    100%
+    {
+        background-position: 0% 50%;
+    }
+}
 
 .moon
 {
@@ -856,105 +956,93 @@ ul
 
 @keyframes moonMove
 {
-    0% {
+    0%
+    {
         width: 120px;
         height: 120px;
     }
-    45%, 55% {
+
+    45%,
+    55%
+    {
         transform: translate(350px, -200px);
         width: 90px;
         height: 90px;
         animation-delay: 3s;
     }
-    100% {
-        transform: translate(800px, 0px);
+
+    100%
+    {
+        transform: translate(800px, 0);
         width: 120px;
         height: 120px;
     }
 }
 
-.smoke
+.rt,
+.rb
+{
+    display: inline-block;
+}
+
+.rt,
+.rb,
+.lt,
+.lb
 {
     position: absolute;
-    top: -1.5rem;
-    left: .2rem;
-
-    width: .8rem;
-    height: 1.4rem;
-
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .8);
-    animation: smoke1Move 1900ms linear infinite;
-    animation-delay: 100ms;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
 }
 
-@keyframes smoke1Move
+.lb
 {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(0px, -80px);
-        opacity: .5;
-    }
+    left: 0;
+    bottom: 0;
 }
 
-.smoke-2
+.lt
 {
-    left: .4rem;
-    animation: smoke2Move 1700ms linear infinite;
-    animation-delay: 300ms;
+    left: 0;
+    top: 0;
 }
 
-@keyframes smoke2Move
+.rt
 {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0px, -60px);
-        opacity: .5;
-    }
+    right: 0;
+    top: 0;
 }
 
-.smoke-3
+.rb
 {
-    left: .6rem;
-    animation: smoke3Move 1600ms linear infinite;
-    animation-delay: 400ms;
-}
-
-@keyframes smoke3Move
-{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0px, -40px);
-        opacity: .5;
-    }
-}
-
-.smoke-4
-{
-    animation: smoke4Move 1400ms  linear infinite;
-    left: .8rem;
-    animation-delay: 600ms;
-}
-
-@keyframes smoke4Move
-{
-    0% {
-        opacity: 1;
-    }
-    100% {
-        transform: translate(0px, -20px);
-        opacity: .5;
-    }
+    right: 0;
+    bottom: 0;
 }
 
 .canvas
 {
     transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: .5s linear;
+}
+
+.lt:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(-20deg);
+}
+
+.rt:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(20deg);
+}
+
+.lb:hover ~ .canvas
+{
+    transform: rotateX(20deg) rotateY(-20deg);
+}
+
+.rb:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(-20deg);
 }
