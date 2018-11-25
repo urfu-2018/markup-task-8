@@ -827,6 +827,31 @@ ul
     animation-delay: .95s;
 }
 
+.moon
+{
+    top: 350px;
+    left: 396px;
+    animation: moonrise 10s cubic-bezier(.54,.18,.77,.47);
+    animation-fill-mode: forwards;
+}
+
+.h-con
+{
+}
+
+@keyframes moonrise
+{
+    0%
+    {
+        transform: scale(1.8) rotate(0) translateX(-240px) rotate(0);
+    }
+
+    100%
+    {
+        transform: scale(1) rotate(90deg) translateX(-240px) rotate(-90deg);
+    }
+}
+
 @keyframes smoke-animation-clockwise
 {
     100%
