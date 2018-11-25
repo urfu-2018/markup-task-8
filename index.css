@@ -653,34 +653,15 @@ ul
 
 .canvas
 {
-    transition: transform 1s linear;
+    transition: transform .3s linear;
     perspective: 600px;
     transform-style: preserve-3d;
-    overflow: hidden;
 }
-
-/*
 
 .center:hover .canvas
 {
 
-    transform: rotateY(25deg) rotateX(0);
-}
-
-.clouds
-{
-    position: absolute;
-    width: 900px;
-    height: 250px;
-    top: 0;
-
-    transform: translateZ(40px);
-    transform-origin: 0 0;
-}
-
-.moon
-{
-    transform: translateZ(25px);
+    transform: rotateY(15deg) rotateX(0);
 }
 
 .train,
@@ -688,8 +669,6 @@ ul
 {
     transform: translateZ(70px) scale(.8);
 }
-
-*/
 
 .train
 {
@@ -707,6 +686,19 @@ ul
     animation: wheel-joint-rotation 1800ms infinite linear;
 }
 
+.clouds
+{
+    position: absolute;
+    width: 900px;
+    height: 250px;
+    top: 0;
+
+    transform: translateZ(40px);
+    transform-origin: 0 0;
+    transform-style: preserve-3d;
+    perspective: 200px;
+}
+
 .cloud
 {
     animation: cloud-movement 1s linear,
@@ -719,7 +711,7 @@ ul
     animation-delay: 0s, 45s;
     top: 110px;
     left: 400px;
-    transform: scale(.25);
+    transform: scale(.25) translateZ(0);
 }
 
 .cloud-2
@@ -728,7 +720,7 @@ ul
     animation-delay: 0s, 36s;
     top: 50px;
     left: 250px;
-    transform: scale(.3) rotateY(180deg);
+    transform: scale(.3) rotateY(180deg) translateZ(10px);
 }
 
 .cloud-3
@@ -737,7 +729,7 @@ ul
     animation-delay: 0s, 28s;
     top: 80px;
     left: 70px;
-    transform: scale(.4);
+    transform: scale(.4) translateZ(20px);
 }
 
 .cloud-4
@@ -746,7 +738,7 @@ ul
     animation-delay: 0s, 12.5s;
     top: 150px;
     left: 550px;
-    transform: scale(.5)  rotateY(180deg);
+    transform: scale(.5)  rotateY(180deg) translateZ(30px);
 }
 
 .comet
@@ -848,7 +840,7 @@ ul
 
     100%
     {
-        transform: scale(1) rotate(90deg) translateX(-240px) rotate(-90deg);
+        transform: scale(1) rotate(90deg) translateX(-240px) rotate(-90deg) translateZ(25px);
     }
 }
 
@@ -884,7 +876,7 @@ ul
 {
     0%
     {
-        left: -180px;
+        left: -200px;
     }
 
     100%
