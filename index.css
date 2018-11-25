@@ -719,3 +719,25 @@ ul
         left: 940px;
     }
 }
+
+.moon-flight
+{
+    transform: translate(-100%, 400%) scale(1.5);
+    animation: moonrise 10s ease-in-out forwards;
+}
+
+@keyframes moonrise
+{
+    from
+    {
+        top: -160px;
+        left: 300px;
+    }
+
+    to
+    {
+        top: 20px;
+        left: 510px;
+        transform: scale(.8);
+    }
+}
