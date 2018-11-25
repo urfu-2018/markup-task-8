@@ -66,7 +66,6 @@ ul
 .center::after
 {
     position: absolute;
-    z-index: -1; /* TODO: del it */
 
     content: '';
 }
@@ -646,22 +645,103 @@ ul
     height: 120px;
 }
 
-.center
-{
-    perspective: 600px;
-}
-
 .canvas
 {
-    transition: transform .3s linear;
+    transition: transform .3s linear .3s;
     perspective: 600px;
     transform-style: preserve-3d;
 }
 
-.center:hover .canvas
+.side
 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    margin: auto;
 
-    transform: rotateY(15deg) rotateX(0);
+    background-color: pink;
+    opacity: .6;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 999;
+    transition: transform .3s linear .3s;
+}
+
+.side-b-right
+{
+    top: 400px;
+    left: 600px;
+}
+
+.side-t-right
+{
+    bottom: 400px;
+    left: 600px;
+}
+
+.side-b-left
+{
+    top: 400px;
+    right: 600px;
+}
+
+.side-t-left
+{
+    bottom: 400px;
+    right: 600px;
+}
+
+.side-b-right:hover ~ .canvas
+{
+    transform: rotateY(15deg) rotateX(-10deg);
+}
+
+.side-b-right:hover
+{
+    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
+    transform: rotateY(15deg) rotateX(-10deg) translateZ(-90px);
+}
+
+.side-t-right:hover ~ .canvas
+{
+    transform: rotateY(15deg) rotateX(10deg);
+}
+
+.side-t-right:hover
+{
+    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
+    transform: rotateY(15deg) rotateX(10deg) translateZ(-90px);
+}
+
+.side-b-left:hover ~ .canvas
+{
+    transform: rotateY(-15deg) rotateX(-10deg);
+}
+
+.side-b-left:hover
+{
+    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
+    transform: rotateY(-15deg) rotateX(-10deg) translateZ(-90px);
+}
+
+.side-t-left:hover ~ .canvas
+{
+    transform: rotateY(-15deg) rotateX(10deg);
+}
+
+.side-t-left:hover
+{
+    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
+    transform: rotateY(-15deg) rotateX(10deg) translateZ(-90px);
+}
+
+.center
+{
+    perspective: 600px;
 }
 
 .train,
@@ -827,10 +907,6 @@ ul
     animation-fill-mode: forwards;
 }
 
-.h-con
-{
-}
-
 @keyframes moonrise
 {
     0%
@@ -840,7 +916,8 @@ ul
 
     100%
     {
-        transform: scale(1) rotate(90deg) translateX(-240px) rotate(-90deg) translateZ(25px);
+        transform: scale(1) rotate(90deg) translateX(-240px)
+            rotate(-90deg) translateZ(25px);
     }
 }
 
