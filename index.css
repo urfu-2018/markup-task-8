@@ -953,8 +953,8 @@ ul
 
 .h-con
 {
-    -webkit-transform: translateZ(40px);
-    transform: translateZ(40px);
+    -webkit-transform: rotateX(15deg) translateZ(80px);
+    transform: rotateX(15deg) translateZ(80px);
 }
 
 .hill,
@@ -985,18 +985,13 @@ ul
 
 .wolf
 {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(-45deg);
+    margin-left: 30px;
+    -webkit-transform: rotateX(-10deg) translateZ(59px);
+    transform: rotateX(-10deg) translateZ(59px);
     position: absolute;
-    top: 20px;
-    left: 60px;
-}
-
-.audio
-{
-    height: 0;
-    overflow: hidden;
-    width: 0;
+    left: 50%;
+    bottom: 320px;
+    z-index: 1;
 }
 
 @keyframes wheel
