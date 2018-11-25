@@ -96,6 +96,23 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    transform-origin: 0 500%;
+    animation: moon-animation 10s linear infinite forwards;
+
+}
+
+@keyframes moon-animation
+{
+    0%
+    {
+        transform: scale(1.2, 1.2) rotate(-.25turn);
+    }
+
+    50%
+    {
+        transform: scale(1, 1) rotate(0);
+    }
+
 }
 
 .center::after
@@ -157,6 +174,92 @@ ul
 
     width: 44rem;
     height: 10rem;
+    animation: train-animation 10s linear infinite;
+}
+
+.cloud-1
+{
+    animation: cloud-animation-1 10s linear infinite;
+}
+
+@keyframes cloud-animation-1
+{
+    from
+    {
+        transform: scale(.5, .5) translate(0, 0);
+    }
+
+    to
+    {
+        transform: scale(.75, .75) translate(200%, 0);
+    }
+}
+
+.cloud-2
+{
+    animation: cloud-animation-2 10s linear infinite;
+}
+
+@keyframes cloud-animation-2
+{
+    from
+    {
+        transform: translate(0, 60px);
+    }
+
+    to
+    {
+        transform: translate(200%, 60px);
+    }
+}
+
+.cloud-3
+{
+    animation: cloud-animation-3 10s linear infinite;
+}
+
+@keyframes cloud-animation-3
+{
+    from
+    {
+        transform: scale(-1, 1) translate(-100%, 60px);
+    }
+
+    to
+    {
+        transform: scale(-1, 1) translate(-300%, 60px);
+    }
+}
+
+.cloud-4
+{
+    animation: cloud-animation-4 10s linear infinite;
+}
+
+@keyframes cloud-animation-4
+{
+    from
+    {
+        transform: scale(-1.5, 1.5) translate(0, 120px);
+    }
+
+    to
+    {
+        transform: scale(-1.5, 1.5) translate(-200%, 120px);
+    }
+}
+
+@keyframes train-animation
+{
+    from
+    {
+        transform: translate(100%, 0);
+    }
+
+    to
+    {
+        transform: translate(-200%, 0);
+    }
 }
 
 .engine-front,
@@ -245,31 +348,63 @@ ul
     z-index: -1;
     top: -1.5rem;
     left: .2rem;
-
     width: .8rem;
     height: 1.4rem;
+    visibility: hidden;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation: smokeAnimation 10s linear infinite forwards;
+}
+
+.smoke-1
+{
+    left: .2rem;
+
+    animation-delay: 1s;
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: 2s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: 3s;
 }
 
 .smoke-4
 {
     left: .8rem;
+
+    animation-delay: 4s;
+}
+
+.smoke-5
+{
+    left: 1rem;
+
+    animation-delay: 5s;
+}
+
+@keyframes smokeAnimation
+{
+    0%
+    {
+        visibility: hidden;
+        transform: translate(100%, 0);
+    }
+
+    100%
+    {
+        visibility: visible;
+        transform: translate(150rem, -50px);
+    }
 }
 
 .engine-body
@@ -294,6 +429,22 @@ ul
     content: '';
 
     transform: translate(-50%, 0);
+
+    animation: engine-body-animation .2s linear alternate infinite;
+}
+
+@keyframes engine-body-animation
+{
+    from
+    {
+        background-color: cyan;
+    }
+
+    to
+    {
+        background-color: magenta;
+    }
+
 }
 
 .engine-body::before
@@ -347,6 +498,21 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: rotating 2s linear infinite;
+}
+
+@keyframes rotating
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(-360deg);
+    }
 }
 
 .wheel-2
@@ -524,6 +690,22 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: wheelJointAnimation 2s linear infinite forwards;
+
+}
+
+@keyframes wheelJointAnimation
+{
+    from
+    {
+        transform: rotate(0);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-joint::before,
