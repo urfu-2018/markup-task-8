@@ -88,6 +88,7 @@ ul
     position: absolute;
     top: 100px;
     left: calc(50% - 60px);
+    z-index: 1;
 
     width: 120px;
     height: 120px;
@@ -626,7 +627,7 @@ ul
 .h-con
 {
     position: absolute;
-    z-index: 1;
+    z-index: 130;
     bottom: 0;
     left: 0;
 
@@ -690,7 +691,6 @@ ul
 .cloud
 {
     position: absolute;
-    z-index: 1;
     top: 0;
     left: 0;
 
@@ -700,6 +700,102 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+}
+
+.clouds :nth-child(1)
+{
+    top: 170px;
+    z-index: 100;
+    opacity: .3;
+    animation-name: cloud-animation-1;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud-animation-1
+{
+    from
+    {
+        transform: scale(.5, .5) translateX(-100%);
+    }
+
+    to
+    {
+        transform: scale(.5, .5) translateX(500%);
+    }
+}
+
+.clouds :nth-child(2)
+{
+    z-index: 250;
+    top: 200px;
+    opacity: .8;
+    animation-name: cloud-animation-2;
+    animation-duration: 20s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes cloud-animation-2
+{
+    from
+    {
+        transform: scale(-1.25, 1.25) translateX(500%);
+    }
+
+    to
+    {
+        transform: scale(-1.25, 1.25) translateX(-500%);
+    }
+}
+
+.clouds :nth-child(3)
+{
+    z-index: 160;
+    top: 100px;
+    opacity: .6;
+    animation-name: cloud-animation-3;
+    animation-duration: 10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards
+}
+
+@keyframes cloud-animation-3
+{
+    0%
+    {
+        transform: scale(-0.75, 0.85) translateX(150%);
+    }
+    100%
+    {
+        transform: scale(-0.75, 0.85) translateX(-450%);
+    }
+}
+
+.clouds :nth-child(4)
+{
+    top: 80px;
+    z-index: 300;
+    opacity: .9;
+    animation-name: cloud-animation-4;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes cloud-animation-4
+{
+    from
+    {
+        transform: scale(-1.25, 1.25) translateX(200%);
+    }
+
+    to
+    {
+        transform: scale(-1.25, 1.25) translateX(-500%);
+    }
 }
 
 .cloud:before,
