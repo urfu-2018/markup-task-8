@@ -1,3 +1,23 @@
+.controls
+{
+    position: absolute;
+    margin: 20px;
+    z-index: 1;
+}
+
+input.controls
+{
+    margin-top: 24px;
+    margin-left: 280px;
+}
+
+.controls:checked ~ .side,
+.controls:checked ~ .canvas .canvas-hider
+{
+    background-color: pink;
+    opacity: .6;
+}
+
 /* stylelint-disable-next-line */
 *,
 *:before,
