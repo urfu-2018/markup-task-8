@@ -1,0 +1,118 @@
+.cloud
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    height: 60px;
+
+    opacity: .8;
+    border-radius: 200px;
+    background: #fff;
+}
+
+.cloud:before,
+.cloud:after
+{
+    position: absolute;
+    top: -15px;
+    left: 10px;
+
+    width: 100px;
+    height: 80px;
+
+    content: '';
+
+    border-radius: 100px;
+    background: #fff;
+}
+
+.cloud:after
+{
+    top: -55px;
+    right: 15px;
+    left: auto;
+
+    width: 120px;
+    height: 120px;
+}
+
+.cloud-1
+{
+    top: 400px;
+    animation: right-move-1 26s linear -5s infinite;
+}
+
+@keyframes right-move-1
+{
+    from
+    {
+        transform: translateX(-150px);
+    }
+
+    to
+    {
+        transform: translateX(1000px);
+    }
+}
+
+.cloud-2
+{
+    top: 120px;
+    z-index: 100;
+    animation: right-move-2 35s linear -5s infinite;
+}
+
+@keyframes right-move-2
+{
+    from
+    {
+        transform: translateX(-150px) scale(-.5, .5);
+    }
+
+    to
+    {
+        transform: translateX(1000px) scale(-.5, .5);
+    }
+}
+
+.cloud-3
+{
+    top: 10px;
+    animation: right-move-3 42s linear -5s infinite;
+}
+
+@keyframes right-move-3
+{
+    from
+    {
+        transform: translateX(-150px) scale(.45);
+    }
+
+    to
+    {
+        transform: translateX(1000px) scale(.45);
+    }
+}
+
+.cloud-4
+{
+    top: 260px;
+    animation: right-move-4 22s linear -5s infinite;
+    z-index: 100;
+}
+
+@keyframes right-move-4
+{
+    from
+    {
+        transform: translateX(-150px) scale(-1.1, 1.1);
+    }
+
+    to
+    {
+        transform: translateX(1000px) scale(-1.1, 1.1);
+    }
+}
