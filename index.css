@@ -704,7 +704,7 @@ ul
 {
     transform: translate(10%, 270%) scale(-1, 1);
     animation: move-clouds 12s infinite linear;
-    z-index: 1;
+    z-index: 400;
 }
 
 @keyframes move-clouds
@@ -737,7 +737,26 @@ ul
     to
     {
         top: 20px;
-        left: 510px;
+        left: 410px;
         transform: scale(.8);
+    }
+}
+
+.train
+{
+    transform: translateX(200px);
+    animation: move-train infinite 20s linear;
+}
+
+@keyframes move-train
+{
+    from
+    {
+        left: 800px;
+    }
+
+    to
+    {
+        left: -800px;
     }
 }
