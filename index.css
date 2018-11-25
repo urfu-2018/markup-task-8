@@ -689,9 +689,10 @@ ul
 
 .canvas
 {
-    transition: transform .3s linear .3s;
+    transition: transform .4s ease-in-out .4s;
     perspective: 600px;
     transform-style: preserve-3d;
+    transform: translateZ(-100px);
 }
 
 .side
@@ -707,37 +708,37 @@ ul
     left: 0;
 
     z-index: 1;
-    transition: transform .3s linear .3s;
+    transition: transform .4s ease-in-out .4s;
 }
 
 .side-b-right
 {
-    top: 400px;
-    left: 600px;
+    top: 315px;
+    left: 500px;
 }
 
 .side-t-right
 {
-    bottom: 400px;
-    left: 600px;
+    bottom: 315px;
+    left: 500px;
 }
 
 .side-b-left
 {
-    top: 400px;
-    right: 600px;
+    top: 315px;
+    right: 500px;
 }
 
 .side-t-left
 {
-    bottom: 400px;
-    right: 600px;
+    bottom: 315px;
+    right: 500px;
 }
 
 .side-b-right:hover ~ .canvas,
 .side-b-right:hover
 {
-    transform: rotateY(15deg) rotateX(-10deg);
+    transform: rotateY(15deg) rotateX(-8deg);
 }
 
 .side-b-right:hover
@@ -749,7 +750,7 @@ ul
 .side-t-right:hover ~ .canvas,
 .side-t-right:hover
 {
-    transform: rotateY(15deg) rotateX(10deg);
+    transform: rotateY(15deg) rotateX(8deg);
 }
 
 .side-t-right:hover
@@ -761,7 +762,7 @@ ul
 .side-b-left:hover ~ .canvas,
 .side-b-left:hover
 {
-    transform: rotateY(-15deg) rotateX(-10deg);
+    transform: rotateY(-15deg) rotateX(-8deg);
 }
 
 .side-b-left:hover
@@ -773,7 +774,7 @@ ul
 .side-t-left:hover ~ .canvas,
 .side-t-left:hover
 {
-    transform: rotateY(-15deg) rotateX(10deg);
+    transform: rotateY(-15deg) rotateX(8deg);
 }
 
 .side-t-left:hover
