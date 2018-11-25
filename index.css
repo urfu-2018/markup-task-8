@@ -173,6 +173,23 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation-name: train-move;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes train-move
+{
+    from
+    {
+        transform: translateX(120%);
+    }
+    to
+    {
+        transform: translateX(-210%);
+    }
 }
 
 .engine-front,
@@ -363,6 +380,25 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+    
+    animation-name: wheel-rotation;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes wheel-rotation
+{
+    from
+    {
+        transform: rotate(-1deg);
+    }
+
+    to
+    {
+        transform: rotate(359deg);
+    }
 }
 
 .wheel-2
