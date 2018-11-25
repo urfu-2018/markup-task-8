@@ -62,6 +62,11 @@ ul
     margin: auto;
 }
 
+.no-display
+{
+    display: none;
+}
+
 .center::before,
 .center::after
 {
@@ -176,7 +181,7 @@ ul
     height: 10rem;
 
     animation-name: train-move;
-    animation-duration: 15s;
+    animation-duration: 30s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
@@ -185,7 +190,7 @@ ul
 {
     from
     {
-        transform: translateX(120%);
+        transform: translateX(150%);
     }
     to
     {
@@ -277,33 +282,156 @@ ul
 {
     position: absolute;
     z-index: -1;
-    top: -1.5rem;
-    left: .2rem;
+    top: -2em;
+    visibility: hidden;
 
-    width: .8rem;
-    height: 1.4rem;
+    width: .8em;
+    height: 1.4em;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation-name: smoke-animation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
+
+@keyframes smoke-animation
+{
+    0%
+    {
+        visibility: hidden;
+        transform: translate(0, 0);
+    }
+
+    100%
+    {
+        visibility: visible;
+        transform: translate(50em, -50px);
+    }
+}
+
+.smoke-1
+{
+    left: .1em;
+    animation-delay: 9.3s;
 }
 
 .smoke-2
 {
-    left: .4rem;
-
-    animation-delay: .1s;
+    left: .2em;
+    animation-delay: 9.6s;
 }
 
 .smoke-3
 {
-    left: .6rem;
-
-    animation-delay: .2s;
+    left: .3em;
+    animation-delay: 10s;
 }
 
 .smoke-4
 {
-    left: .8rem;
+    left: .4em;
+    animation-delay: 10.5s;
+}
+
+.smoke-5
+{
+    left: .5em;
+    animation-delay: 11s;
+}
+
+.smoke-6
+{
+    left: .6em;
+    animation-delay: 11.5s;
+}
+
+.smoke-7
+{
+    left: .7em;
+    animation-delay: 12s;
+}
+
+.smoke-8
+{
+    left: .8em;
+    animation-delay: 12.5s;
+}
+
+.smoke-9
+{
+    left: .9em;
+    animation-delay: 13s;
+}
+
+.smoke-10
+{
+    left: 1em;
+    animation-delay: 13.5s;
+}
+
+.smoke-11
+{
+    left: 1.1em;
+    animation-delay: 14s;
+}
+
+.smoke-12
+{
+    left: 1.2em;
+    animation-delay: 14.5s;
+}
+
+.smoke-13
+{
+    left: 1.3em;
+    animation-delay: 15s;
+}
+
+.smoke-14
+{
+    left: 1.4em;
+    animation-delay: 15.5s;
+}
+
+.smoke-15
+{
+    left: 1.5em;
+    animation-delay: 16s;
+}
+
+.smoke-16
+{
+    left: 1.6em;
+    animation-delay: 16.5s;
+}
+
+.smoke-17
+{
+    left: 1.7em;
+    animation-delay: 17s;
+}
+
+.smoke-18
+{
+    left: 1.8em;
+    animation-delay: 17.5s;
+}
+
+.smoke-19
+{
+    left: 1.9em;
+    animation-delay: 18s;
+}
+
+.smoke-20
+{
+    left: 2em;
+    animation-delay: 18.5s;
 }
 
 .engine-body
@@ -350,6 +478,25 @@ ul
 
     border-radius: .2rem;
     background: #b3e0f2;
+    animation-name: party-body;
+    animation-duration: .2s;
+    animation-delay: 9.3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes party-body
+{
+    from
+    {
+        background: magenta;
+    }
+
+    to
+    {
+        background: cyan;
+    }
 }
 
 .wheel::before,
@@ -535,10 +682,28 @@ ul
 
     width: 100%;
     height: 40%;
-
+    
     background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
+    animation-name: party-compartment;
+    animation-delay: 9.3s;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
     background-position: left;
     background-size: 2.4rem 100%;
+}
+
+@keyframes party-compartment {
+    from
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, magenta .8rem);
+    }
+
+    to
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, cyan .8rem);
+    }
 }
 
 .compartment-window::before,
@@ -867,4 +1032,30 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.snoop-dogg
+{
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 290px;
+    height: 595px;
+    animation-name: snoop-dogg-animation;
+    animation-delay: 9.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes snoop-dogg-animation
+{
+    from
+    {
+        background: none;
+    }
+
+    to
+    {
+        background: url('images/snoop_dogg.gif') no-repeat;
+    }
 }
