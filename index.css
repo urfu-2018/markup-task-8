@@ -675,3 +675,227 @@ ul
     width: 120px;
     height: 120px;
 }
+
+.wheel
+{
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: spin_reverse 2s linear infinite forwards;
+}
+
+@keyframes spin_reverse
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.train
+{
+    animation: toto 5s linear infinite,
+        speedy_toto 4s cubic-bezier(1, -.07, 1, .25) infinite 10s,
+        hella-yeah-toto .5s linear infinite 14.5s;
+}
+
+@keyframes toto
+{
+    from
+    {
+        transform: translateX(600px);
+    }
+
+    to
+    {
+        transform: translateX(-1200px);
+    }
+}
+
+@keyframes speedy_toto
+{
+    from
+    {
+        transform: translateX(600px);
+    }
+
+    to
+    {
+        transform: translateX(-1200px);
+    }
+}
+
+@keyframes hella-yeah-toto
+{
+    from
+    {
+        transform: scaleY(-1) translate(600px, -120px);
+    }
+
+    to
+    {
+        transform: scaleY(-1) translate(-1200px, -120px);
+    }
+}
+
+.cloud.№1
+{
+    opacity: .3;
+    animation: cl1 45s linear infinite forwards;
+}
+
+@keyframes cl1
+{
+    from
+    {
+        transform: translate(-150px, 350px) scale(.3, .3);
+    }
+
+    to
+    {
+        transform: translate(900px, 350px) scale(.3, .3);
+    }
+}
+
+.cloud.№2
+{
+    z-index: 131;
+    animation: cl2 30s linear infinite;
+}
+
+@keyframes cl2
+{
+    from
+    {
+        transform: translate(-250px, 250px) scale(-.6, .4);
+    }
+
+    to
+    {
+        transform: translate(1000px, 250px) scale(-.6, .4);
+    }
+}
+
+.cloud.№3
+{
+    opacity: 1;
+    animation: cl3 22s linear infinite;
+}
+
+@keyframes cl3
+{
+    from
+    {
+        transform: translate(720px, 100px) scale(.7, .7);
+    }
+
+    to
+    {
+        transform: translate(-170px, 100px) scale(.7, .7);
+    }
+}
+
+.cloud.№4
+{
+    opacity: .6;
+    animation: cl4 40s linear infinite;
+}
+
+@keyframes cl4
+{
+    from
+    {
+        transform: translate(690px, 270px) scale(-.4, .2);
+    }
+
+    to
+    {
+        transform: translate(-170px, 270px) scale(-.4, .2);
+    }
+}
+
+.smoke
+{
+    animation: smoke 1s linear infinite .25s;
+}
+
+.smoke-2
+{
+    animation: smoke 1s linear infinite .5s;
+}
+
+.smoke-3
+{
+    animation: smoke 1s linear infinite .75s;
+}
+
+.smoke-4
+{
+    animation: smoke 1s linear infinite 1s;
+}
+
+@keyframes smoke
+{
+    to
+    {
+        transform: translate(80px, -40px) scale(3);
+    }
+}
+
+.moon
+{
+    animation: moon_rising 20s linear forwards;
+}
+
+@keyframes moon_rising
+{
+    from
+    {
+        transform: translate(-200px, 200px);
+    }
+    
+    to
+    {
+        transform: translate(40px, 50px) scale(.6);
+    }
+}
+
+.canvas
+{
+    animation: HELLA_YEAH 6s cubic-bezier(.61,-1.42,.16,1.84) infinite alternate 15s;
+}
+
+@keyframes HELLA_YEAH
+{
+    0%
+    {
+        background: linear-gradient(#013971, #000c18 60%);
+    }
+
+    25%
+    {
+        transform: translate(0, 70px) rotate(.5turn);
+        background: linear-gradient(#0865c2, #032444 60%);
+    }
+
+    50%
+    {
+        transform: translate(0, -70px) rotate(1.1turn);
+        background: linear-gradient(#c29008, #053f79 60%);
+    }
+
+    100%
+    {
+        background: linear-gradient(#f00, #7e5200 70%);
+    }
+}
