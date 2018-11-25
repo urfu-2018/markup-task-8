@@ -979,9 +979,45 @@ ul
 
 @keyframes smoke-animation-clockwise
 {
+    30%
+    {
+        left: 3px;
+    }
+
+    40%
+    {
+        left: 5px;
+    }
+
+    50%
+    {
+        left: 7px;
+    }
+
+    60%
+    {
+        left: 11px;
+    }
+
+    70%
+    {
+        left: 14px;
+    }
+
+    80%
+    {
+        left: 19px;
+    }
+
+    90%
+    {
+        left: 24px;
+    }
+
     100%
     {
         top: -60px;
+        left: 30px;
         opacity: 0;
         transform: rotate(120deg);
     }
@@ -989,9 +1025,45 @@ ul
 
 @keyframes smoke-animation-anti-clockwise
 {
+    30%
+    {
+        left: 3px;
+    }
+
+    40%
+    {
+        left: 5px;
+    }
+
+    50%
+    {
+        left: 7px;
+    }
+
+    60%
+    {
+        left: 11px;
+    }
+
+    70%
+    {
+        left: 14px;
+    }
+
+    80%
+    {
+        left: 19px;
+    }
+
+    90%
+    {
+        left: 24px;
+    }
+
     100%
     {
         top: -60px;
+        left: 30px;
         opacity: 0;
         transform: rotate(-120deg);
     }
