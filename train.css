@@ -8,7 +8,7 @@
     width: 44rem;
     height: 10rem;
 
-    animation: train-move 15s linear 3s infinite;
+    animation: train-move 15s linear -3s infinite;
 }
 
 @keyframes train-move
@@ -116,20 +116,34 @@
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke-move-1 7s linear infinite;
+}
+
+@keyframes smoke-move-1
+{
+    from
+    {
+        transform: translate(0, 0);
+    }
+    to
+    {
+        transform: translate(500px, -60px) rotate(90deg);
+    }
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: .2s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: .4s;
 }
 
 .smoke-4
