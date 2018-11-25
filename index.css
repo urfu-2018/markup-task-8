@@ -72,15 +72,91 @@ ul
 
 .canvas
 {
-    position: relative;
+    position: absolute;
 
     overflow: hidden;
 
     width: 900px;
     height: 600px;
     margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transition: 1s ease;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+    z-index: 1;
+}
+
+.block1
+{
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    margin: auto;
+
+}
+
+.block_left_top
+{
+    z-index: 2;
+    top: -300px;
+    left: -450px;
+    bottom: 0;
+    right: 0;
+}
+
+.block_right_top
+{
+    z-index: 2;
+    top: -300px;
+    left: 0;
+    bottom: 0;
+    right: -450px;
+}
+
+.block_left_bottom
+{
+    z-index: 2;
+    top: 0;
+    bottom: -300px;
+    left: -450px;
+    right: 0;
+}
+
+.block_right_bottom
+{
+    z-index: 2;
+    top: 0;
+    bottom: -300px;
+    left: 0;
+    right: -450px;
+}
+
+.block_left_top:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(20deg);
+}
+
+.block_right_top:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(-20deg);
+}
+
+.block_left_bottom:hover ~ .canvas
+{
+    cursor: pointer;
+    transform: rotateX(20deg) rotateY(20deg);
+}
+
+.block_right_bottom:hover ~ .canvas
+{
+    cursor: pointer;
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 
 .moon
@@ -255,21 +331,21 @@ ul
 
 .smoke-2
 {
-    left: .4rem;
+    left: .3rem;
 
     animation-delay: .1s;
 }
 
 .smoke-3
 {
-    left: .6rem;
+    left: .2rem;
 
     animation-delay: .2s;
 }
 
 .smoke-4
 {
-    left: .8rem;
+    left: .3rem;
 }
 
 .engine-body
@@ -648,6 +724,8 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+
+    transform-style: preserve-3d;
 }
 
 .cloud:before,
@@ -674,4 +752,226 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+/*Мои стили*/
+/*Тучки*/
+
+.cloud
+{
+    left: -200px;
+    animation: cloud 25s linear infinite;
+    transform: scale(-1, 1);
+}
+
+.cloud_1
+{
+    top: 200px;
+    z-index: 2;
+}
+
+.cloud_2
+{
+    top: 150px;
+    transform: scale(.7);
+    animation-duration: 30s;
+    animation-delay: 5s;
+}
+
+.cloud_3
+{
+    top: 100px;
+    transform: scale(-.5, .5);
+    animation-duration: 35s;
+    animation-delay: 15s;
+}
+
+.cloud_4
+{
+    top: 10px;
+    transform: scale(.3);
+    animation-duration: 40s;
+}
+
+@keyframes cloud
+{
+    to
+    {
+        left: 100%;
+    }
+}
+
+/*Луна*/
+
+.block_moon
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform-origin: bottom center;
+    animation: block-moon 10s linear;
+}
+
+.moon
+{
+    animation: moon-size 10s linear;
+}
+
+@keyframes block-moon
+{
+    0%
+    {
+        transform: rotate(-90deg);
+    }
+
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes moon-size
+{
+    0%
+    {
+        transform: scale(2);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+/*Паровоз*/
+
+.train
+{
+    animation: train 10s linear infinite;
+    right: -500px;
+}
+
+@keyframes train
+{
+    to
+    {
+        right: 100%;
+    }
+}
+
+/*Колеса*/
+
+.wheel
+{
+    animation: wheel-train 2s linear infinite;
+    z-index: 1;
+}
+
+@keyframes wheel-train
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 2s linear infinite;
+    z-index: 2;
+}
+@keyframes wheel-joint
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint-2 2s linear infinite;
+}
+@keyframes wheel-joint-2
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    50%
+    {
+        transform: rotate(160deg);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+/*Дымок*/
+
+.smoke
+{
+    animation: smoke 3s ease-out infinite;
+    width: 17px;
+    height: 17px;
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+@keyframes smoke
+{
+    from
+    {
+        opacity: 1;
+    }
+
+    to
+    {
+        top: -60px;
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+/*Окна*/
+
+.compartment-window
+{
+    animation: window 5s linear infinite;
+}
+
+.compartment-two .compartment-window
+{
+    animation-delay: 7s;
+}
+
+.compartment-three .compartment-window
+{
+    animation-delay: 3s;
+}
+
+@keyframes window
+{
+    to
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, gold .8rem);
+    }
 }
