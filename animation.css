@@ -1,0 +1,259 @@
+/*
+    Движение поезда должно повторяться.
+    Движение луны нет. Облака тоже зациклены.
+*/
+
+/* <editor-fold desc="Hover effect"> */
+
+.control
+{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    /*background: rgba(255, 0, 0, .4);*/
+    z-index: 10;
+}
+
+.control-top-left
+{
+    top: 0;
+    left: 150px;
+}
+
+.control-top-right
+{
+    top: 0;
+    right: 150px;
+}
+
+.control-bottom-left
+{
+    bottom: 0;
+    left: 150px;
+}
+
+.control-bottom-right
+{
+    bottom: 0;
+    right: 150px;
+}
+
+.canvas
+{
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.train,
+.bridge
+{
+    transform: translateZ(300px);
+}
+
+.h-con
+{
+    transform: translateZ(100px);
+}
+
+.control-top-left:hover ~ .canvas
+{
+    transform: perspective(1000px) rotateX(15deg) rotateY(-9deg);
+}
+
+.control-top-right:hover ~ .canvas
+{
+    transform: perspective(1000px) rotateX(15deg) rotateY(9deg);
+}
+
+.control-bottom-left:hover ~ .canvas
+{
+    transform: perspective(1000px) rotateX(-5deg) rotateY(-9deg);
+}
+
+.control-bottom-right:hover ~ .canvas
+{
+    transform: perspective(1000px) rotateX(-5deg) rotateY(9deg);
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Hover effect"> */
+
+@keyframes falling-star
+{
+    100%
+    {
+        transform: translate(2000px, 1000px);
+    }
+}
+
+.star.falling-star
+{
+    top: -250px;
+    left: -250px;
+    z-index: 0;
+    width: 3px;
+    height: 3px;
+    background: #ff0;
+    animation: falling-star 6s ease-in;
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Smoke"> */
+
+@keyframes smoke
+{
+    100%
+    {
+        opacity: 0;
+        transform: translate(30px, -80px);
+    }
+}
+
+.smoke
+{
+    animation: smoke 4s infinite linear;
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Moon"> */
+
+@keyframes moon
+{
+    0%
+    {
+        transform: rotate(90deg) scale(1.2);
+
+    }
+}
+
+.moon
+{
+    animation: moon 60s linear;
+    transform-origin: 140px 370px;
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Wheels"> */
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes wheel-joint-2
+{
+    100%
+    {
+        transform: rotate(345deg);
+    }
+}
+
+.wheel-joint-1
+{
+    animation: wheel 2s infinite linear reverse;
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint-2 2s infinite linear;
+}
+
+.wheel
+{
+    animation: wheel 2s infinite linear;
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Train"> */
+
+@keyframes train
+{
+    0%
+    {
+        left: 920px;
+    }
+
+    100%
+    {
+        left: -460px;
+    }
+}
+
+.train
+{
+    animation: train 10s infinite linear;
+}
+
+/* </editor-fold> */
+
+/* <editor-fold desc="Clouds"> */
+
+@keyframes cloud
+{
+    0%
+    {
+        left: -200px;
+    }
+
+    100%
+    {
+        left: 900px;
+    }
+}
+
+.cloud-1
+{
+    top: 50px;
+    transform: scale(.98);
+    animation: cloud 39s infinite linear reverse;
+    animation-delay: -18s;
+}
+
+.cloud-2
+{
+    top: 100px;
+    transform: scale(.41);
+    animation: cloud 20s infinite linear;
+    animation-delay: -2s;
+}
+
+.cloud-3
+{
+    top: -5px;
+    transform: scale(.73);
+    animation: cloud 24s infinite linear;
+    animation-delay: -12s;
+}
+
+.cloud-4
+{
+    top: 200px;
+    transform: scale(.6);
+    animation: cloud 28s infinite linear reverse;
+    animation-delay: -4s;
+}
+
+/* </editor-fold> */

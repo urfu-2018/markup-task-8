@@ -5,10 +5,16 @@
     <title>Задача «Мультик»</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="animation.css">
 </head>
 <body>
 
 <div class="center">
+    <div class="control control-top-left"></div>
+    <div class="control control-top-right"></div>
+    <div class="control control-bottom-left"></div>
+    <div class="control control-bottom-right"></div>
+
     <div class="canvas">
         <div class="stars">
             <div class="star"></div>
@@ -32,7 +38,7 @@
             <div class="star"></div>
             <div class="star"></div>
             <div class="star"></div>
-            <div class="star"></div>
+            <div class="star falling-star"></div>
             <div class="star"></div>
             <div class="star"></div>
             <div class="star"></div>
@@ -122,10 +128,10 @@
         </div>
         <div class="moon"></div>
         <div class="clouds">
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
         </div>
         <div class="h-con">
             <div class="hill2"></div>
@@ -159,7 +165,7 @@
             <div class="wheel-holder">
                 <div class="wheel"></div>
                 <div class="wheel wheel-2">
-                    <div class="wheel-joint"></div>
+                    <div class="wheel-joint wheel-joint-1"></div>
                     <div class="wheel-joint wheel-joint-2"></div>
                 </div>
                 <div class="wheel wheel-3"></div>
