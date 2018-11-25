@@ -867,7 +867,7 @@ ul
 
     25%
     {
-        transform: rotate(42deg);
+        transform: rotate(43deg);
     }
 
     50%
@@ -877,7 +877,7 @@ ul
 
     75%
     {
-        transform: rotate(47deg);
+        transform: rotate(46deg);
     }
 
     100%
@@ -910,4 +910,57 @@ ul
         background-image: linear-gradient(
             90deg, transparent .8rem, skyblue .8rem);
     }
+}
+
+.canvas
+{
+    transition: 1.5s linear;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.hover-area
+{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    left: 20.4%;
+    top: 16.4%;
+    z-index: 1;
+}
+
+.top-right
+{
+    transform: translate(100%, 0);
+}
+
+.bottom-left
+{
+    transform: translate(0, 100%);
+}
+
+.bottom-right
+{
+    transform: translate(100%, 100%);
+}
+
+.top-left:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(12deg) rotateY(22deg);
+}
+
+.top-right:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(-12deg) rotateY(-22deg);
+}
+
+.bottom-left:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(-12deg) rotateY(22deg);
+}
+
+.bottom-right:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(12deg) rotateY(-22deg);
+    
 }
