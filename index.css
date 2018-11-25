@@ -120,6 +120,7 @@ ul
         transform: translateY(-70%) scale(.7);
     }
 }
+
 .center::after
 {
     width: 100%;
@@ -192,6 +193,7 @@ ul
     {
         transform: translateX(150%);
     }
+
     to
     {
         transform: translateX(-210%);
@@ -296,8 +298,6 @@ ul
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
 }
-
-
 
 @keyframes smoke-animation
 {
@@ -694,9 +694,11 @@ ul
     background-size: 2.4rem 100%;
 }
 
-@keyframes party-compartment {
+@keyframes party-compartment
+{
     from
     {
+        /* stylelint-disable-next-line */
         background-image: linear-gradient(90deg, transparent .8rem, magenta .8rem);
     }
 
@@ -814,12 +816,12 @@ ul
 
     25%
     {
-        transform: rotate(0.2turn);
+        transform: rotate(.2turn);
     }
 
     50%
     {
-        transform: rotate(0.5turn);
+        transform: rotate(.5turn);
     }
 
     100%
@@ -944,7 +946,7 @@ ul
     animation-name: cloud-animation-2;
     animation-duration: 20s;
     animation-timing-function: ease-out;
-    animation-iteration-count: infinite; 
+    animation-iteration-count: infinite;
 }
 
 @keyframes cloud-animation-2
@@ -968,18 +970,19 @@ ul
     animation-name: cloud-animation-3;
     animation-duration: 10s;
     animation-timing-function: ease;
-    animation-fill-mode: forwards
+    animation-fill-mode: forwards;
 }
 
 @keyframes cloud-animation-3
 {
     0%
     {
-        transform: scale(-0.75, 0.85) translateX(150%);
+        transform: scale(-.75, .85) translateX(150%);
     }
+
     100%
     {
-        transform: scale(-0.75, 0.85) translateX(-450%);
+        transform: scale(-.75, .85) translateX(-450%);
     }
 }
 
