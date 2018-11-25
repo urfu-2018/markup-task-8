@@ -645,6 +645,29 @@ ul
     height: 120px;
 }
 
+.canvas-hider
+{
+    position: absolute;
+    width: 600px;
+    height: 100%;
+    top: 0;
+
+    background-color: pink;
+    opacity: .6;
+    z-index: 1;
+    transform: translateZ(80px);
+}
+
+.canvas-hider-left
+{
+    left: -490px;
+}
+
+.canvas-hider-right
+{
+    right: -490px;
+}
+
 .canvas
 {
     transition: transform .3s linear .3s;
@@ -667,7 +690,7 @@ ul
     bottom: 0;
     left: 0;
 
-    z-index: 999;
+    z-index: 1;
     transition: transform .3s linear .3s;
 }
 
@@ -695,48 +718,52 @@ ul
     right: 600px;
 }
 
-.side-b-right:hover ~ .canvas
+.side-b-right:hover ~ .canvas,
+.side-b-right:hover
 {
     transform: rotateY(15deg) rotateX(-10deg);
 }
 
 .side-b-right:hover
 {
-    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
-    transform: rotateY(15deg) rotateX(-10deg) translateZ(-90px);
+    width: 400px;
+    height: 400px;
 }
 
-.side-t-right:hover ~ .canvas
+.side-t-right:hover ~ .canvas,
+.side-t-right:hover
 {
     transform: rotateY(15deg) rotateX(10deg);
 }
 
 .side-t-right:hover
 {
-    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
-    transform: rotateY(15deg) rotateX(10deg) translateZ(-90px);
+    width: 400px;
+    height: 400px;
 }
 
-.side-b-left:hover ~ .canvas
+.side-b-left:hover ~ .canvas,
+.side-b-left:hover
 {
     transform: rotateY(-15deg) rotateX(-10deg);
 }
 
 .side-b-left:hover
 {
-    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
-    transform: rotateY(-15deg) rotateX(-10deg) translateZ(-90px);
+    width: 400px;
+    height: 400px;
 }
 
-.side-t-left:hover ~ .canvas
+.side-t-left:hover ~ .canvas,
+.side-t-left:hover
 {
     transform: rotateY(-15deg) rotateX(10deg);
 }
 
 .side-t-left:hover
 {
-    /* Сами области тоже двигаем, чтобы они были прибиты к полотну */
-    transform: rotateY(-15deg) rotateX(10deg) translateZ(-90px);
+    width: 400px;
+    height: 400px;
 }
 
 .center
