@@ -1,0 +1,27 @@
+.moon
+{
+    animation: moon-action 20s;
+}
+
+@keyframes moon-action
+{
+    0%
+    {
+        top: 250px;
+        left: -50px;
+    }
+
+    45%,
+    55%
+    {
+        top: 100px;
+        left: calc(50% - 60px);
+        transform: scale(.85);
+    }
+
+    100%
+    {
+        top: 250px;
+        left: calc(100% + 50px);
+    }
+}

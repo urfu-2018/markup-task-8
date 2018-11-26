@@ -1,0 +1,31 @@
+.train
+{
+    animation: train-action 25s linear;
+}
+
+@keyframes train-action
+{
+    from
+    {
+
+        right: -70%;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+}
+
+@keyframes body-upDown
+{
+    50%
+    {
+        transform: translateY(-2px);
+    }
+
+    100%
+    {
+        transform: translateY(0);
+    }
+}

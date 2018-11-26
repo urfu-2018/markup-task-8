@@ -1,0 +1,66 @@
+.cloud-1
+{
+    animation-name: cloud-1-action;
+    animation-duration: 15s;
+    top: 100px;
+    left: 0;
+}
+
+.cloud-2
+{
+    animation-name: cloud-2-action;
+    animation-duration: 15s;
+    left: 250px;
+    top: 30px;
+    transform: scale(.8);
+}
+
+.cloud-3
+{
+    animation-name: cloud-3-action;
+    animation-duration: 15s;
+    left: 500px;
+    top: 220px;
+    transform: scale(-.5, .5);
+}
+
+.cloud-4
+{
+    animation-name: cloud-4-action;
+    animation-duration: 15s;
+    left: 600px;
+    top: 150px;
+    transform: scale(-.4, .4) ;
+}
+
+@keyframes cloud-1-action
+{
+    to
+    {
+        left: 100%;
+    }
+}
+
+@keyframes cloud-2-action
+{
+    to
+    {
+        left: calc(100% + 200px);
+    }
+}
+
+@keyframes cloud-3-action
+{
+    to
+    {
+        left: calc(100% + 500px);
+    }
+}
+
+@keyframes cloud-4-action
+{
+    to
+    {
+        left: calc(100% + 600px);
+    }
+}

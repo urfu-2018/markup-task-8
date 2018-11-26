@@ -1,0 +1,72 @@
+.canvas
+{
+    transition: transform 2s ease-in-out;
+    transform-style: preserve-3d;
+    overflow: visible;
+}
+
+.hover
+{
+    position: absolute;
+    z-index: 100;
+}
+
+.hover-1
+{
+    left: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.hover-2
+{
+    top: 0;
+    width: 100%;
+    height: 15%;
+}
+
+.hover-3
+{
+    right: 0;
+    width: 15%;
+    height: 100%;
+}
+
+.hover-4
+{
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+}
+
+.hover-1:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 30deg);
+}
+
+.hover-2:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 30deg);
+}
+
+.hover-3:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+.hover-4:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 30deg);
+}
+
+.bridge
+{
+    transform: translateZ(125px);
+    width: 1500px;
+    margin-left: -100px;
+}
+
+.train
+{
+    transform: translateZ(120px);
+}

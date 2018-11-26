@@ -1,0 +1,12 @@
+.smoke
+{
+    animation: smoke-action 1s linear infinite;
+}
+
+@keyframes smoke-action
+{
+    to
+    {
+        transform: translateY(-50px) translateX(15px);
+    }
+}
