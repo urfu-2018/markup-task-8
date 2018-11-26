@@ -791,3 +791,29 @@ ul
         transform: rotate(360deg);
     }
 }
+
+.smoke-2
+{
+    animation: smoke-flyes 2s infinite linear;
+}
+
+.smoke-3
+{
+    animation: smoke-flyes 2s infinite 1s linear;
+}
+
+.smoke-4
+{
+    animation: smoke-flyes 2s infinite .5s linear;
+}
+
+@keyframes smoke-flyes
+{
+    to
+    {
+        top: -100px;
+        left: 150px;
+        opacity: .2;
+        transform: scale(3.5, 2);
+    }
+}
