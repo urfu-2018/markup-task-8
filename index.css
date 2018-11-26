@@ -88,6 +88,7 @@ ul
     position: absolute;
     top: 100px;
     left: calc(50% - 60px);
+    z-index: 0;
 
     width: 120px;
     height: 120px;
@@ -96,6 +97,39 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: move-moon 45s linear infinite;
+}
+
+@keyframes move-moon
+{
+    0%
+    {
+        transform: scale(2);
+    }
+
+    12.5%,
+    25%
+    {
+        transform: translateY(-40px) scale(1.5);
+    }
+
+    50%
+    {
+        transform: translateY(-100px) scale(1);
+    }
+
+    75%,
+    87.5%
+    {
+        transform: translateY(-40px) scale(1.5);
+    }
+
+    100%
+    {
+        transform: translateY(0) scale(2);
+    }
+
 }
 
 .center::after
@@ -157,6 +191,21 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: move-train 15s linear infinite;
+}
+
+@keyframes move-train
+{
+    0%
+    {
+        left: 100%;
+    }
+
+    100%
+    {
+        left: -50em;
+    }
 }
 
 .engine-front,
@@ -251,25 +300,37 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: display-smoke 3s linear infinite;
+}
+
+@keyframes display-smoke
+{
+    to
+    {
+        transform: translate(45px, -50px) scale(3);
+    }
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: .3s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: .9s;
 }
 
 .smoke-4
 {
     left: .8rem;
+
+    animation-delay: 1.5s;
 }
 
 .engine-body
@@ -311,11 +372,33 @@ ul
 {
     top: 1rem;
 
-    width: 45%;
-    height: 40%;
+    width: 69%;
+    height: 45%;
 
+    border: 1px solid black;
     border-radius: .2rem;
-    background: #b3e0f2;
+    background: url('pain.jpg');
+    z-index: -1;
+    animation: display-pain 3s linear infinite forwards;
+}
+
+@keyframes display-pain
+{
+    0%
+    {
+        transform: translate(-17px, 30px) scale(1, .5);
+    }
+
+    50%
+    {
+        transform: translate(-18px, -5px) scale(1.2, 1);
+        z-index: 1;
+    }
+
+    100%
+    {
+        transform: translate(-17px, 30px) scale(1, .5);
+    }
 }
 
 .wheel::before,
@@ -347,6 +430,8 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: wheel-rotate 1s linear infinite;
 }
 
 .wheel-2
@@ -363,6 +448,8 @@ ul
     height: 3.8rem;
 
     border-width: .5rem;
+
+    animation: wheel-rotate 1.8s linear infinite;
 }
 
 .wheel-4
@@ -393,6 +480,14 @@ ul
 .wheel-9
 {
     left: 39.5rem;
+}
+
+@keyframes wheel-rotate
+{
+    0%
+    {
+        transform: rotate(360deg);
+    }
 }
 
 .wheel::before,
@@ -430,7 +525,7 @@ ul
     height: 5rem;
 
     border-radius: 0 0 .3rem .3rem;
-    background: linear-gradient(#104b63 50%, #1f8dba);
+    background: linear-gradient(#104b63 50%, red);
 
     animation: body-upDown .3s infinite;
 }
@@ -524,6 +619,16 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: joint-anti-rotate 1s linear infinite;
+}
+
+@keyframes joint-anti-rotate
+{
+    0%
+    {
+        transform: rotate(-360deg);
+    }
 }
 
 .wheel-joint::before,
@@ -563,6 +668,16 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
+
+    animation: joint-2-anti-rotate 1s linear infinite;
+}
+
+@keyframes joint-2-anti-rotate
+{
+    0%
+    {
+        transform: rotate(-375deg);
+    }
 }
 
 .wheel-joint-2::before
@@ -638,7 +753,7 @@ ul
 .cloud
 {
     position: absolute;
-    z-index: 1;
+    z-index: 200;
     top: 0;
     left: 0;
 
@@ -647,7 +762,61 @@ ul
 
     opacity: .8;
     border-radius: 200px;
-    background: #fff;
+    background: darkgray;
+}
+
+.cloud:nth-child(4)
+{
+    top: 30px;
+    transform: scale(.7);
+    animation: move-cloud-left 50s linear infinite;
+}
+
+.cloud:nth-child(3)
+{
+    top: 60px;
+    transform: scale(.9);
+    animation: move-cloud-right 44s linear infinite;
+}
+
+.cloud:nth-child(2)
+{
+    top: 80px;
+    transform: scale(-1, 1);
+    animation: move-cloud-left 37s linear infinite;
+}
+
+.cloud:nth-child(1)
+{
+    top: 120px;
+    transform: scale(-1.2, 1.2);
+    animation: move-cloud-right 24s linear infinite;
+}
+
+@keyframes move-cloud-right
+{
+    0%
+    {
+        left: -30%;
+    }
+
+    100%
+    {
+        left: 100%;
+    }
+}
+
+@keyframes move-cloud-left
+{
+    0%
+    {
+        left: 100%;
+    }
+
+    100%
+    {
+        left: -30%;
+    }
 }
 
 .cloud:before,
@@ -663,7 +832,7 @@ ul
     content: '';
 
     border-radius: 100px;
-    background: #fff;
+    background: darkgray;
 }
 
 .cloud:after
