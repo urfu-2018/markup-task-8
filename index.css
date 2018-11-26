@@ -96,6 +96,22 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: moon-move 20s ease-in normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moon-move
+{
+    from
+    {
+        transform: rotate(-50deg) translateX(-400px) scale(1);
+    }
+
+    to
+    {
+        transform: rotate(0) translateY(0) scale(.5);
+    }
 }
 
 .center::after
@@ -157,6 +173,21 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train-move 20s linear infinite;
+}
+
+@keyframes train-move
+{
+    from
+    {
+        transform: translateX(500px);
+    }
+
+    to
+    {
+        transform: translateX(-1200px);
+    }
 }
 
 .engine-front,
@@ -251,25 +282,44 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke-move 2s ease-out infinite;
+}
+
+@keyframes smoke-move
+{
+    from
+    {
+        opacity: 1;
+        transform: scale(.2) rotate(-50deg) translate(0, 0);
+    }
+
+    to
+    {
+        opacity: 0;
+        transform: scale(1.5) rotate(0) translate(150px, -40px);
+    }
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: .5s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: 1s;
 }
 
 .smoke-4
 {
     left: .8rem;
+
+    animation-delay: 1.5s;
 }
 
 .engine-body
@@ -347,6 +397,8 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: reverse-rotate 3s linear infinite;
 }
 
 .wheel-2
@@ -524,6 +576,8 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: rotate 3s linear infinite;
 }
 
 .wheel-joint::before,
@@ -569,6 +623,22 @@ ul
 {
     width: 1.1rem;
     height: 1.1rem;
+}
+
+@keyframes rotate
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes reverse-rotate
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
 }
 
 .h-con
@@ -640,7 +710,7 @@ ul
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 0;
+    left: -200px;
 
     width: 200px;
     height: 60px;
@@ -674,4 +744,40 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud:nth-child(1)
+{
+    top: 40px;
+    transform: scale(-.5, .5);
+    animation: cloud-move 50s linear infinite;
+}
+
+.cloud:nth-child(2)
+{
+    top: 80px;
+    transform: scale(-.6, .6);
+    animation: cloud-move 45s linear infinite normal 10s;
+}
+
+.cloud:nth-child(3)
+{
+    top: 120px;
+    transform: scale(.8, .8);
+    animation: cloud-move 30s linear infinite normal 5s;
+}
+
+.cloud:nth-child(4)
+{
+    top: 60px;
+    transform: scale(.6, .6);
+    animation: cloud-move 45s linear infinite normal 15s;
+}
+
+@keyframes cloud-move
+{
+    to
+    {
+        left: 120%;
+    }
 }
