@@ -1,0 +1,82 @@
+@keyframes trainMovement
+{
+    to
+    {
+        transform: translateX(-1400px);
+    }
+}
+
+.train
+{
+    right: -500px;
+    /*transform: translate(-700px);*/
+    animation: trainMovement 15s linear infinite;
+}
+
+@keyframes rotateWheel
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+
+}
+
+.wheel
+{
+    animation: rotateWheel 2s linear infinite;
+}
+
+.wheel.wheel-3
+{
+    animation: rotateWheel 2.5s linear infinite;
+}
+
+@keyframes rotateWheelJoint
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+
+}
+
+.wheel-joint
+{
+    animation: rotateWheelJoint 2s linear infinite;
+}
+
+@keyframes smoke
+{
+    from
+    {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    to
+    {
+        opacity: 0;
+        transform: scaleX(2.5) translate(20px, -90px);
+    }
+}
+
+.smoke
+{
+    animation: smoke 2s linear infinite forwards;
+}
+
+.smoke.smoke-2
+{
+    animation-delay: 1.5s;
+}
+
+.smoke.smoke-3
+{
+    animation-delay: 1s;
+}
+
+.smoke.smoke-4
+{
+    animation-delay: .5s;
+}

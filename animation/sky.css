@@ -1,0 +1,106 @@
+@keyframes moonrise
+{
+    from
+    {
+        transform: scale(1);
+    }
+
+    to
+    {
+        transform: scale(.7) translateY(-400px);
+    }
+}
+
+.moon
+{
+    top: 300px;
+    animation: moonrise 7s ease-in forwards;
+}
+
+@keyframes cloud-1
+{
+    from
+    {
+        transform: scale(.6);
+    }
+
+    to
+    {
+        transform: scale(.6) translateX(2000px);
+    }
+}
+
+.cloud:nth-child(1)
+{
+    top: 150px;
+    z-index: 150;
+    animation: cloud-1 15s linear infinite;
+}
+
+@keyframes cloud-2
+{
+    from
+    {
+        transform: scale(-.53, .53);
+    }
+
+    to
+    {
+        transform: scale(-.53, .53) translateX(-2400px);
+    }
+}
+
+.cloud:nth-child(2)
+{
+    top: 100px;
+    animation: cloud-2 20s linear infinite;
+}
+
+@keyframes cloud-3
+{
+    from
+    {
+        transform: scale(.7);
+    }
+
+    to
+    {
+        transform: scale(.7) translateX(1700px);
+    }
+}
+
+.cloud:nth-child(3)
+{
+    top: 50px;
+    animation: cloud-3 12s linear infinite;
+}
+
+@keyframes cloud-4
+{
+    from
+    {
+        transform: scale(.45);
+    }
+
+    to
+    {
+        transform: scale(.45) translateX(2600px);
+    }
+}
+
+.cloud:nth-child(4)
+{
+    top: 200px;
+    z-index: 150;
+    animation: cloud-4 25s linear infinite;
+}
+
+.cloud
+{
+    left: -300px;
+}
+
+/*.cloud:hover*/
+/*{*/
+    /*animation-play-state: paused;*/
+/*}*/
