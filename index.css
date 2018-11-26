@@ -675,3 +675,279 @@ ul
     width: 120px;
     height: 120px;
 }
+
+/*----------Clouds----------*/
+
+@keyframes move-cloud-1
+{
+    to
+    {
+        transform: translateX(1000px);
+    }
+}
+
+.cloud-1
+{
+    top: 200px;
+    animation: move-cloud-1 7s linear forwards;
+}
+
+@keyframes move-cloud-2
+{
+    to
+    {
+        transform: scale(-.7, .7) translateX(-1000px);
+    }
+}
+
+.cloud-2
+{
+    left: 550px;
+    top: 150px;
+    transform: scale(-.7, .7);
+    animation: move-cloud-2 8s linear forwards;
+}
+
+@keyframes move-cloud-3
+{
+    to
+    {
+        transform: scale(-.5, .5) translateX(-1000px);
+    }
+}
+
+.cloud-3
+{
+    left: 700px;
+    top: 100px;
+    transform: scale(-.5, .5);
+    animation: move-cloud-3 9s linear forwards;
+}
+
+@keyframes move-cloud-4
+{
+    to
+    {
+        transform: scale(-.3, .3) translateX(-1000px);
+    }
+}
+
+.cloud-4
+{
+    left: 580px;
+    top: 60px;
+    transform: scale(-.3, .3);
+    animation: move-cloud-4 10s linear forwards;
+}
+
+/*----------Train----------*/
+
+@keyframes move-train
+{
+    to
+    {
+        transform: translateX(-400%);
+    }
+}
+
+.train
+{
+    right: -500px;
+    animation: move-train 10s linear infinite;
+}
+
+@keyframes rotate-wheel
+{
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel
+{
+    animation: rotate-wheel 1s infinite linear;
+}
+
+/*----------Joint ( ͡° ͜ʖ ͡°)----------*/
+
+@keyframes move-wheel-joint
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint
+{
+    animation: move-wheel-joint 1s infinite linear;
+}
+
+/*----------Smoke----------*/
+
+@keyframes smoke-rising
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    to
+    {
+        transform: translate(1000px, -1000px) scale(10);
+    }
+}
+
+.smoke
+{
+    opacity: 0;
+    animation: smoke-rising 4s 1s linear infinite;
+}
+
+.smoke-2
+{
+    animation-delay: 1.2s;
+}
+
+.smoke-3
+{
+    animation-delay: 1.3s;
+}
+
+.smoke-4
+{
+    animation-delay: 2s;
+}
+
+/*----------Moon----------*/
+
+@keyframes moon-rising
+{
+    to
+    {
+        transform: translateY(-80px) scale(.8);
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes blink-moon
+{
+    20%
+    {
+        box-shadow: 0 1px 30px 0 rgb(200, 255, 0);
+    }
+
+    40%
+    {
+        box-shadow: 0 1px 30px 0 rgb(0, 247, 255);
+    }
+
+    60%
+    {
+        box-shadow: 0 1px 30px 0 rgb(174, 0, 255);
+    }
+
+    80%
+    {
+        box-shadow: 0 1px 30px 0 rgb(255, 117, 232);
+    }
+
+    100%
+    {
+        box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    }
+}
+
+@keyframes kolobok
+{
+    to
+    {
+        opacity: .7;
+    }
+}
+
+@keyframes rotate-kolobok
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.moon
+{
+    transform: translateY(150px);
+    animation: moon-rising 10s forwards,
+        blink-moon 5s 10s infinite;
+}
+
+.moon-inner-image
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: kolobok 5s 5s ease-in forwards,
+        rotate-kolobok 1s 8s linear infinite;
+}
+
+/*----------Hills----------*/
+
+@keyframes hill-bg
+{
+    to
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 0 30px -4px rgba(225, 255, 255, .8);
+    }
+}
+
+@keyframes blink-hills
+{
+    0%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 0 30px -4px rgba(225, 255, 255, .8);
+    }
+
+    20%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 1px 30px 0 rgb(200, 255, 0);
+    }
+
+    40%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 1px 30px 0 rgba(0, 247, 255, .8);
+    }
+
+    60%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 1px 30px 0 rgba(174, 0, 255, .8);
+    }
+
+    80%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 1px 30px 0 rgba(255, 117, 232, .8);
+    }
+
+    100%
+    {
+        box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5),
+            inset 0 0 30px -4px rgba(225, 255, 255, .8);
+    }
+}
+
+.hill,
+.hill2,
+.hill3
+{
+    animation: hill-bg 10s ease-in forwards,
+        blink-hills 5s 10s infinite;
+}
