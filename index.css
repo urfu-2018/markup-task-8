@@ -91,11 +91,55 @@ ul
 
     width: 120px;
     height: 120px;
+    animation: move-moon 18s linear forwards, moon-color 12s linear infinite;
 
     opacity: 1;
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+}
+
+@keyframes move-moon {
+    0% {
+        transform:translate(-400px,300px)
+            scale(2);
+    }
+    50%{
+        transform: scale(1);
+    }
+}
+
+@keyframes moon-color {
+    0% {
+        background: linear-gradient(#fefce6 30%, #E6D800 70%);
+        opacity: 1;
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        opacity: .5;
+    }
+    20% {
+        background: linear-gradient(#E6D800 30%, #e66465 70%);
+        opacity: 1;
+    }
+    40% {
+        background: linear-gradient(#e66465 30%, #9198e5 70%);
+        opacity: 1;
+    }
+    60% {
+        background: linear-gradient(#9198e5 30%, #5AE515 70%);
+        opacity: 1;
+    }
+    80% {
+        background: linear-gradient(#5AE515 30%, #00CDE5 70%);
+        opacity: 1;
+    }
+    100% {
+        background: linear-gradient(#00CDE5 30%, #fefce6 70%);
+    }
 }
 
 .center::after
@@ -154,10 +198,11 @@ ul
     z-index: 1;
     right: 0;
     bottom: 12.6rem;
-
+    animation: move-train 12s linear infinite ;
     width: 44rem;
     height: 10rem;
 }
+
 
 .engine-front,
 .engine-front::before,
@@ -245,30 +290,42 @@ ul
     z-index: -1;
     top: -1.5rem;
     left: .2rem;
-
     width: .8rem;
     height: 1.4rem;
-
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation: move-smoke 4s linear infinite;
+}
+
+@keyframes move-smoke {
+    100%{
+        transform:
+        scale(3)
+           translate(60px,-60px);
+        opacity: 0;
+    }
+}
+
+.smoke-1
+{
+   animation-delay: .5s;
 }
 
 .smoke-2
 {
     left: .4rem;
-
-    animation-delay: .1s;
+    animation-delay: 1.5s ;
 }
 
 .smoke-3
 {
     left: .6rem;
-
-    animation-delay: .2s;
+    animation-delay: 2.5s ;
 }
 
 .smoke-4
 {
+    animation-delay: 3.5s ;
     left: .8rem;
 }
 
@@ -343,11 +400,13 @@ ul
 
     width: 2.8rem;
     height: 2.8rem;
-
+    animation: move-wheels linear 2s infinite;
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
 }
+
+
 
 .wheel-2
 {
@@ -428,7 +487,6 @@ ul
 
     width: 8rem;
     height: 5rem;
-
     border-radius: 0 0 .3rem .3rem;
     background: linear-gradient(#104b63 50%, #1f8dba);
 
@@ -443,6 +501,12 @@ ul
 .compartment-three
 {
     left: 35rem;
+}
+
+@keyframes body-upDown {
+    to{
+        transform: translateY(-5px);
+    }
 }
 
 .compartment::before,
@@ -522,7 +586,7 @@ ul
 
     border-radius: .6rem;
     background: white;
-
+    animation: move-joint linear 2s infinite;
     transform-origin: 100% 50%;
 }
 
@@ -558,9 +622,8 @@ ul
 {
     right: auto;
     left: 1.8rem;
-
+    animation: move-joint-2 linear 2s infinite;
     width: 4.4rem;
-
     transform: rotate(-15deg);
     transform-origin: 0 50%;
 }
@@ -650,6 +713,77 @@ ul
     background: #fff;
 }
 
+.cloud-1
+{
+    animation: move-cloud-1 25s linear infinite;
+    top:80px;
+    left: -60px;
+
+}
+
+.cloud-2
+{
+
+    animation: move-cloud-2 13s linear infinite;
+    top:240px;
+    left: 300px;
+    z-index: 10;
+}
+
+.cloud-3
+{
+    animation: move-cloud-3 16s linear infinite;
+    z-index: 4;
+    top:200px;
+    left: 500px;
+}
+
+.cloud-4
+{
+    animation: move-cloud-4 20s linear infinite;
+    z-index: 2;
+    top:160px;
+    left: -160px;
+}
+
+@keyframes move-cloud-1 {
+    from{
+        transform:
+            scale(-.3, .3)  translateX(200px);
+    }
+    to {
+        transform: scale(-.3, .3) translateX(-2900px);
+    }
+}
+
+@keyframes move-cloud-2 {
+    from{
+        transform: scale(-1.2, 1.2) translateX(-500px);
+    }
+    to {
+        transform: scale(-1.2, 1.2) translateX(900px);
+    }
+}
+
+@keyframes move-cloud-3 {
+    from{
+        transform: scale(.9) translateX(400px);
+    }
+    to {
+        transform: scale(.9) translateX(-900px);
+    }
+
+}
+
+@keyframes move-cloud-4 {
+    from{
+        transform: scale(.6) translateX(100px);
+    }
+    to {
+        transform: scale(.6) translateX(1600px);
+    }
+}
+
 .cloud:before,
 .cloud:after
 {
@@ -674,4 +808,155 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+
+@keyframes move-train
+{
+    0% {
+        transform: translateX(940px);
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
+
+@keyframes move-wheels {
+    to {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes move-joint {
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes move-joint-2 {
+    70%
+    {
+        transform: rotate(240deg);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.canvas
+{
+    transition: 1s;
+    perspective-origin: center center   ;
+}
+
+.center__block
+{
+    position: absolute;
+    width: 20%;
+    height: 300px;
+    z-index: 999;
+}
+
+.top-middle
+{
+    top: 18%;
+    left: 40%;
+    right: 40%;
+}
+
+.bottom-middle
+{
+    bottom: 18%;
+    left: 40%;
+    right: 40%;
+}
+
+.top-right
+{
+    top: 18vh;
+    left: 60%;
+
+}
+
+.bottom-right
+{
+    bottom: 18vh;
+    left: 60%;
+}
+
+.bottom-left
+{
+    bottom: 18vh;
+    right: 60%;
+}
+
+.top-left
+{
+    top: 18vh;
+    right: 60%;
+}
+
+.middle-left
+{
+    width: 150px;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+}
+
+.middle-right
+{
+    width: 150px;
+    height: 50%;
+    right: 25%;
+    top: 25%;
+}
+
+.top-left:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(30deg) rotateY(-30deg);
+}
+
+.top-middle:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(30deg);
+}
+
+.top-right:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(30deg) rotateY(30deg);
+}
+
+.middle-right:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateY(30deg)
+}
+
+.middle-left:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateY(-30deg);
+}
+
+.bottom-left:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(-30deg) rotateY(-30deg)
+}
+
+.bottom-middle:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(-30deg);
+}
+
+.bottom-right:hover ~ .canvas
+{
+    transition: 1s;
+    transform: perspective(1000px) rotateX(-30deg) rotateY(30deg);
 }
