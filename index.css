@@ -792,6 +792,11 @@ ul
     }
 }
 
+.smoke
+{
+    width: 90%;
+}
+
 .smoke-2
 {
     animation: smoke-flyes 2s infinite linear;
