@@ -108,7 +108,7 @@ ul
     }
     100%
     {
-        transform: translateY(-320px);
+        transform: translateY(-320px) scale(.2);
     }
 }
 
