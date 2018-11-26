@@ -168,6 +168,8 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train 20s linear infinite;
 }
 
 .engine-front,
@@ -262,25 +264,29 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke 3s linear infinite;
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: 1s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: 2s;
 }
 
 .smoke-4
 {
     left: .8rem;
+
+    animation-delay: 4s;
 }
 
 .engine-body
@@ -358,6 +364,8 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: wheel 2.5s linear infinite;
 }
 
 .wheel-2
@@ -521,6 +529,13 @@ ul
     transform: translate(-50%, 0);
 }
 
+.compartment-two .compartment-window:nth-child(2),
+.compartment-three .compartment-window:nth-child(1),
+.compartment-three .compartment-window:nth-child(2)
+{
+    animation: window 3s linear forwards infinite;
+}
+
 .wheel-joint
 {
     position: absolute;
@@ -535,6 +550,8 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: wheel-joint 2.5s linear infinite;
 }
 
 .wheel-joint::before,
@@ -802,5 +819,53 @@ ul
     100%
     {
         transform: scale(-.3, .3);
+    }
+}
+
+@keyframes train
+{
+    70%
+    {
+        transform: translateX(-210%);
+    }
+
+    70.0001%
+    {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes wheel-joint
+{
+    100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes smoke
+{
+    100%
+    {
+        opacity: 0;
+        transform: scale(2, 1.3)
+            translateY(-300%);
+    }
+}
+
+@keyframes window
+{
+    /*noinspection Stylelint*/
+    100%
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, lightyellow .8rem);
     }
 }
