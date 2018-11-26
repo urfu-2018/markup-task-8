@@ -88,7 +88,6 @@ ul
 
     transition: 1s ease;
     transform-style: preserve-3d;
-    perspective: 1200px;
     z-index: 1;
 }
 
@@ -139,24 +138,24 @@ ul
 
 .block_left_top:hover ~ .canvas
 {
-    transform: rotateX(-20deg) rotateY(20deg);
+    transform: perspective(1000px) rotateX(-20deg) rotateY(20deg);
 }
 
 .block_right_top:hover ~ .canvas
 {
-    transform: rotateX(-20deg) rotateY(-20deg);
+    transform: perspective(1000px) rotateX(-20deg) rotateY(-20deg);
 }
 
 .block_left_bottom:hover ~ .canvas
 {
     cursor: pointer;
-    transform: rotateX(20deg) rotateY(20deg);
+    transform: perspective(1000px) rotateX(20deg) rotateY(20deg);
 }
 
 .block_right_bottom:hover ~ .canvas
 {
     cursor: pointer;
-    transform: rotateX(20deg) rotateY(-20deg);
+    transform: perspective(1000px) rotateX(20deg) rotateY(-20deg);
 }
 
 .moon
