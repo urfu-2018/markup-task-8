@@ -96,6 +96,32 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: moonMove 39s linear infinite;
+}
+
+@keyframes moonMove
+{
+    0%
+    {
+        transform: translate(-500px, 150px);
+    }
+
+
+    45%
+    {
+        transform: translate(0, -50px) scale(.6);
+    }
+
+    55%
+    {
+        transform: translate(0, -50px) scale(.6);
+    }
+
+    100%
+    {
+        transform: translate(500px, 150px);
+    }
 }
 
 .center::after
@@ -157,6 +183,19 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    transform: translateX(400px);
+
+    animation: trainMove 8s linear infinite;
+
+}
+
+@keyframes trainMove
+{
+    to
+    {
+        transform: translateX(-900px);
+    }
 }
 
 .engine-front,
@@ -251,6 +290,16 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smokeMove 1.5s infinite;
+}
+
+@keyframes smokeMove
+{
+    to
+    {
+        transform: translateY(-100px);
+    }
 }
 
 .smoke-2
@@ -347,6 +396,16 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: rotateWheels 2s linear infinite;
+}
+
+@keyframes rotateWheels
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
 }
 
 .wheel-2
@@ -524,6 +583,20 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+    animation: wheelJointMove 2s linear infinite;
+}
+
+@keyframes wheelJointMove
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-joint::before,
@@ -563,6 +636,26 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
+
+    animation: wheelJointMove2 2s linear infinite;
+}
+
+@keyframes wheelJointMove2
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    50%
+    {
+        transform: rotate(165deg);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-joint-2::before
@@ -648,6 +741,84 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+}
+
+.cloud:nth-child(1)
+{
+    transform: translate(-200px, -200px);
+    animation: cloudMove1 40s linear infinite;
+}
+
+@keyframes cloudMove1
+{
+    from
+    {
+        transform: scale(.7) translate(900px, 100px);
+    }
+
+    to
+    {
+        transform: scale(.7)   translate(-210px, 100px);
+    }
+}
+
+.cloud:nth-child(2)
+{
+    transform: translate(-200px, -200px);
+    animation: cloudMove2 50s linear infinite;
+}
+
+@keyframes cloudMove2
+{
+    from
+    {
+        transform: scale(.4) translate(-210px, 80px);
+    }
+
+    to
+    {
+        transform: scale(.4) translate(900px, 80px);
+    }
+}
+
+.cloud:nth-child(3)
+{
+    transform: translate(-200px, -200px);
+    animation: cloudMove3 30s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes cloudMove3
+{
+    from
+    {
+        transform: translate(900px, 120px);
+    }
+
+    to
+    {
+        transform: translate(-210px, 120px);
+    }
+}
+
+.cloud:nth-child(4)
+{
+    transform: translate(-200px, -200px);
+    animation: cloudMove4 30s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes cloudMove4
+{
+    from
+    {
+        transform: translate(-210px, 300px);
+    }
+
+    to
+    {
+        transform: translate(900px, 300px);
+    }
 }
 
 .cloud:before,
