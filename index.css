@@ -98,6 +98,24 @@ ul
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
 }
 
+.moon
+{
+    animation: moon 10s linear 1 forwards;
+}
+
+@keyframes moon
+{
+    from
+    {
+        top: 300px;
+    }
+
+    to
+    {
+        top: 100px scale(.5);
+    }
+}
+
 .center::after
 {
     width: 100%;
@@ -148,6 +166,20 @@ ul
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
 }
 
+.bridge
+{
+    animation: bridge 250ms linear infinite;
+}
+
+@keyframes bridge
+{
+    to
+    {
+        opacity: .9;
+        bottom: 9.8rem;
+    }
+}
+
 .train
 {
     position: absolute;
@@ -157,6 +189,24 @@ ul
 
     width: 44rem;
     height: 10rem;
+}
+
+.train
+{
+    animation: train 10s linear infinite;
+}
+
+@keyframes train
+{
+    from
+    {
+        left: 900px;
+    }
+
+    to
+    {
+        left: -500px;
+    }
 }
 
 .engine-front,
@@ -270,6 +320,36 @@ ul
 .smoke-4
 {
     left: .8rem;
+}
+
+@keyframes smoke
+{
+    to
+    {
+        opacity: .1;
+        top: -90px;
+        left: 60px;
+    }
+}
+
+.smoke
+{
+    animation: smoke 1s infinite linear;
+}
+
+.smoke-2
+{
+    animation-delay: 250ms;
+}
+
+.smoke-3
+{
+    animation-delay: 500ms;
+}
+
+.smoke-4
+{
+    animation-delay: 750ms;
 }
 
 .engine-body
@@ -418,6 +498,19 @@ ul
 
     border-radius: 50%;
     background: radial-gradient(circle at center, #b37400 30%, #996300 30%);
+}
+
+.wheel
+{
+    animation: wheel-rotation 1s linear infinite reverse;
+}
+
+@keyframes wheel-rotation
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .compartment
@@ -571,6 +664,37 @@ ul
     height: 1.1rem;
 }
 
+.wheel-joint
+{
+    animation: wheel-joint 1s linear infinite;
+}
+
+@keyframes wheel-joint
+{
+    from
+    {
+        transform: rotate(0turn);
+    }
+
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint-2 1s linear infinite;
+}
+
+@keyframes wheel-joint-2
+{
+    100%
+    {
+        transform: rotate(350deg);
+    }
+}
+
 .h-con
 {
     position: absolute;
@@ -674,4 +798,46 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud:nth-child(1)
+{
+    top: 70px;
+    animation: cloud 25s linear infinite;
+    transform: scale(.8);
+    animation-delay: -7s;
+}
+
+.cloud:nth-child(2)
+{
+    top: 50px;
+    animation: cloud 10s linear infinite;
+    transform: scale(-1, 1);
+}
+
+.cloud:nth-child(3)
+{
+    top: 150px;
+    animation: cloud 20s linear infinite;
+    transform: scale(-.7, .7);
+}
+
+.cloud:nth-child(4)
+{
+    top: 150px;
+    animation: cloud 15s linear infinite;
+    transform: scale(.5);
+}
+
+@keyframes cloud
+{
+    from
+    {
+        left: -200px;
+    }
+
+    to
+    {
+        left: 900px;
+    }
 }
