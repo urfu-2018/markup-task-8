@@ -675,3 +675,278 @@ ul
     width: 120px;
     height: 120px;
 }
+
+.train
+{
+    animation-name: traintranslate;
+    -webkit-animation-name: traintranslate;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes traintranslate
+{
+    from
+    {
+        transform: translateX(100%);
+    }
+
+    to
+    {
+        transform: translateX(-220%);
+    }
+}
+
+@-webkit-keyframes traintranslate
+{
+    from
+    {
+        transform: translateX(100%);
+    }
+
+    to
+    {
+        transform: translateX(-220%);
+    }
+}
+
+.cloud:nth-child(1)
+{
+    margin-top: 10%;
+    animation-name: cloudtranslate;
+    -webkit-animation-name: cloudtranslate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+.cloud:nth-child(2)
+{
+    margin-top: 4%;
+    animation-name: cloudtranslate;
+    -webkit-animation-name: cloudtranslate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+.cloud:nth-child(3)
+{
+    margin-top: 6%;
+    animation-name: cloudtranslate;
+    -webkit-animation-name: cloudtranslate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+.cloud:nth-child(4)
+{
+    margin-top: 8%;
+    animation-name: cloudtranslate;
+    -webkit-animation-name: cloudtranslate;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+}
+
+@keyframes cloudtranslate
+{
+    from
+    {
+        transform: translateX(-100%);
+    }
+
+    to
+    {
+        transform: translateX(500%);
+    }
+}
+
+@-webkit-keyframes cloudtranslate
+{
+    from
+    {
+        transform: translateX(-100%);
+    }
+
+    to
+    {
+        transform: translateX(500%);
+    }
+}
+
+.wheel,
+.wheel-2,
+.wheel-3,
+.wheel-4,
+.wheel-5,
+.wheel-6,
+.wheel-7,
+.wheel-8,
+.wheel-9
+{
+    animation-name: wheelrotate;
+    -webkit-animation-name: wheelrotate;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes wheelrotate
+{
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel-joint,
+.wheel-joint-2
+{
+    animation-name: wheeljointrotate;
+    -webkit-animation-name: wheeljointrotate;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes wheeljointrotate
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.smoke
+{
+    animation-name: smoketranslate;
+    -webkit-animation-name: smoketranslate;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.smoke-2
+{
+    animation-name: smoketranslate;
+    -webkit-animation-name: smoketranslate;
+    animation-duration: 3s;
+    -webkit-animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.smoke-3
+{
+    animation-name: smoketranslate;
+    -webkit-animation-name: smoketranslate;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+.smoke-4
+{
+    animation-name: smoketranslate;
+    -webkit-animation-name: smoketranslate;
+    animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes smoketranslate
+{
+    to
+    {
+        transform: translateY(-500%);
+        opacity: 0;
+    }
+}
+
+.moon
+{
+    animation: 15s infinite linear;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: move-moon;
+}
+
+@keyframes move-moon
+{
+    10%
+    {
+        margin-left: -4.5em;
+    }
+
+    20%
+    {
+        margin-left: -5.5em;
+    }
+
+    30%
+    {
+        margin-left: -6em;
+    }
+
+    40%
+    {
+        margin-left: -4.5em;
+    }
+
+    50%
+    {
+        left: 50%;
+        bottom: 75%;
+        width: 5em;
+        height: 5em;
+        margin-left: -2.5em;
+    }
+
+    60%
+    {
+        margin-left: 1.5em;
+    }
+
+    70%
+    {
+        margin-left: 3.5em;
+    }
+
+    80%
+    {
+        margin-left: 2.5em;
+    }
+
+    90%
+    {
+        margin-left: 1em;
+    }
+
+    100%
+    {
+        left: 98%;
+        margin-left: -2.5em;
+    }
+}
