@@ -1,0 +1,61 @@
+.canvas
+{
+    transform-style: preserve-3d;
+    transition-duration: 2s;
+}
+
+.top-left-handler
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+}
+
+.top-left-handler:hover ~ .canvas
+{
+    transform: rotateX(15deg) rotateY(-15deg);
+}
+
+.top-right-handler
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+    right: 0;
+}
+
+.top-right-handler:hover ~ .canvas
+{
+    transform: rotateX(15deg) rotateY(15deg);
+}
+
+.bottom-left-handler
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+    bottom: 0;
+}
+
+.bottom-left-handler:hover ~ .canvas
+{
+    transform: rotateX(-15deg) rotateY(-15deg);
+}
+
+.bottom-right-handler
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+}
+
+.bottom-right-handler:hover ~ .canvas
+{
+    transform: rotateX(15deg) rotateY(-15deg);
+}

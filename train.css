@@ -1,0 +1,103 @@
+.train
+{
+    animation: move-train 30s linear 1s normal 1 forwards;
+    transform: translateX(500px);
+}
+
+@keyframes move-train
+{
+    form
+    {
+        transform: translateX(500px);
+    }
+
+    to
+    {
+        transform: translateX(-900px);
+    }
+}
+
+.wheel
+{
+    animation: rotate-wheel 3s linear infinite;
+}
+
+@keyframes rotate-wheel
+{
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 3s linear infinite;
+}
+
+@keyframes wheel-joint
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.smoke
+{
+    animation: first-smoke 3s linear infinite;
+}
+
+@keyframes first-smoke
+{
+    to
+    {
+        transform: translate(40px, -60px) scale(.9);
+        opacity: 0;
+    }
+}
+
+.smoke-2
+{
+    animation: second-smoke 3s linear infinite;
+    transform: scale(1.5);
+}
+
+@keyframes second-smoke
+{
+    to
+    {
+        transform: translate(20px, -40px) scale(1.2);
+        opacity: .2;
+    }
+}
+
+.smoke-3
+{
+    animation: third-smoke 3s linear infinite;
+    transform: scale(2.5);
+}
+
+@keyframes third-smoke
+{
+    to
+    {
+        transform: translateY(-15px) scale(2.5);
+        opacity: .4;
+    }
+}
+
+.smoke-4
+{
+    animation: fourth-smoke 3s linear infinite;
+    transform: scale(2);
+}
+
+@keyframes fourth-smoke
+{
+    to
+    {
+        transform: translate(10px, -30px) scale(1.8);
+        opacity: .3;
+    }
+}

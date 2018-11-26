@@ -73,14 +73,22 @@ ul
 .canvas
 {
     position: relative;
-
     overflow: hidden;
-
     width: 900px;
     height: 600px;
     margin: auto;
+    background: #257acf;
+    box-shadow: 0 -500px 500px -120px black inset;
+    animation: canvas-background 20s 1 forwards;
+}
 
-    background: linear-gradient(#013971, #000c18 60%);
+@keyframes canvas-background
+{
+    to
+    {
+        background: #23024e;
+        box-shadow: 0 -500px 500px -100px black inset;
+    }
 }
 
 .moon

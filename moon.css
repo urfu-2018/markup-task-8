@@ -1,0 +1,17 @@
+.moon
+{
+    animation: move-moon 10s linear 1 forwards;
+}
+
+@keyframes move-moon
+{
+    from
+    {
+        transform: translateY(150%) scale(1.5);
+    }
+
+    to
+    {
+        transform: translateY(-50%);
+    }
+}
