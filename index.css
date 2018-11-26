@@ -872,7 +872,8 @@ ul
 
 .canvas
 {
-    animation: HELLA_YEAH 6s cubic-bezier(.61,-1.42,.16,1.84) infinite alternate 15s;
+    animation: HELLA_YEAH 6s cubic-bezier(.61,-1.42,.16,1.84) 
+        infinite alternate 15s;
 }
 
 @keyframes HELLA_YEAH
