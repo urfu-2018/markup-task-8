@@ -760,3 +760,16 @@ ul
         left: -800px;
     }
 }
+
+.wheel
+{
+    animation: rotate-wheel infinite 5s linear;
+}
+
+@keyframes rotate-wheel
+{
+    to
+    {
+        transform: rotate(-360deg)
+    }
+}
