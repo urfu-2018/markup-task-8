@@ -615,7 +615,7 @@ ul
 .hill2
 {
     position: absolute;
-    z-index: 130;
+    z-index: 120;
 
     width: 800px;
     height: 1000px;
@@ -710,11 +710,97 @@ ul
 .cloud:first-child
 {
     animation: cloud-first 20s linear infinite;
-    top: 120px;
+    top: 100px;
     left: -200px;
 }
 
-.cloud:not(:first-child)
+.cloud:nth-child(2)
 {
-    display: none !important;
+    top: 40px;
+    left: 130px;
+    animation: cloud-second 40s linear infinite;
+}
+
+.cloud:nth-child(3)
+{
+    top: 70px;
+    left: 300px;
+    animation: cloud-third 30s linear infinite;
+}
+
+.cloud:last-child
+{
+    top: 180px;
+    left: 900px;
+    animation: cloud-fourth 15s linear infinite;
+    z-index: 125;
+}
+
+@keyframes cloud-fourth
+{
+    0%
+    {
+        transform: scale(-1, 1);
+    }
+
+    99.99999%
+    {
+        transform: translateX(-585%)
+            scale(-1, 1);
+    }
+
+    100%
+    {
+        transform: scale(-1, 1);
+    }
+}
+
+@keyframes cloud-third
+{
+    0%
+    {
+        transform: scale(.6);
+    }
+
+    40%
+    {
+        transform: translateX(-240%)
+            scale(.6);
+    }
+
+    40.00001%
+    {
+        transform: translateX(360%)
+            scale(.6);
+    }
+
+    100%
+    {
+        transform: scale(.6);
+    }
+}
+
+@keyframes cloud-second
+{
+    0%
+    {
+        transform: scale(-.3, .3);
+    }
+
+    75%
+    {
+        transform: translateX(360%)
+            scale(-.3, .3);
+    }
+
+    75.00001%
+    {
+        transform: translateX(-120%)
+            scale(-.3, .3);
+    }
+
+    100%
+    {
+        transform: scale(-.3, .3);
+    }
 }
