@@ -1,3 +1,35 @@
+@keyframes star-fall-left
+{
+    from
+    {
+        background: gold;
+        opacity: 1;
+    }
+
+    to
+    {
+        opacity: 1;
+        background: gold;
+        transform: scale(5, 5) translate(-200px, 200px);
+    }
+}
+
+@keyframes star-fall-right
+{
+    from
+    {
+        background: gold;
+        opacity: 1;
+    }
+
+    to
+    {
+        opacity: 1;
+        background: gold;
+        transform: scale(5, 5) translate(200px, 200px);
+    }
+}
+
 .stars
 {
     position: relative;
@@ -23,8 +55,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-0 1s linear infinite;
-    animation-delay: 0s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 2.8s;
 }
 
 @keyframes twinkle-0
@@ -116,8 +148,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-3 1s linear infinite;
-    animation-delay: .03s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: .2s;
 }
 
 @keyframes twinkle-3
@@ -147,8 +179,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-4 1s linear infinite;
-    animation-delay: .04s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: .4s;
 }
 
 @keyframes twinkle-4
@@ -271,8 +303,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-8 1s linear infinite;
-    animation-delay: .08s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: .6s;
 }
 
 @keyframes twinkle-8
@@ -581,8 +613,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-18 1s linear infinite;
-    animation-delay: .18s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: .8s;
 }
 
 @keyframes twinkle-18
@@ -860,8 +892,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-27 1s linear infinite;
-    animation-delay: .27s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 1s;
 }
 
 @keyframes twinkle-27
@@ -891,8 +923,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-28 1s linear infinite;
-    animation-delay: .28s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: 1.2s;
 }
 
 @keyframes twinkle-28
@@ -1697,8 +1729,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-54 1s linear infinite;
-    animation-delay: .54s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 1.4s;
 }
 
 @keyframes twinkle-54
@@ -1945,8 +1977,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-62 1s linear infinite;
-    animation-delay: .62s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: 1.6s;
 }
 
 @keyframes twinkle-62
@@ -2038,8 +2070,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-65 1s linear infinite;
-    animation-delay: .65s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 1.8s;
 }
 
 @keyframes twinkle-65
@@ -2317,8 +2349,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-74 1s linear infinite;
-    animation-delay: .74s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: 2s;
 }
 
 @keyframes twinkle-74
@@ -2441,8 +2473,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-78 1s linear infinite;
-    animation-delay: .78s;
+    animation: star-fall-left 3s linear infinite;
+    animation-delay: 2.2s;
 }
 
 @keyframes twinkle-78
@@ -2720,8 +2752,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-87 1s linear infinite;
-    animation-delay: .87s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 2.4s;
 }
 
 @keyframes twinkle-87
@@ -2844,8 +2876,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-91 1s linear infinite;
-    animation-delay: .91s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 2.8s;
 }
 
 @keyframes twinkle-91
@@ -3309,8 +3341,8 @@
     border-radius: 50%;
     background: white;
 
-    animation: twinkle-106 1s linear infinite;
-    animation-delay: 1.06s;
+    animation: star-fall-right 3s linear infinite;
+    animation-delay: 2.6s;
 }
 
 @keyframes twinkle-106
