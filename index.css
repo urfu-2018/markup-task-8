@@ -822,3 +822,16 @@ ul
         transform: scale(3.5, 2);
     }
 }
+
+.compartment-window::before
+{
+    animation: light-in-window 1s infinite .3s ease;
+}
+
+@keyframes light-in-window
+{
+    to
+    {
+        background-color: #eebe1f;
+    }
+}
