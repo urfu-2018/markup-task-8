@@ -107,10 +107,16 @@ ul
         transform: translate(-500px, 150px);
     }
 
+    44%
+    {
+        background: #fefce6;
+    }
 
     45%
     {
         transform: translate(0, -50px) scale(.6);
+        background: url(cat.png) no-repeat center;
+        background-size: 100%;
     }
 
     55%
@@ -121,6 +127,8 @@ ul
     100%
     {
         transform: translate(500px, 150px);
+        background: url(cat.png) no-repeat center;
+        background-size: 100%;
     }
 }
 
