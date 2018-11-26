@@ -197,9 +197,13 @@
 <!-- этот хак нужен для автовоспроизведения музыки -->
 <!-- https://stackoverflow.com/questions/50490304/audio-autoplay-not-working-in-chrome -->
 <iframe src="sound/silence.mp3" allow="autoplay" class="no-display"></iframe>
-<audio autoplay controls>
+<audio autoplay loop controls>
     <source src="sound/smoke_weed_everyday_cutted.mp3">
 </audio>
-
+<script>
+    $('audio').on('canplay', function() {
+        this.play();
+    });
+</script>
 </body>
 </html>
