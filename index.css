@@ -773,3 +773,21 @@ ul
         transform: rotate(-360deg)
     }
 }
+
+.wheel-joint
+{
+    animation: move-joint infinite 5s linear;
+}
+
+@keyframes move-joint
+{
+    from
+    {
+        transform: rotate(0);
+    }
+
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
