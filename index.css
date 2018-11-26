@@ -85,6 +85,7 @@ ul
 
 .moon
 {
+    animation: moon-rices 20s ease;
     position: absolute;
     top: 100px;
     left: calc(50% - 60px);
@@ -150,11 +151,11 @@ ul
 
 .train
 {
+    animation: train-move 20s linear infinite;
     position: absolute;
     z-index: 1;
     right: 0;
     bottom: 12.6rem;
-
     width: 44rem;
     height: 10rem;
 }
@@ -241,6 +242,7 @@ ul
 
 .smoke
 {
+    animation: smoke .7s linear infinite;
     position: absolute;
     z-index: -1;
     top: -1.5rem;
@@ -674,4 +676,66 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.wheel
+{
+    animation: wheel-rotate-ccw 2s linear infinite;
+}
+
+.wheel-joint
+{
+    animation: wheel-rotate-cw 2s linear infinite;
+}
+
+@keyframes wheel-rotate-ccw
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes wheel-rotate-cw
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes train-move
+{
+    from
+    {
+        transform: translateX(500px);
+    }
+
+    to
+    {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes smoke
+{
+    to
+    {
+        background-color: rgba(127,127,127,.99);
+        transform: translate(100px, -100px) scale(2);
+    }
+}
+
+@keyframes moon-rices
+{
+    from
+    {
+        transform: rotate(-90deg);
+        transform-origin: 0 600px;
+    }
+
+    to
+    {
+        transform: rotate(0deg);
+    }
 }
