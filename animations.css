@@ -10,7 +10,7 @@
 {
     from
     {
-        transform: translate(150%, 0);
+        transform: translate(100%, 0);
     }
 
     to
@@ -79,5 +79,145 @@
     to
     {
         transform: rotate(360deg);
+    }
+}
+
+.moon
+{
+    animation-name: rise;
+    animation-duration: 8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rise
+{
+    from
+    {
+        transform: translate(0, 150px) scale(1.5, 1.5);
+    }
+
+    to
+    {
+        transform: translate(0, 0) scale(1, 1);
+    }
+}
+
+.smoke
+{
+    animation-name: fly-up;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fly-up
+{
+    to
+    {
+        transform: translate(150px, -500px);
+    }
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+.cloud
+{
+    animation-name: cloud-1;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    top: 80px;
+}
+
+@keyframes cloud-1
+{
+    from
+    {
+        transform: translate(-210px, 0);
+    }
+
+    to
+    {
+        transform: translate(900px, 0);
+    }
+}
+
+.cloud-2
+{
+    top: 20px;
+    left: -20px;
+    animation-duration: 30s;
+
+    animation-name: cloud-2;
+}
+
+@keyframes cloud-2
+{
+    from
+    {
+        transform: translate(900px, 0) scale(-.5, .5);
+    }
+
+    to
+    {
+        transform: translate(-210px, 0) scale(-.5, .5);
+    }
+}
+
+.cloud-3
+{
+    top: 100px;
+    animation-duration: 20s;
+    animation-delay: 5s;
+    transform: translate(-210px, 0) scale(-.8, .8);
+
+    animation-name: cloud-3;
+}
+
+@keyframes cloud-3
+{
+    from
+    {
+        transform: translate(-210px, 0) scale(-.8, .8);
+    }
+
+    to
+    {
+        transform: translate(900px, 0) scale(-.8, .8);
+    }
+}
+
+.cloud-4
+{
+    top: 200px;
+    animation-duration: 30s;
+    animation-name: cloud-4;
+}
+
+@keyframes cloud-4
+{
+    from
+    {
+        transform: translate(-210px, 0) scale(.2, .2);
+    }
+
+    to
+    {
+        transform: translate(900px, 0) scale(.2, .2);
     }
 }
