@@ -675,3 +675,176 @@ ul
     width: 120px;
     height: 120px;
 }
+
+.moon
+{
+    animation: moonUpAndDown 14s linear 2s infinite;
+}
+
+.train
+{
+    animation: trainGo 14s linear infinite;
+}
+
+.wheel
+{
+    animation: wheelTurn 2s linear infinite;
+}
+
+.wheel-joint
+{
+    animation: joint1 2s linear infinite;
+}
+
+@keyframes joint1
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-3
+{
+    animation: wheelTurn 2.5s linear infinite;
+}
+
+.cloud:nth-child(1)
+{
+    animation: cloudMove1 16s linear infinite;
+}
+
+.cloud:nth-child(2)
+{
+    animation: cloudMove2 15s linear infinite;
+    transform: translate(-150%, 50%);
+    animation-delay: 3s;
+}
+
+.cloud:nth-child(3)
+{
+    animation: cloudMove3 11s linear infinite;
+    z-index: 131;
+}
+
+.cloud:nth-child(4)
+{
+    animation: cloudMove4 13s linear infinite;
+}
+
+@keyframes cloudMove1
+{
+    from
+    {
+        transform: scale(.7) translate(100%, 130%);
+        opacity: .8;
+    }
+
+    65%
+    {
+        transform: scale(.7) translate(700%, 130%);
+        opacity: .8;
+    }
+
+    68%
+    {
+        transform: scale(.7) translate(700%, 130%);
+        opacity: 0;
+    }
+
+    69%
+    {
+        transform: scale(.7) translate(-180%, 130%);
+        opacity: 0;
+    }
+
+    70%
+    {
+        transform: scale(.7) translate(-180%, 130%);
+        opacity: .8;
+    }
+
+    to
+    {
+        transform: scale(.7) translate(100%, 130%);
+        opacity: .8;
+    }
+}
+
+@keyframes cloudMove2
+{
+    from
+    {
+        transform: translate(-150%, 100%);
+    }
+
+    to
+    {
+        transform: translate(500%, 100%);
+    }
+}
+
+@keyframes cloudMove3
+{
+    from
+    {
+        transform: translate(-150%, 300%) scale(.6);
+    }
+
+    to
+    {
+        transform: translate(500%, 300%) scale(.6);
+    }
+}
+
+@keyframes cloudMove4
+{
+    from
+    {
+        transform: translate(-150%, 230%);
+    }
+
+    to
+    {
+        transform: translate(500%, 230%);
+    }
+}
+
+@keyframes wheelTurn
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes trainGo
+{
+    from
+    {
+        transform: translate(100%, 0);
+    }
+    
+    to
+    {
+        transform: translate(-220%, 0);
+    }
+}
+
+@keyframes moonUpAndDown
+{
+    from
+    {
+        transform: translate(0, 0);
+    }
+
+    50%
+    {
+        transform: translate(0, -60%) scale(.85);
+    }
+
+    to
+    {
+        transform: translate(0, 0);
+    }
+}
