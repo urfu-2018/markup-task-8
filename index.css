@@ -57,6 +57,15 @@
     }
 }
 
+@keyframes move-smoke
+{
+    to
+    {
+        transform: scale(2) translate(50px, -50px);
+        opacity: 0;
+    }
+}
+
 /* stylelint-disable-next-line */
 *,
 *:before,
@@ -772,7 +781,7 @@ ul
 
 .cloud:nth-child(1)
 {
-    animation-name: translate;
+    animation-name: move-cloud;
     animation-duration: 50s;
     animation-fill-mode: forwards;
     transform: scale(.5);
@@ -781,7 +790,7 @@ ul
 
 .cloud:nth-child(2)
 {
-    animation-name: translate;
+    animation-name: move-cloud;
     animation-duration: 30s;
     animation-fill-mode: forwards;
     transform: scale(.8);
@@ -808,7 +817,7 @@ ul
 .train
 {
     animation-name: move-train;
-    animation-duration: 20s;
+    animation-duration: 30s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
 }
@@ -818,4 +827,31 @@ ul
     animation-name: move-moon;
     animation-duration: 10s;
     animation-fill-mode: both;
+}
+
+.smoke
+{
+    animation-name: move-smoke;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.smoke-1
+{
+    animation-delay: 1s;
+}
+
+.smoke-2
+{
+    animation-delay: 2s;
+}
+
+.smoke-3
+{
+    animation-delay: 3s;
+}
+
+.smoke-4
+{
+    animation-delay: 4s;
 }
