@@ -671,7 +671,6 @@ ul
     top: -55px;
     right: 15px;
     left: auto;
-
     width: 120px;
     height: 120px;
 }
@@ -683,6 +682,7 @@ ul
         left: -500px;
         transform: scale(-1, 1);
     }
+
     50%
     {
         left: 1000px;
@@ -702,12 +702,12 @@ ul
     }
 }
 
- .train
+.train
 {
     animation: train 20s infinite linear forwards;
 }
 
- @keyframes wheel
+@keyframes wheel
 {
     100%
     {
@@ -715,12 +715,12 @@ ul
     }
 }
 
- .wheel
+.wheel
 {
     animation: wheel 2s infinite linear forwards;
 }
 
- @keyframes wheel-joint
+@keyframes wheel-joint
 {
     100%
     {
@@ -728,12 +728,12 @@ ul
     }
 }
 
- .wheel-joint
+.wheel-joint
 {
     animation: wheel-joint 2s infinite linear forwards;
 }
 
- @keyframes cloud-1
+@keyframes cloud-1
 {
     0%
     {
@@ -754,7 +754,7 @@ ul
     animation: cloud-1 40s infinite alternate forwards;
 }
 
- @keyframes cloud-2
+@keyframes cloud-2
 {
     0%
     {
@@ -773,7 +773,7 @@ ul
     animation: cloud-2 15s infinite alternate forwards;
 }
 
- @keyframes cloud-3
+@keyframes cloud-3
 {
     0%
     {
@@ -794,7 +794,7 @@ ul
     animation: cloud-3 50s infinite alternate forwards;
 }
 
- @keyframes cloud-4
+@keyframes cloud-4
 {
     0%
     {
@@ -833,7 +833,7 @@ ul
     animation: move-moon 10s linear 1 forwards;
 }
 
- @keyframes smoke
+@keyframes smoke
 {
     100%
     {
@@ -842,22 +842,22 @@ ul
     }
 }
 
- .smoke
+.smoke
 {
     animation: smoke 1s infinite linear .75s forwards;
 }
 
- .smoke-2
+.smoke-2
 {
     animation: smoke 1s infinite linear .5s forwards;
 }
 
- .smoke-3
+.smoke-3
 {
     animation: smoke 1s infinite linear .25s forwards;
 }
 
- .smoke-4
+.smoke-4
 {
     animation: smoke 1s infinite linear forwards;
 }
@@ -875,17 +875,20 @@ ul
     top: 0;
     left: 0;
 }
- .right-top
+
+.right-top
 {
     top: 0;
     right: 0;
 }
- .left-bottom
+
+.left-bottom
 {
     bottom: 0;
     left: 0;
 }
- .right-bottom
+
+.right-bottom
 {
     bottom: 0;
     right: 0;
@@ -895,14 +898,17 @@ ul
 {
     transform: perspective(2000px) rotateX(10deg) rotateY(-10deg);
 }
+
 .right-top:hover ~ .canvas
 {
     transform: perspective(2000px) rotateX(10deg) rotateY(10deg);
 }
+
 .left-bottom:hover ~ .canvas
 {
     transform: perspective(2000px) rotateX(-10deg) rotateY(-10deg);
 }
+
 .right-bottom:hover ~ .canvas
 {
     transform: perspective(2000px) rotateX(-10deg) rotateY(10deg);
