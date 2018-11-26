@@ -103,8 +103,7 @@ ul
 {
     0%
     {
-        transform:translate(-400px,300px)
-            scale(2);
+        transform: translate(-400px,300px) scale(2);
     }
 
     50%
@@ -120,6 +119,7 @@ ul
         background: linear-gradient(#fefce6 30%, #e6d800 70%);
         opacity: 1;
     }
+
     10%,
     30%,
     50%,
@@ -128,26 +128,31 @@ ul
     {
         opacity: .5;
     }
+
     20%
     {
         background: linear-gradient(#e6d800 30%, #e66465 70%);
         opacity: 1;
     }
+
     40%
     {
         background: linear-gradient(#e66465 30%, #9198e5 70%);
         opacity: 1;
     }
+
     60%
     {
         background: linear-gradient(#9198e5 30%, #5ae515 70%);
         opacity: 1;
     }
+
     80%
     {
         background: linear-gradient(#5ae515 30%, #00cde5 70%);
         opacity: 1;
     }
+
     100%
     {
         background: linear-gradient(#00cde5 30%, #fefce6 70%);
@@ -201,9 +206,8 @@ ul
     border-top: .3rem solid white;
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
-    background: linear-gradient(55deg, transparent 46%, white 46%,
-    white 54%, transparent 54%) left/1.6rem 2.2rem,
-    linear-gradient(-55deg, transparent 46%, white 46%, white 54%,
+    background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem,
+        linear-gradient(-55deg, transparent 46%, white 46%, white 54%,
         transparent 54%) left/1.6rem 2.2rem;
 }
 
@@ -217,7 +221,6 @@ ul
     width: 44rem;
     height: 10rem;
 }
-
 
 .engine-front,
 .engine-front::before,
@@ -323,7 +326,7 @@ ul
 
 .smoke-1
 {
-   animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 .smoke-2
@@ -764,6 +767,7 @@ ul
     {
         transform: scale(-.3, .3)  translateX(200px);
     }
+    
     to
     {
         transform: scale(-.3, .3) translateX(-2900px);
@@ -776,6 +780,7 @@ ul
     {
         transform: scale(-1.2, 1.2) translateX(-500px);
     }
+    
     to
     {
         transform: scale(-1.2, 1.2) translateX(900px);
@@ -788,6 +793,7 @@ ul
     {
         transform: scale(.9) translateX(400px);
     }
+    
     to
     {
         transform: scale(.9) translateX(-900px);
@@ -801,6 +807,7 @@ ul
     {
         transform: scale(.6) translateX(100px);
     }
+    
     to
     {
         transform: scale(.6) translateX(1600px);
@@ -839,6 +846,7 @@ ul
     {
         transform: translateX(940px);
     }
+    
     100%
     {
         transform: translateX(-900px);
@@ -867,6 +875,7 @@ ul
     {
         transform: rotate(240deg);
     }
+    
     to
     {
         transform: rotate(1turn);
