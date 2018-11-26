@@ -745,7 +745,7 @@ ul
 .train
 {
     transform: translateX(200px);
-    animation: move-train infinite 20s linear;
+    animation: move-train infinite 15s linear;
 }
 
 @keyframes move-train
@@ -763,7 +763,7 @@ ul
 
 .wheel
 {
-    animation: rotate-wheel infinite 5s linear;
+    animation: rotate-wheel infinite 2s linear;
 }
 
 @keyframes rotate-wheel
@@ -776,7 +776,7 @@ ul
 
 .wheel-joint
 {
-    animation: move-joint infinite 5s linear;
+    animation: move-joint infinite 2s linear;
 }
 
 @keyframes move-joint
