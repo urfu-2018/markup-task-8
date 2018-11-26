@@ -106,6 +106,7 @@ ul
     {
         transform: scale(.2) translateY(-270px);
     }
+
     100%
     {
         transform: translateY(-320px) scale(.2);
@@ -172,10 +173,7 @@ ul
     width: 44rem;
     height: 10rem;
 
-    animation-name: moving;
-    animation-duration: 12s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: 12s infinite linear moving;
 }
 
 @keyframes moving
@@ -184,7 +182,9 @@ ul
     {
         transform: translateX(500px);
     }
-    100% {
+
+    100%
+    {
         transform: translateX(-900px);
     }
 }
@@ -269,11 +269,19 @@ ul
     transform: translate(-50%, 0);
 }
 
+@keyframes smoke
+{
+    100%
+    {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
 .smoke
 {
     position: absolute;
     z-index: -1;
-    top: -1.5rem;
     left: .2rem;
 
     width: .8rem;
@@ -281,6 +289,7 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation: smoke .7s infinite linear;
 }
 
 .smoke-2
@@ -427,10 +436,7 @@ ul
 
 .wheel
 {
-    animation-name: rotation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: 1s infinite linear rotation;
 }
 
 @keyframes rotation
@@ -556,17 +562,23 @@ ul
     transform: translate(-50%, 0);
 }
 
-@keyframes rot2 {
-    100% {
+@keyframes rotation2
+{
+    100%
+    {
         transform: rotate(360deg);
     }
 }
 
-@keyframes rot3 {
-    0% {
+@keyframes rotation3
+{
+    0%
+    {
         transform: rotate(-15deg);
     }
-    100% {
+
+    100%
+    {
         transform: rotate(345deg);
     }
 }
@@ -585,7 +597,7 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
-    animation: rot2 linear infinite 1s;
+    animation: rotation2 linear infinite 1s;
 }
 
 .wheel-joint::before,
@@ -625,7 +637,7 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
-    animation: rot3 linear infinite 1s;
+    animation: rotation3 linear infinite 1s;
 }
 
 .wheel-joint-2::before
@@ -645,6 +657,8 @@ ul
 
     width: 100%;
     height: 420px;
+
+    perspective: 200px;
 }
 
 .hill
@@ -662,6 +676,16 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+
+    animation: hill-moving 12s infinite linear;
+}
+
+@keyframes hill-moving
+{
+    100%
+    {
+        transform: rotateX(45deg);
+    }
 }
 
 .hill2
@@ -679,6 +703,8 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+
+    animation: hill-moving 12s infinite linear;
 }
 
 .hill3
@@ -696,6 +722,8 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+
+    animation: hill-moving 12s infinite linear;
 }
 
 .clouds
@@ -741,30 +769,85 @@ ul
     height: 120px;
 }
 
-.clouds {
+.clouds
+{
     z-index: 100;
 }
 
-.clouds-1 {
+.clouds-1
+{
     left: 700px;
     top: 50px;
-    transform: scale(0.4);
+    transform: scale(.4);
+    animation: 12s infinite linear cloud-1-moving;
 }
 
-.clouds-2 {
+@keyframes cloud-1-moving
+{
+    100%
+    {
+        transform: translateX(150px) scale(.4);
+    }
+}
+
+.clouds-2
+{
     left: 600px;
     top: 140px;
-    transform: scale(0.75) scale(-1, 1);
+    transform: scale(.75) scale(-1, 1);
+    animation: 12s infinite linear cloud-2-moving;
 }
 
-.clouds-3 {
+@keyframes cloud-2-moving
+{
+    40%
+    {
+        transform: translateX(300px) scale(.75) scale(-1, 1);
+    }
+
+    100%
+    {
+        transform: translateX(350px) scale(.75) scale(-1, 1);
+    }
+}
+
+.clouds-3
+{
     left: 450px;
     top: 70px;
-    transform: scale(0.5);
+    transform: scale(.5);
+    animation: 12s infinite linear cloud-3-moving;
 }
 
-.clouds-4 {
-    left: 0px;
+@keyframes cloud-3-moving
+{
+    80%
+    {
+        transform: translateX(400px) scale(.5);
+    }
+
+    100%
+    {
+        transform: translateX(450px) scale(.5);
+    }
+}
+
+.clouds-4
+{
     top: 170px;
     transform: scale(-1, 1);
+    animation: 12s infinite linear cloud-4-moving;
+}
+
+@keyframes cloud-4-moving
+{
+    10%
+    {
+        transform: translate(900px) scale(-1, 1);
+    }
+
+    100%
+    {
+        transform: translate(950px) scale(-1, 1);
+    }
 }
