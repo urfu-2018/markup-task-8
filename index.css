@@ -17,7 +17,7 @@ html
     font-size: 10px;
 }
 
-body
+.canvas
 {
     height: 100%;
 
@@ -81,6 +81,69 @@ ul
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transition: transform 1.2s linear;
+    transform-style: preserve-3d;
+}
+
+.canvas,
+.center
+{
+    perspective: 600px;
+}
+
+.helper
+{
+    position: absolute;
+
+    width: 450px;
+    height: 300px;
+
+    z-index: 1;
+}
+
+.top-right
+{
+    top: 0;
+    right: 0;
+}
+
+.bot-right
+{
+    bottom: 0;
+    right: 0;
+}
+
+.bot-left
+{
+    bottom: 0;
+    left: 0;
+}
+
+.top-left
+{
+    top: 0;
+    left: 0;
+}
+
+.top-right:hover ~ .canvas
+{
+    transform: translateZ(-100px) rotateX(10deg) rotateY(-10deg);
+}
+
+.bot-right:hover ~ .canvas
+{
+    transform: translateZ(-100px) rotateX(-10deg) rotateY(-10deg);
+}
+
+.bot-left:hover ~ .canvas
+{
+    transform: translateZ(-100px) rotateX(-10deg) rotateY(10deg);
+}
+
+.top-left:hover ~ .canvas
+{
+    transform: translateZ(-100px) rotateX(10deg) rotateY(10deg);
 }
 
 .moon
@@ -96,6 +159,30 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: moon-move 26s linear forwards, moon-shining 10s ease 26s infinite;
+}
+
+@keyframes moon-move
+{
+    from
+    {
+        transform: rotateZ(-45deg) translate3d(-800px, 0, 10px) scale(1.6);
+    }
+
+    to
+    {
+        transform: rotateZ(0) translate3d(0, 0, 10px) scale(1);
+    }
+}
+
+@keyframes moon-shining
+{
+    50%
+    {
+        box-shadow: 0 4px 80px 0 rgb(1, 57, 113);
+    }
+
 }
 
 .center::after
@@ -157,6 +244,21 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train-move 18s linear infinite;
+}
+
+@keyframes train-move
+{
+    from
+    {
+        transform: translateX(44rem);
+    }
+
+    to
+    {
+        transform: translateX(-92rem);
+    }
 }
 
 .engine-front,
@@ -251,25 +353,38 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke-move 1s linear infinite;
+}
+
+@keyframes smoke-move
+{
+    to
+    {
+        transform: translate(50%, calc(-4 * 1.4rem)) scale(2);
+        opacity: 0;
+    }
 }
 
 .smoke-2
 {
     left: .4rem;
 
-    animation-delay: .1s;
+    animation-delay: .3s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: .5s;
 }
 
 .smoke-4
 {
     left: .8rem;
+
+    animation-delay: .7s;
 }
 
 .engine-body
@@ -347,6 +462,16 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
 }
 
 .wheel-2
@@ -519,11 +644,19 @@ ul
 
     width: 3.6rem;
     height: .4rem;
-
     border-radius: .6rem;
     background: white;
 
+    animation: r-spin 2s linear infinite;
     transform-origin: 100% 50%;
+}
+
+@keyframes r-spin
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-joint::before,
@@ -648,6 +781,8 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+
+    animation: cloud-move 30s linear infinite;
 }
 
 .cloud:before,
@@ -674,4 +809,47 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+@keyframes cloud-move
+{
+    from
+    {
+        left: calc(-20% - 200px);
+    }
+
+    to
+    {
+        left: calc(120% + 200px);
+    }
+}
+
+.cloud-2
+{
+    top: 180px;
+
+    z-index: 130;
+
+    transform: translateX(-200px) scale(-1, .7);
+    animation-delay: 2s;
+    animation-duration: 24s;
+}
+
+.cloud-3
+{
+    top: 380px;
+
+    transform: translateX(-200px) scale(-.7, .7);
+    animation-delay: 3s;
+    animation-duration: 34s;
+}
+
+.cloud-4
+{
+    top: 280px;
+
+    z-index: 140;
+
+    transform: translateX(calc(-20% - 200px)) scale(1.2, 1.2);
+    animation-duration: 20s;
 }
