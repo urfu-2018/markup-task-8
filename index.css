@@ -678,6 +678,11 @@ ul
 
 /*--------------- Мои стили --------------*/
 
+.canvas
+{
+    transform-style: preserve-3d;
+}
+
 .wheel
 {
     animation: wheel-movement 2s linear infinite;
@@ -713,12 +718,128 @@ ul
     animation: smoke-movement 2.8s linear infinite 1.4s;
 }
 
+.cloud-1
+{
+    animation: cloud-1-movement 15s linear infinite;
+    z-index: 170;
+}
+
+.cloud-2
+{
+    animation: cloud-2-movement 25s linear infinite -17s;
+}
+
+.cloud-3
+{
+    animation: cloud-3-movement 18s linear infinite -15s;
+}
+
+.cloud-4
+{
+    animation: cloud-4-movement 21s linear infinite -7s;
+}
+
+.moon
+{
+    animation: moon-movement 10s ease-out;
+}
+
+.compartment-one .compartment-window
+{
+    animation: window-color 5s ease-out infinite;
+}
+
+.compartment-two .compartment-window
+{
+    animation: window-color 3s ease-out infinite -1s;
+}
+
+.compartment-three .compartment-window
+{
+    animation: window-color 4s ease-out infinite -3s;
+}
+
+@keyframes window-color
+{
+    to
+    {
+        /* stylelint-disable-next-line */
+        background-image: linear-gradient(90deg, transparent .8rem, orange .8rem);
+    }
+}
+
+@keyframes moon-movement
+{
+    from
+    {
+        transform: rotate(-45deg) translateX(-800px) scale(1.6);
+    }
+
+    to
+    {
+        transform: rotate(0) translateX(0) scale(1);
+    }
+}
+
+@keyframes cloud-1-movement
+{
+    from
+    {
+        transform: translate3d(-200px, 180px, 20px) scale(1.1);
+    }
+
+    to
+    {
+        transform: translate3d(900px, 180px, 20px) scale(1.1);
+    }
+}
+
+@keyframes cloud-2-movement
+{
+    from
+    {
+        transform: translate3d(-200px, 90px, 20px) scale(.4);
+    }
+
+    to
+    {
+        transform: translate3d(900px, 90px, 20px) scale(.4);
+    }
+}
+
+@keyframes cloud-3-movement
+{
+    from
+    {
+        transform: translate3d(-200px, 130px, 120px) scale(-.75, .75);
+    }
+
+    to
+    {
+        transform: translate3d(900px, 130px, 120px) scale(-.75, .75);
+    }
+}
+
+@keyframes cloud-4-movement
+{
+    from
+    {
+        transform: translate3d(-200px, 50px, 80px) scale(-.62, .62);
+    }
+
+    to
+    {
+        transform: translate3d(900px, 50px, 80px) scale(-.62, .62);
+    }
+}
+
 @keyframes train-movement
 {
     from
     {
-        transform: translateX(45.3rem); 
+        transform: translateX(45.3rem);
     }
+
     to
     {
         transform: translateX(-1000px);
