@@ -96,13 +96,14 @@
 
 .smoke
 {
+    height: 1rem;
+
     animation-name: fly-up;
     animation-duration: 4s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    opacity: 0;
-    height: 1rem;
 
+    opacity: 0;
 }
 
 @keyframes fly-up
@@ -114,8 +115,9 @@
 
     to
     {
-        opacity: 0;
         transform: translate3d(250px, -300px, 50px);
+
+        opacity: 0;
     }
 }
 
