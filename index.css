@@ -801,7 +801,7 @@ ul
 
 .hover-block_left_top:hover ~ .canvas
 {
-    transform: rotate3d(-1, 1, 0, 25deg) scale3d(.9, .9, 1);
+    transform: rotate3d(-1, 1, 0, 25deg);
 }
 
 .hover-block_left_bottom:hover ~ .canvas
