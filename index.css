@@ -154,10 +154,9 @@ ul
     z-index: 1;
     right: 0;
     bottom: 12.6rem;
-    animation: trainAnimation 40s linear infinite;
+    animation: trainanimation 40s linear infinite;
     width: 44rem;
     height: 10rem;
-    -webkit-animation: trainAnimation 40s linear infinite;
 }
 
 .engine-front,
@@ -677,49 +676,29 @@ ul
 .cloud:nth-child(1)
 {
     top: 10px;
-    animation: cloudAnimation 70s linear infinite 5s;
+    animation: cloudanimation 70s linear infinite 5s;
     transform: scale(-.2,.2);
-    -webkit-transform: scale(-.2,.2);
-    -moz-transform: scale(-.2,.2);
-    -ms-transform: scale(-.2,.2);
-    -o-transform: scale(-.2,.2);
-    -webkit-animation: cloudAnimation 70s linear infinite 5s;
 }
 
 .cloud:nth-child(2)
 {
-    animation: cloudAnimation 60s linear infinite -10s;
+    animation: cloudanimation 60s linear infinite -10s;
     transform: scale(.4);
     top: 50px;
-    -webkit-animation: cloudAnimation 60s linear infinite -10s;
-    -webkit-transform: scale(.4);
-    -moz-transform: scale(.4);
-    -ms-transform: scale(.4);
-    -o-transform: scale(.4);
 }
 
 .cloud:nth-child(3)
 {
-    animation: cloudAnimation 50s linear infinite 7s;
+    animation: cloudanimation 50s linear infinite 7s;
     transform: scale(.5);
     top: 100px;
-    -webkit-animation: cloudAnimation 50s linear infinite 7s;
-    -webkit-transform: scale(.5);
-    -moz-transform: scale(.5);
-    -ms-transform: scale(.5);
-    -o-transform: scale(.5);
 }
 
 .cloud:nth-child(4)
 {
-    animation: cloudAnimation 40s linear infinite;
+    animation: cloudanimation 40s linear infinite;
     transform: scale(-.6,.6);
     top: 170px;
-    -webkit-animation: cloudAnimation 40s linear infinite;
-    -webkit-transform: scale(-.6,.6);
-    -moz-transform: scale(-.6,.6);
-    -ms-transform: scale(-.6,.6);
-    -o-transform: scale(-.6,.6);
 }
 
 .smoke-1,
@@ -754,7 +733,7 @@ ul
     right: 49px;
 }
 
-@keyframes cloudAnimation
+@keyframes cloudanimation
 {
     to
     {
@@ -762,12 +741,13 @@ ul
     }
 }
 
-@keyframes trainAnimation
+@keyframes train-animation
 {
     from
     {
         transform: translate(100px);
     }
+
     to
     {
         transform: translate(-800px);
@@ -780,6 +760,7 @@ ul
     {
         opacity: 1;
     }
+
     to
     {
         opacity: 0;
@@ -797,6 +778,7 @@ ul
     {
         opacity: 1;
     }
+
     to
     {
         opacity: 0;
@@ -836,18 +818,19 @@ ul
 .moon
 {
     transform-origin: 0 500px;
-    animation: moonAnimation 30s ease-in-out infinite;
+    animation: moonAnimation 20s ease-in infinite;
 }
 
 @keyframes moonAnimation
 {
     from
     {
-        transform: rotate(0);
+        transform: rotate(-90deg);
 
     }
+
     to
     {
-        transform: rotate(1turn);
+        transform: rotate(0deg);
     }
 }
