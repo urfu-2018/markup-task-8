@@ -1,0 +1,399 @@
+.canvas
+{
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.hover
+{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    left: calc(50% - 450px);
+    top: calc(50% - 300px);
+    z-index: 1;
+}
+
+.center-top,
+.center-center,
+.center-bottom
+{
+    left: calc(50% - 150px);
+}
+
+.right-top,
+.right-center,
+.right-bottom
+{
+    left: calc(50% + 150px);
+}
+
+.left-center,
+.center-center,
+.right-center
+{
+    top: calc(50% - 100px);
+}
+
+.left-bottom,
+.center-bottom,
+.right-bottom
+{
+    top: calc(50% + 100px);
+}
+
+.cloud,
+.cloud::before,
+.cloud::after
+{
+    background: lightsteelblue;
+    z-index: 150;
+}
+
+.hover:hover ~ .canvas
+{
+    transition: transform;
+    transition-duration: 1s;
+}
+
+.left-top:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(-20deg) rotateY(20deg);
+}
+
+.center-top:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(-20deg);
+}
+
+.right-top:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(-20deg) rotateY(-20deg);
+}
+
+.left-center:hover ~ .canvas
+{
+    transform: perspective(900px) rotateY(20deg);
+}
+
+.center-center:hover ~ .canvas
+{
+    transform: perspective(900px);
+}
+
+.right-center:hover ~ .canvas
+{
+    transform: perspective(900px) rotateY(-20deg);
+}
+
+.left-bottom:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(20deg) rotateY(20deg);
+}
+
+.center-bottom:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(20deg);
+}
+
+.right-bottom:hover ~ .canvas
+{
+    transform: perspective(900px) rotateX(20deg) rotateY(-20deg);
+}
+
+@keyframes moveCloud1
+{
+    from
+    {
+        left: 450px;
+    }
+
+    50%
+    {
+        left: -200px;
+    }
+
+    50.0001%
+    {
+        left: 1100px;
+    }
+
+    to
+    {
+        left: 450px;
+    }
+}
+
+.cloud
+{
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.cloud:first-child
+{
+    animation-name: moveCloud1;
+    animation-duration: 20s;
+    top: 50px;
+    transform: scale(.7);
+}
+
+@keyframes moveCloud2
+{
+    from
+    {
+        left: -200px;
+    }
+
+    to
+    {
+        left: 1100px;
+    }
+}
+
+.cloud:nth-child(2)
+{
+    animation-name: moveCloud2;
+    animation-duration: 10s;
+    top: 100px;
+    transform: scale(1.2);
+}
+
+@keyframes moveCloud3
+{
+    from
+    {
+        left: -200px;
+    }
+
+    to
+    {
+        left: 1100px;
+    }
+}
+
+.cloud:nth-child(3)
+{
+    animation-name: moveCloud3;
+    animation-duration: 13s;
+    top: 200px;
+}
+
+@keyframes moveCloud4
+{
+    from
+    {
+        left: 900px;
+    }
+
+    to
+    {
+        left: -200px;
+    }
+}
+
+.cloud:last-child
+{
+    animation-name: moveCloud4;
+    animation-duration: 17s;
+    top: 150px;
+    transform: scale(.9);
+}
+
+@keyframes moveMoon
+{
+    from
+    {
+        transform: scale(1.2);
+        left: calc(50% - 350px);
+        top: 300px;
+    }
+
+    to
+    {
+        transform: scale(1);
+        left: calc(50% - 60px);
+        top: 50px;
+    }
+}
+
+.moon
+{
+    animation-name: moveMoon;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes moveTrain
+{
+    from
+    {
+        right: 0;
+    }
+
+    66%
+    {
+        right: 1000px;
+    }
+
+    66.0001%
+    {
+        right: -500px;
+    }
+
+    to
+    {
+        right: 0;
+    }
+}
+
+.train
+{
+    animation-name: moveTrain;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateWheel
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel
+{
+    animation-name: rotateWheel;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateWheelJoint
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation-name: rotateWheelJoint;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinkWindow
+{
+    25%
+    {
+        background-image: linear-gradient(90deg, transparent .8rem,
+        yellow .8rem);
+    }
+
+    50%
+    {
+        background-image: linear-gradient(90deg, transparent .8rem,
+        purple .8rem);
+    }
+
+    75%
+    {
+        background-image: linear-gradient(90deg, transparent .8rem,
+        red .8rem);
+    }
+}
+
+.compartment-window
+{
+    animation-name: blinkWindow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes smoking
+{
+    100%
+    {
+        transform: translate(40px, -60px);
+        opacity: 0;
+    }
+}
+
+.smoke
+{
+    transform: scale(1.2);
+    animation-name: smoking;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.smoke-1
+{
+    animation-delay: 3s;
+}
+
+.smoke-2
+{
+    animation-delay: 2s;
+}
+
+.smoke-3
+{
+    animation-delay: 1s;
+}
+
+@keyframes danceHill
+{
+    50%
+    {
+        margin-left: -150px;
+    }
+}
+
+@keyframes danceHill2
+{
+    50%
+    {
+        margin-top: 100px;
+    }
+}
+
+@keyframes danceHill3
+{
+    50%
+    {
+        margin-left: 200px;
+    }
+}
+
+.hill,
+.hill2,
+.hill3
+{
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.hill
+{
+    animation-name: danceHill;
+}
+
+.hill2
+{
+    animation-name: danceHill2;
+}
+
+.hill3
+{
+    animation-name: danceHill3;
+}
