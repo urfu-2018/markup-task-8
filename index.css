@@ -835,3 +835,54 @@ ul
         background-color: #eebe1f;
     }
 }
+
+.canvas
+{
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: 3s ease-out;
+}
+
+.hover-area
+{
+    width: 450px;
+    height: 300px;
+    position: absolute;
+    left: 20%;
+    top: 16%;
+    z-index: 1;
+}
+
+.right-top
+{
+    transform: translate(100%, 0);
+}
+
+.left-bottom
+{
+    transform: translate(0, 100%);
+}
+.right-bottom
+{
+    transform: translate(100%, 100%);
+}
+
+.left-top:hover ~ .canvas
+{
+    transform: perspective(800px) rotateX(10deg) rotateY(10deg);
+}
+
+.right-top:hover ~ .canvas
+{
+    transform: perspective(800px) rotateX(-10deg) rotateY(-10deg);
+}
+
+.left-bottom:hover ~ .canvas
+{
+    transform: perspective(800px) rotateX(-10deg) rotateY(10deg);
+}
+
+.right-bottom:hover ~ .canvas
+{
+    transform: perspective(800px) rotateX(10deg) rotateY(-10deg);
+}
