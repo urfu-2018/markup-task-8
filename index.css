@@ -64,12 +64,23 @@ ul
 
 @keyframes flame
 {
-    from
+    0%
     {
         background: #f50000ad;
     }
 
-    to
+    25%,
+    75%
+    {
+        transform: rotate(-10deg);
+    }
+
+    50%
+    {
+        transform: rotate(10deg);
+    }
+
+    100%
     {
         background: linear-gradient(#013971, #000c18 60%);
     }
@@ -86,7 +97,7 @@ ul
 .canvas
 {
     position: relative;
-
+    
     overflow: hidden;
 
     width: 900px;
@@ -175,7 +186,7 @@ ul
 
     to
     {
-        transform: translate(900px,600px)  scale(1);
+        transform: translate(850px,600px) scale(1);
     }
 }
 
@@ -767,17 +778,32 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
-    animation: hill2-fall 20s linear 7.2s forwards;
+    animation: hill2-fall 15s linear 7.2s forwards;
 }
 
 @keyframes hill2-fall
 {
-    from
+    0%
     {
         transform: rotate(45deg) translate(0,0);
     }
 
-    to
+    3%
+    {
+        transform: rotate(43deg) translate(0,0);
+    }
+
+    6%
+    {
+        transform: rotate(45deg) translate(0,0);
+    }
+
+    9%
+    {
+        transform: rotate(47deg) translate(0,0);
+    }
+
+    100%
     {
         transform: rotate(45deg) translate(50%,50%);
     }
@@ -1042,4 +1068,110 @@ li
     {
         background-position: 0 -2391px;
     }
+}
+
+.tilt
+{
+    position: absolute;
+    height: 200px;
+    width: 300px;
+    z-index: 99999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.left-top
+{
+    left: -600px;
+    top: -400px;
+}
+
+.right-top
+{
+    left: 600px;
+    top: -400px;
+}
+
+.left-bottom
+{
+    top: 400px;
+    left: -600px;
+}
+
+.right-bottom
+{
+    left: 600px;
+    top: 400px;
+}
+
+.center-top
+{
+    top: -400px;
+}
+
+.center-bottom
+{
+    top: 400px;
+}
+
+.l-t-l-b
+{
+    left: -600px;
+}
+
+.r-t-r-b
+{
+    left: 600px;
+}
+
+.left-top:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(-1, 1, 0, 20deg);
+}
+
+.right-top:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(-1, -1, 0, 20deg);
+}
+
+.left-bottom:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(1, 1, 0, 20deg);
+}
+
+.right-bottom:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(1, -1, 0, 20deg);
+}
+
+.center-top:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(-1, 0, 0, 20deg);
+}
+
+.center-bottom:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(1, 0, 0, 14deg);
+}
+
+.r-t-r-b:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(0, -1, 0, 20deg);
+}
+
+.l-t-l-b:hover ~ .wrap
+{
+    transform: perspective(900px) rotate3d(0, 1, 0, 20deg);
+}
+
+.wrap
+{
+    perspective: 900px;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+    position: relative;
+    margin: auto;
 }
