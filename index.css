@@ -154,9 +154,10 @@ ul
     z-index: 1;
     right: 0;
     bottom: 12.6rem;
-
+    animation: trainAnimation 40s linear infinite;
     width: 44rem;
     height: 10rem;
+    -webkit-animation: trainAnimation 40s linear infinite;
 }
 
 .engine-front,
@@ -516,13 +517,10 @@ ul
     z-index: 1;
     top: calc(50% - .2rem);
     right: .4rem;
-
     width: 3.6rem;
     height: .4rem;
-
     border-radius: .6rem;
     background: white;
-
     transform-origin: 100% 50%;
 }
 
@@ -674,4 +672,182 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud:nth-child(1)
+{
+    top: 10px;
+    animation: cloudAnimation 70s linear infinite 5s;
+    transform: scale(-.2,.2);
+    -webkit-transform: scale(-.2,.2);
+    -moz-transform: scale(-.2,.2);
+    -ms-transform: scale(-.2,.2);
+    -o-transform: scale(-.2,.2);
+    -webkit-animation: cloudAnimation 70s linear infinite 5s;
+}
+
+.cloud:nth-child(2)
+{
+    animation: cloudAnimation 60s linear infinite -10s;
+    transform: scale(.4);
+    top: 50px;
+    -webkit-animation: cloudAnimation 60s linear infinite -10s;
+    -webkit-transform: scale(.4);
+    -moz-transform: scale(.4);
+    -ms-transform: scale(.4);
+    -o-transform: scale(.4);
+}
+
+.cloud:nth-child(3)
+{
+    animation: cloudAnimation 50s linear infinite 7s;
+    transform: scale(.5);
+    top: 100px;
+    -webkit-animation: cloudAnimation 50s linear infinite 7s;
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+}
+
+.cloud:nth-child(4)
+{
+    animation: cloudAnimation 40s linear infinite;
+    transform: scale(-.6,.6);
+    top: 170px;
+    -webkit-animation: cloudAnimation 40s linear infinite;
+    -webkit-transform: scale(-.6,.6);
+    -moz-transform: scale(-.6,.6);
+    -ms-transform: scale(-.6,.6);
+    -o-transform: scale(-.6,.6);
+}
+
+.smoke-1,
+.smoke-3
+{
+    animation: smokeAnimation1 2s infinite;
+}
+
+.smoke-1
+{
+    top: -25px;
+    right: 44px;
+}
+
+.smoke-2,
+.smoke-4
+{
+    top: -25px;
+    right: 42px;
+    animation: smokeAnimation2 2s infinite 1s;
+}
+
+.smoke-4
+{
+    animation-delay: 1.5s;
+}
+
+.smoke-3
+{
+    animation-delay: .5s;
+    top: -25px;
+    right: 49px;
+}
+
+@keyframes cloudAnimation
+{
+    to
+    {
+        left: 100%;
+    }
+}
+
+@keyframes trainAnimation
+{
+    from
+    {
+        transform: translate(100px);
+    }
+    to
+    {
+        transform: translate(-800px);
+    }
+}
+
+@keyframes smokeAnimation1
+{
+    from
+    {
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0;
+        transform: translate(10px, -15px) scale(1.5);
+        -webkit-transform: translate(10px, -15px) scale(1.5);
+        -moz-transform: translate(10px, -15px) scale(1.5);
+        -ms-transform: translate(10px, -15px) scale(1.5);
+        -o-transform: translate(10px, -15px) scale(1.5);
+    }
+}
+
+@keyframes smokeAnimation2
+{
+    from
+    {
+        opacity: 1;
+    }
+    to
+    {
+        opacity: 0;
+        transform: translate(-10px, -25px) scale(1.5);
+        -webkit-transform: translate(-10px, -25px) scale(1.5);
+        -moz-transform: translate(-10px, -25px) scale(1.5);
+        -ms-transform: translate(-10px, -25px) scale(1.5);
+        -o-transform: translate(-10px, -25px) scale(1.5);
+    }
+}
+
+@keyframes wheelAnimation
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-jointAnimation 5s linear infinite;
+}
+
+.wheel
+{
+    animation: wheelAnimation 5s linear infinite;
+}
+@keyframes wheel-jointAnimation
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+.moon
+{
+    transform-origin: 0 500px;
+    animation: moonAnimation 30s ease-in-out infinite;
+}
+
+@keyframes moonAnimation
+{
+    from
+    {
+        transform: rotate(0);
+
+    }
+    to
+    {
+        transform: rotate(1turn);
+    }
 }
