@@ -96,6 +96,8 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: move-moon 15s linear 0s forwards;
 }
 
 .center::after
@@ -157,6 +159,8 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: move-train 20s linear infinite;
 }
 
 .engine-front,
@@ -251,25 +255,27 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: move-smoke 2s linear infinite;
 }
 
 .smoke-2
 {
     left: .4rem;
-
-    animation-delay: .1s;
+    animation-delay: .3s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .2s;
+    animation-delay: .4s;
 }
 
 .smoke-4
 {
     left: .8rem;
+    animation-delay: .6s;
 }
 
 .engine-body
@@ -347,6 +353,8 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: spin 3s linear infinite;
 }
 
 .wheel-2
@@ -524,6 +532,7 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+    animation: spin-reverse 3s linear infinite;
 }
 
 .wheel-joint::before,
@@ -648,6 +657,7 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+    
 }
 
 .cloud:before,
@@ -674,4 +684,104 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.clouds .cloud:nth-child(1),
+.clouds .cloud:nth-child(2),
+.clouds .cloud:nth-child(3),
+.clouds .cloud:nth-child(4)
+{
+    animation: move-cloud linear infinite;
+}
+
+.clouds .cloud:nth-child(1)
+{
+    transform: translate(0, 150px) scale(-1, 1);
+    animation-duration: 15s;
+    z-index: 5;
+}
+  
+.clouds .cloud:nth-child(2)
+{
+    transform: translate(0, 100px) scale(.8);
+    animation-duration: 25s;
+}
+
+.clouds .cloud:nth-child(3)
+{
+    transform: translate(0, 80px) scale(.6) scale(-1, 1);
+    animation-duration: 35s;
+}
+
+.clouds .cloud:nth-child(4)
+{
+    transform: translate(0, 10px) scale(.4);
+    animation-duration: 40s;
+}
+
+@keyframes move-cloud
+{
+    0%
+    {
+        left: -25%;
+    }
+
+    100%
+    {
+        left: 100%;
+    }
+}
+
+@keyframes move-moon
+{
+    0%
+    {
+        transform: scale(1.5);
+    }
+
+    100%
+    {
+        transform: scale(1);
+        top: 50px;
+    }
+}
+
+@keyframes move-train
+{
+    0%
+    {
+        right: -44rem;
+    }
+    
+    100%
+    {
+        right: 100%;
+    }
+}
+
+@keyframes spin
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes spin-reverse
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move-smoke
+{
+    100%
+    {
+        top: -10rem;
+        opacity: 0;
+        width: 3rem;
+        height: 3.6rem;
+    }
 }
