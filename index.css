@@ -83,7 +83,7 @@ ul
     background: linear-gradient(#013971, #000c18 60%);
 
     transform-style: preserve-3d;
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
 }
 
 .moon
