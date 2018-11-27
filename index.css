@@ -83,12 +83,14 @@ ul
     background: linear-gradient(#013971, #000c18 60%);
 
     transform-style: preserve-3d;
+    perspective-origin: center center;
     transition: all 1s ease-out;
 }
 
 .moon
 {
     position: absolute;
+    z-index: 1;
     top: 100px;
     left: calc(50% - 60px);
 
@@ -100,7 +102,11 @@ ul
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
 
-    animation: 'moving-moon' 40s linear -18s infinite;
+    animation-name: moving-moon;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-delay: -18s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes moving-moon
@@ -182,7 +188,11 @@ ul
     width: 44rem;
     height: 10rem;
 
-    animation: 'moving-train' 10s linear -3.6s infinite;
+    animation-name: moving-train;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: -3.6s;
+    animation-iteration-count: infinite;
 }
 
 @keyframes moving-train
@@ -291,7 +301,10 @@ ul
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
 
-    animation: 'moving-smoke' .1s linear 0s infinite;
+    animation-name: moving-smoke;
+    animation-duration: .1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 @keyframes moving-smoke
@@ -304,7 +317,7 @@ ul
 
     to
     {
-        transform: translate3d(35px, -60px, 0) scale3d(2, 2, 2);
+        transform: translate3d(45px, -55px, 0) scale3d(2, 2, 2);
         opacity: 0;
     }
 }
@@ -313,21 +326,21 @@ ul
 {
     left: .4rem;
 
-    animation: 'moving-smoke' .1s linear .1s infinite;
+    animation-duration: .1s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation: 'moving-smoke' .2s linear .2s infinite;
+    animation-duration: .2s;
 }
 
 .smoke-4
 {
     left: .8rem;
 
-    animation: 'moving-smoke' .3s linear .3s infinite;
+    animation-duration: .3s;
 }
 
 .engine-body
@@ -406,19 +419,23 @@ ul
     border-radius: 50%;
     background: orange;
 
-    animation: 'spinning-wheels' .7s linear 0s infinite;
+    animation-name: spinning-wheels;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes spinning-wheels
 {
     from
     {
-        transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 1turn);
     }
 
     to
     {
-        transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0turn);
     }
 }
 
@@ -598,19 +615,23 @@ ul
 
     transform-origin: 100% 50%;
 
-    animation: 'moving-wheel-joint' .7s linear infinite;
+    animation-name: moving-wheel-joint;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-wheel-joint
 {
     from
     {
-        transform: rotate3d(0, 0, 1, 0);
+        transform: rotate3d(0, 0, 1, 0turn);
     }
 
     to
     {
-        transform: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 1turn);
     }
 }
 
@@ -651,20 +672,24 @@ ul
 
     transform-origin: 0 50%;
 
-    animation: 'moving-wheel-joint-2' .7s linear infinite;
+    animation-name: moving-wheel-joint-2;
+    animation-duration: .6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-wheel-joint-2
 {
     from
     {
-        transform: rotate3d(0, 0, 1, -8deg);
+        transform: rotate3d(0, 0, 1, -.02turn);
         
     }
 
     to
     {
-        transform: rotate3d(0, 0, 1, 352deg);
+        transform: rotate3d(0, 0, 1, .98turn);
     }
 }
 
@@ -781,7 +806,13 @@ ul
 
 .cloud-1
 {
-    animation: 'moving-cloud-1' 30s linear -13s infinite;
+    z-index: 105;
+    animation-name: moving-cloud-1;
+    animation-duration: 30s;
+    animation-delay: -13s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-cloud-1
@@ -799,7 +830,13 @@ ul
 
 .cloud-2
 {
-    animation: 'moving-cloud-2' 25s linear -6s infinite;
+    z-index: 110;
+    animation-name: moving-cloud-2;
+    animation-duration: 25s;
+    animation-delay: -6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-cloud-2
@@ -817,7 +854,13 @@ ul
 
 .cloud-3
 {
-    animation: 'moving-cloud-3' 20s linear -14s infinite;
+    z-index: 115;
+    animation-name: moving-cloud-3;
+    animation-duration: 20s;
+    animation-delay: -14s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-cloud-3
@@ -835,7 +878,12 @@ ul
 
 .cloud-4
 {
-    animation: 'moving-cloud-4' 15s linear 0s infinite;
+    z-index: 120;
+    animation-name: moving-cloud-4;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes moving-cloud-4
@@ -854,7 +902,7 @@ ul
 .rotate-canvas
 {
     position: absolute;
-    z-index: 10;
+    z-index: 200;
     width: 300px;
     height: 200px;
 }
