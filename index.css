@@ -160,7 +160,8 @@ ul
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
 
-    animation: moon-move 26s linear forwards, moon-shining 10s ease 26s infinite;
+    animation: moon-move 26s linear forwards,
+        moon-shining 10s ease 26s infinite;
 }
 
 @keyframes moon-move
