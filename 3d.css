@@ -1,16 +1,26 @@
-.sides
+body div
+{
+    transform-style: preserve-3d;
+}
+
+.wrapper
 {
     position: relative;
+
+    overflow: hidden;
 
     width: 900px;
     height: 600px;
     margin: auto;
+
+    perspective: 900px;
+    transform-style: preserve-3d;
 }
 
 .side
 {
     position: absolute;
-    z-index: 5000;
+    z-index: 500;
 
     width: 40%;
     height: 40%;
@@ -42,7 +52,7 @@
     left: 0;
 }
 
-.center
+.wrapper
 {
     perspective: 1300px;
 }
@@ -50,26 +60,26 @@
 .canvas
 {
     z-index: 0;
-    transform-style: preserve-3d;
+
     transition: all linear 1s;
 }
 
-.top-left-side:hover ~ .canvas
+.top-left-side:hover ~ .wrapper .canvas
 {
     transform: rotate3d(1, -1, 0, 45deg);
 }
 
-.top-right-side:hover ~ .canvas
+.top-right-side:hover ~ .wrapper .canvas
 {
     transform: rotate3d(1, 1, 0, 45deg);
 }
 
-.bottom-right-side:hover ~ .canvas
+.bottom-right-side:hover ~ .wrapper .canvas
 {
     transform: rotate3d(-1, 1, 0, 45deg);
 }
 
-.bottom-left-side:hover ~ .canvas
+.bottom-left-side:hover ~ .wrapper .canvas
 {
     transform: rotate3d(-1, -1, 0, 45deg);
 }
@@ -77,6 +87,8 @@
 .moon
 {
     z-index: 2;
+
+    transform: translateZ(10px);
 }
 
 .h-con

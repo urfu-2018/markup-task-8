@@ -74,14 +74,14 @@
 
 .moon
 {
-    animation-name: rise;
+    animation-name: moonrise;
     animation-duration: 8s;
     animation-timing-function: ease-out;
 
     animation-fill-mode: forwards;
 }
 
-@keyframes rise
+@keyframes moonrise
 {
     from
     {
