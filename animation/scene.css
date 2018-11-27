@@ -1,0 +1,63 @@
+.rotate
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+
+.rotate.left-top
+{
+    left: 0;
+    top: 0;
+}
+
+.rotate.right-top
+{
+    right: 0;
+    top: 0;
+}
+
+.rotate.left-bottom
+{
+    left: 0;
+    bottom: 0;
+}
+
+.rotate.right-bottom
+{
+    right: 0;
+    bottom: 0;
+}
+
+.center
+{
+    transform-style: preserve-3d;
+    perspective: 2200px;
+}
+
+.canvas
+{
+    transition-property: transform;
+    transition-duration: .3s;
+}
+
+.rotate.left-top:hover ~ .canvas
+{
+    transform: rotateX(15deg) rotateY(-15deg);
+}
+
+.rotate.left-bottom:hover ~ .canvas
+{
+    transform: rotateX(-15deg) rotateY(-15deg);
+}
+
+.rotate.right-top:hover ~ .canvas
+{
+    transform: rotateX(15deg) rotateY(15deg);
+}
+
+.rotate.right-bottom:hover ~ .canvas
+{
+    transform: rotateX(-15deg) rotateY(15deg);
+}

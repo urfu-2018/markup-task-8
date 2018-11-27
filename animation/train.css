@@ -9,7 +9,6 @@
 .train
 {
     right: -500px;
-    /*transform: translate(-700px);*/
     animation: trainMovement 15s linear infinite;
 }
 
