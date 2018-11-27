@@ -678,9 +678,20 @@ ul
 
 /*--------------- Мои стили --------------*/
 
+.hover-block
+{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    z-index: 500;
+}
+
 .canvas
 {
+    perspective: 2000px;
     transform-style: preserve-3d;
+    transition: all .5s;
+    overflow: visible;
 }
 
 .wheel
@@ -759,6 +770,55 @@ ul
     animation: window-color 4s ease-out infinite -3s;
 }
 
+.bridge
+{
+    transform: translate3d(0, 0, 100px);
+}
+
+.hover-block_left_top
+{
+    top: 0;
+    left: 0;
+}
+
+.hover-block_left_bottom
+{
+    left: 0;
+    bottom: 0;
+}
+
+.hover-block_right_top
+{
+    right: 0;
+    top: 0;
+}
+
+.hover-block_right_bottom
+{
+    right: 0;
+    bottom: 0;
+}
+
+.hover-block_left_top:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 25deg) scale3d(.9, .9, 1);
+}
+
+.hover-block_left_bottom:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 25deg);
+}
+
+.hover-block_right_top:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 25deg);
+}
+
+.hover-block_right_bottom:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 25deg);
+}
+
 @keyframes window-color
 {
     to
@@ -772,12 +832,12 @@ ul
 {
     from
     {
-        transform: rotate(-45deg) translateX(-800px) scale(1.6);
+        transform: rotateZ(-45deg) translate3d(-800px, 0, 10px) scale(1.6);
     }
 
     to
     {
-        transform: rotate(0) translateX(0) scale(1);
+        transform: rotateZ(0) translate3d(0, 0, 10px) scale(1);
     }
 }
 
@@ -785,12 +845,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 180px, 20px) scale(1.1);
+        transform: translate3d(-200px, 180px, 50px) scale(1.1);
     }
 
     to
     {
-        transform: translate3d(900px, 180px, 20px) scale(1.1);
+        transform: translate3d(900px, 180px, 50px) scale(1.1);
     }
 }
 
@@ -798,12 +858,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 90px, 20px) scale(.4);
+        transform: translate3d(-200px, 90px, 10px) scale(.4);
     }
 
     to
     {
-        transform: translate3d(900px, 90px, 20px) scale(.4);
+        transform: translate3d(900px, 90px, 10px) scale(.4);
     }
 }
 
@@ -811,12 +871,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 130px, 120px) scale(-.75, .75);
+        transform: translate3d(-200px, 130px, 35px) scale(-.75, .75);
     }
 
     to
     {
-        transform: translate3d(900px, 130px, 120px) scale(-.75, .75);
+        transform: translate3d(900px, 130px, 35px) scale(-.75, .75);
     }
 }
 
@@ -824,12 +884,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 50px, 80px) scale(-.62, .62);
+        transform: translate3d(-200px, 50px, 20px) scale(-.62, .62);
     }
 
     to
     {
-        transform: translate3d(900px, 50px, 80px) scale(-.62, .62);
+        transform: translate3d(900px, 50px, 20px) scale(-.62, .62);
     }
 }
 
@@ -837,12 +897,12 @@ ul
 {
     from
     {
-        transform: translateX(45.3rem);
+        transform: translate3d(45.3rem, 0, 100px);
     }
 
     to
     {
-        transform: translateX(-1000px);
+        transform: translate3d(-1000px, 0, 100px);
     }
 
 }
@@ -851,7 +911,7 @@ ul
 {
     to
     {
-        transform: scale(3, 2) translate(2rem, -5rem);
+        transform: scale(3, 2) translate3d(2rem, -5rem, 100px);
         opacity: 0;
     }
 
@@ -861,7 +921,7 @@ ul
 {
     to
     {
-        transform: rotate(-1turn);
+        transform: rotateZ(-1turn);
     }
 }
 
@@ -869,6 +929,6 @@ ul
 {
     to
     {
-        transform: rotate(1turn);
+        transform: rotateZ(1turn);
     }
 }
