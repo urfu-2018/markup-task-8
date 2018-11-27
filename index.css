@@ -80,22 +80,9 @@ ul
     height: 600px;
     margin: auto;
 
-    background: linear-gradient(#013971, #000c18 60%);
-}
-
-.moon
-{
-    position: absolute;
-    top: 100px;
-    left: calc(50% - 60px);
-
-    width: 120px;
-    height: 120px;
-
-    opacity: 1;
-    border-radius: 50%;
-    background: #fefce6;
-    box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    background: linear-gradient(45deg,  #000c18, #002142, #013971);
+    background-size: 400% 400%;
+    animation: Gradient 15s ease infinite;
 }
 
 .center::after
@@ -152,7 +139,6 @@ ul
 {
     position: absolute;
     z-index: 1;
-    right: 0;
     bottom: 12.6rem;
 
     width: 44rem;
@@ -237,39 +223,6 @@ ul
     border-left: .5rem solid transparent;
 
     transform: translate(-50%, 0);
-}
-
-.smoke
-{
-    position: absolute;
-    z-index: -1;
-    top: -1.5rem;
-    left: .2rem;
-
-    width: .8rem;
-    height: 1.4rem;
-
-    border-radius: 50%;
-    background: rgba(255, 255, 255, .8);
-}
-
-.smoke-2
-{
-    left: .4rem;
-
-    animation-delay: .1s;
-}
-
-.smoke-3
-{
-    left: .6rem;
-
-    animation-delay: .2s;
-}
-
-.smoke-4
-{
-    left: .8rem;
 }
 
 .engine-body
@@ -635,23 +588,24 @@ ul
     transform: rotate(45deg);
 }
 
-.cloud
+.cloud1
 {
     position: absolute;
-    z-index: 1;
-    top: 0;
+    top: 100px;
     left: 0;
 
     width: 200px;
     height: 60px;
 
+    z-index: auto;
     opacity: .8;
+
     border-radius: 200px;
     background: #fff;
 }
 
-.cloud:before,
-.cloud:after
+.cloud1:before,
+.cloud1:after
 {
     position: absolute;
     top: -15px;
@@ -666,7 +620,7 @@ ul
     background: #fff;
 }
 
-.cloud:after
+.cloud1:after
 {
     top: -55px;
     right: 15px;
@@ -674,4 +628,421 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud1
+{
+    animation-name: cloudMove;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloudMove
+{
+    from
+    {
+        left: 0;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+.cloud2
+{
+    position: absolute;
+    z-index: 10 ;
+    top: 200px;
+    left: 0;
+
+    width: 90px;
+    height: 40px;
+
+    opacity: .8;
+
+    border-radius: 200px;
+    background: #fff;
+}
+
+.cloud2:before,
+.cloud2:after
+{
+    position: absolute;
+    top: -15px;
+    left: 20px;
+
+    width: 60px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 60px;
+    background: #fff;
+}
+
+.cloud2:after
+{
+    top: 0;
+    right: 0;
+    left: auto;
+
+    width: 90px;
+    height: 30px;
+}
+
+.cloud2
+{
+    animation-name: cloudMove;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+}
+
+.cloud3
+{
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 140px;
+    height: 40px;
+
+    z-index: auto;
+    opacity: .8;
+
+    border-radius: 40px;
+    background: #fff;
+}
+
+.cloud3:before,
+.cloud3:after
+{
+    position: absolute;
+    top: -25px;
+    left: 5px;
+
+    width: 120px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 70px;
+    background: #fff;
+}
+
+.cloud3:after
+{
+    top: 20px;
+    right: 20px;
+    left: auto;
+
+    width: 80px;
+    height: 30px;
+}
+
+.cloud3
+{
+    animation-name: cloudMove;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+
+.cloud4
+{
+    position: absolute;
+    top: 150px;
+    left: -30px;
+
+    width: 100px;
+    height: 50px;
+
+    z-index: auto;
+    opacity: .7;
+
+    border-radius: 30px;
+    background: #fff;
+}
+
+.cloud4:before,
+.cloud4:after
+{
+    position: absolute;
+    top: -10px;
+    left: 10px;
+
+    width: 60px;
+    height: 60px;
+
+    content: '';
+
+    border-radius: 70px;
+    background: #fff;
+}
+
+.cloud4:after
+{
+    top: 25px;
+    right: 15px;
+    left: auto;
+
+    width: 60px;
+    height: 30px;
+}
+
+.cloud4
+{
+    animation-name: cloudMove;
+    animation-duration: 28s;
+    animation-iteration-count: infinite;
+}
+
+.train
+{
+    animation-name: trainMove;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes trainMove
+{
+    from
+    {
+        right: 0;
+    }
+
+    to
+    {
+        right: 100%;
+    }
+}
+
+.wheel
+{
+    animation: wheelMove 5s linear infinite;
+}
+
+@keyframes wheelMove
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-jointMove 5s linear forwards;
+    animation-iteration-count: infinite;
+    z-index: 120;
+}
+
+@keyframes wheel-jointMove
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.wheel-joint-2
+{
+    animation: wheel-joint2Move 5s linear;
+    animation-iteration-count: infinite;
+    transform-origin: 0% 100%;
+    transform: rotate(-20deg);
+    z-index: 1200000;
+}
+
+@keyframes wheel-joint2Move
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.smoke
+{
+    position: absolute;
+    top: -1.5rem;
+    left: .2rem;
+
+    width: .8rem;
+    height: 1.4rem;
+
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .8);
+    animation: smokeMove 2s linear forwards infinite;
+}
+
+.smoke-2
+{
+    left: .4rem;
+    animation: smokeMove 2s linear infinite;
+    animation-delay: 400ms;
+}
+
+.smoke-3
+{
+    left: .6rem;
+    animation: smokeMove 2s linear infinite;
+    animation-delay: 800ms;
+}
+
+@keyframes smokeMove
+{
+    0%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translate(40px, -80px);
+        opacity: .5;
+    }
+}
+
+.smoke-4
+{
+    animation: smokeMove 2s  linear infinite;
+    left: .8rem;
+    animation-delay: 1200ms;
+}
+
+@keyframes Gradient
+{
+    0%
+    {
+        background-position: 0% 50%;
+    }
+
+    50%
+    {
+        background-position: 100% 50%;
+    }
+
+    100%
+    {
+        background-position: 0% 50%;
+    }
+}
+
+.moon
+{
+    position: absolute;
+    top: 300px;
+    left: 20px;
+
+    border-radius: 50%;
+    background: #fefce6;
+    box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    animation: moonMove 15s linear infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moonMove
+{
+    0%
+    {
+        width: 120px;
+        height: 120px;
+    }
+
+    45%,
+    55%
+    {
+        transform: translate(350px, -200px);
+        width: 90px;
+        height: 90px;
+        animation-delay: 3s;
+    }
+
+    100%
+    {
+        transform: translate(800px, 0);
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.rt,
+.rb
+{
+    display: inline-block;
+}
+
+.rt,
+.rb,
+.lt,
+.lb
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+}
+
+.lb
+{
+    left: 0;
+    bottom: 0;
+}
+
+.lt
+{
+    left: 0;
+    top: 0;
+}
+
+.rt
+{
+    right: 0;
+    top: 0;
+}
+
+.rb
+{
+    right: 0;
+    bottom: 0;
+}
+
+.canvas
+{
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: .5s linear;
+}
+
+.lt:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(-20deg);
+}
+
+.rt:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(20deg);
+}
+
+.lb:hover ~ .canvas
+{
+    transform: rotateX(20deg) rotateY(-20deg);
+}
+
+.rb:hover ~ .canvas
+{
+    transform: rotateX(-20deg) rotateY(-20deg);
 }
