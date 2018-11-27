@@ -179,6 +179,19 @@ ul
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
 }
 
+@keyframes train-animation
+{
+    from
+    {
+        transform: translate(600px);
+    }
+
+    to
+    {
+        transform: translate(-900px);
+    }
+}
+
 .train
 {
     position: absolute;
@@ -189,7 +202,7 @@ ul
     width: 44rem;
     height: 10rem;
 
-    animation: move-animation;
+    animation: train-animation;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 10s;
@@ -770,7 +783,7 @@ ul
 {
     from
     {
-        transform: translate(0);
+        transform: translate(-900px);
     }
 
     to
@@ -784,7 +797,7 @@ ul
     left: 100px;
     top: 120px;
     transform: scale(.25);
-    animation: cloud-animation 5s linear alternate forwards;
+    animation: cloud-animation 20s alternate-reverse linear infinite forwards;
 }
 
 .cloud-2
@@ -792,7 +805,7 @@ ul
     left: 500px;
     top: 100px;
     transform: scale(.5);
-    animation: cloud-animation 4s linear forwards;
+    animation: cloud-animation 19s linear infinite forwards;
 }
 
 .cloud-3
@@ -800,11 +813,11 @@ ul
     left: 200px;
     top: 10px;
     transform: scale(.75);
-    animation: cloud-animation 3.5s linear alternate forwards;
+    animation: cloud-animation 18s alternate-reverse linear infinite forwards;
 }
 
 .cloud-4
 {
     top: 300px;
-    animation: cloud-animation 3s linear forwards;
+    animation: cloud-animation 17s linear infinite forwards;
 }
