@@ -1,0 +1,19 @@
+@keyframes moon-rises
+{
+    from
+    {
+        transform: scale(3);
+        top: 500px;
+    }
+
+    to
+    {
+        transform: scale(1);
+        top: 100px;
+    }
+}
+
+div.moon
+{
+    animation: moon-rises 12s linear;
+}

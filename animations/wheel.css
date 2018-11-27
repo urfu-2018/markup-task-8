@@ -1,0 +1,12 @@
+@keyframes wheel-rotates
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+div.wheel-holder > div.wheel
+{
+    animation: wheel-rotates 5s linear infinite;
+}
