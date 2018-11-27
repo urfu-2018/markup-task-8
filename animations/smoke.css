@@ -13,20 +13,20 @@
 .smoke
 {
     background: gray;
-    animation: smoke-engages 3s infinite linear;
+    animation: smoke-engages 3s linear infinite;
 }
 
 .smoke-2
 {
-    animation: smoke-engages 3s infinite 1.5s linear;
+    animation: smoke-engages 3s linear 1.5s infinite;
 }
 
 .smoke-3
 {
-    animation: smoke-engages 3s infinite 1s linear;
+    animation: smoke-engages 3s linear 1s infinite;
 }
 
 .smoke-4
 {
-    animation: smoke-engages 3s infinite .5s linear;
+    animation: smoke-engages 3s linear .5s infinite;
 }
