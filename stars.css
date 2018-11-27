@@ -3480,8 +3480,7 @@
 {
     to
     {
-        margin-top: 600px;
-        margin-left: 450px;
+        transform: translateX(450px) translateY(600px);
     }
 }
 
@@ -3489,8 +3488,7 @@
 {
     to
     {
-        margin-top: 600px;
-        margin-left: 100px;
+        transform: translateX(100px) translateY(600px);
     }
 }
 
@@ -3498,7 +3496,6 @@
 {
     to
     {
-        margin-top: 600px;
-        margin-left: 30px;
+        transform: translateX(30px) translateY(600px);
     }
 }
