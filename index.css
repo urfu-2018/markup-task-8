@@ -23,7 +23,7 @@ body
 
     font-size: 1.6rem;
 
-    color: #6e6e6e;
+    color: rgb(110, 110, 110);
 }
 
 header,
@@ -38,7 +38,7 @@ a:visited
 {
     text-decoration: none;
 
-    color: #4d4d4d;
+    color: rgb(77, 77, 77);
 }
 
 img
@@ -79,8 +79,9 @@ ul
     width: 900px;
     height: 600px;
     margin: auto;
+    transform-style: preserve-3d;
 
-    background: linear-gradient(#013971, #000c18 60%);
+    background: linear-gradient(rgb(1, 57, 113), rgb(0, 12, 24) 60%);
 }
 
 .moon
@@ -95,7 +96,7 @@ ul
     opacity: 1;
     border-radius: 50%;
     background: #fefce6;
-    box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    box-shadow: 0 1px 30px 0 rgb(255, 255, 255);
 }
 
 .center::after
@@ -127,7 +128,7 @@ ul
 
     opacity: 1;
     border-radius: 50%;
-    background: white;
+    background: rgb(255, 255, 255);
 
     animation: twinkle-0 1s linear infinite;
     animation-delay: 0s;
@@ -136,22 +137,30 @@ ul
 .bridge
 {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     bottom: 10rem;
 
     width: 100%;
     height: 2.6rem;
 
-    border-top: .3rem solid white;
-    border-bottom: .3rem solid white;
+    border-top: .3rem solid rgb(255, 255, 255);
+    border-bottom: .3rem solid rgb(255, 255, 255);
     /* stylelint-disable-next-line */
-    background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+    background: linear-gradient(
+        55deg, transparent 46%,
+        rgb(255, 255, 255) 46%,
+        rgb(255, 255, 255) 54%, transparent 54%)
+        left/1.6rem 2.2rem,
+        linear-gradient(-55deg, transparent 46%,
+        rgb(255, 255, 255) 46%, rgb(255, 255, 255) 54%,
+        transparent 54%)
+        left/1.6rem 2.2rem;
 }
 
 .train
 {
     position: absolute;
-    z-index: 1;
+    z-index: 3;
     right: 0;
     bottom: 12.6rem;
 
@@ -166,7 +175,8 @@ ul
     border: .1rem solid rgba(255, 255, 255, .15);
     border-right: none;
     border-radius: 50% 0 0 50%;
-    background: linear-gradient(0deg, #0f0f0f, #262626, #0f0f0f);
+    background: linear-gradient(0deg, rgb(15, 15, 15),
+    rgb(38, 38, 38), rgb(15, 15, 15));
 }
 
 .engine-front
@@ -213,7 +223,7 @@ ul
     width: 1.7rem;
     height: 2.2rem;
 
-    background: #900;
+    background: rgb(153, 0, 0);
 }
 
 .chimney::before,
@@ -231,7 +241,7 @@ ul
 
     width: 160%;
 
-    border-top: .8rem solid orange;
+    border-top: .8rem solid rgb(255, 165, 0);
     border-right: .5rem solid transparent;
     border-bottom: none;
     border-left: .5rem solid transparent;
@@ -244,32 +254,13 @@ ul
     position: absolute;
     z-index: -1;
     top: -1.5rem;
-    left: .2rem;
+    left: -.1rem;
 
-    width: .8rem;
-    height: 1.4rem;
+    width: 2rem;
+    height: 1.2rem;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
-}
-
-.smoke-2
-{
-    left: .4rem;
-
-    animation-delay: .1s;
-}
-
-.smoke-3
-{
-    left: .6rem;
-
-    animation-delay: .2s;
-}
-
-.smoke-4
-{
-    left: .8rem;
 }
 
 .engine-body
@@ -282,7 +273,8 @@ ul
     height: 7rem;
 
     border-radius: 0 0 .4rem;
-    background: linear-gradient(0deg, #300, red, #900);
+    background: linear-gradient(0deg, rgb(51, 0, 0),
+    rgb(255, 0, 0), rgb(153, 0, 0));
 }
 
 .engine-body::before,
@@ -304,7 +296,8 @@ ul
     height: 1.2rem;
 
     border-radius: 50% 50% 0 0;
-    background: linear-gradient(0deg, #600, #900, #600);
+    background: linear-gradient(0deg, rgb(102, 0, 0),
+    rgb(153, 0, 0), rgb(102, 0, 0));
 }
 
 .engine-body::after
@@ -346,7 +339,7 @@ ul
 
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
-    background: orange;
+    background: rgb(255, 165, 0);
 }
 
 .wheel-2
@@ -417,7 +410,8 @@ ul
     height: 40%;
 
     border-radius: 50%;
-    background: radial-gradient(circle at center, #b37400 30%, #996300 30%);
+    background: radial-gradient(circle at center,
+    rgb(179, 116, 0) 30%, rgb(153, 99, 0) 30%);
 }
 
 .compartment
@@ -430,7 +424,7 @@ ul
     height: 5rem;
 
     border-radius: 0 0 .3rem .3rem;
-    background: linear-gradient(#104b63 50%, #1f8dba);
+    background: linear-gradient(rgb(16, 75, 99) 50%, rgb(31, 141, 186));
 
     animation: body-upDown .3s infinite;
 }
@@ -483,7 +477,8 @@ ul
     width: 100%;
     height: 40%;
 
-    background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
+    background-image: linear-gradient(90deg, transparent .8rem,
+    rgb(135, 206, 235) .8rem);
     background-position: left;
     background-size: 2.4rem 100%;
 }
@@ -505,7 +500,7 @@ ul
     height: .6rem;
 
     border-radius: 50% 50% 0 0;
-    background: #104b63;
+    background: rgb(16, 75, 99);
 
     transform: translate(-50%, 0);
 }
@@ -521,7 +516,7 @@ ul
     height: .4rem;
 
     border-radius: .6rem;
-    background: white;
+    background: rgb(255, 255, 255);
 
     transform-origin: 100% 50%;
 }
@@ -537,9 +532,9 @@ ul
 
     content: '';
 
-    border: .1rem solid white;
+    border: .1rem solid rgb(255, 255, 255);
     border-radius: 50%;
-    background: #333;
+    background: rgb(51, 51, 51);
 
     transform: translate(0, -50%);
 }
@@ -587,7 +582,7 @@ ul
 .hill
 {
     position: absolute;
-    z-index: 130;
+    z-index: 2;
 
     width: 700px;
     height: 1000px;
@@ -595,7 +590,8 @@ ul
     margin-left: -100px;
 
     border-radius: 30px;
-    background: linear-gradient(to bottom right, #002142, #27435f);
+    background: linear-gradient(to bottom right,
+    rgb(0, 33, 66), rgb(39, 67, 95));
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
@@ -604,7 +600,7 @@ ul
 .hill2
 {
     position: absolute;
-    z-index: 130;
+    z-index: 1;
 
     width: 800px;
     height: 1000px;
@@ -612,7 +608,7 @@ ul
     margin-left: 0;
 
     border-radius: 30px;
-    background: linear-gradient(to top right, #002142, #27435f);
+    background: linear-gradient(to top right, rgb(0, 33, 66), rgb(39, 67, 95));
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
@@ -621,7 +617,7 @@ ul
 .hill3
 {
     position: absolute;
-    z-index: 130;
+    z-index: 2;
 
     width: 600px;
     height: 1000px;
@@ -629,7 +625,8 @@ ul
     margin-left: 150px;
 
     border-radius: 30px;
-    background: linear-gradient(to bottom right, #002142, #27435f);
+    background: linear-gradient(to bottom right,
+    rgb(0, 33, 66), rgb(39, 67, 95));
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
@@ -647,7 +644,7 @@ ul
 
     opacity: .8;
     border-radius: 200px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 
 .cloud:before,
@@ -663,7 +660,7 @@ ul
     content: '';
 
     border-radius: 100px;
-    background: #fff;
+    background: rgb(255, 255, 255);
 }
 
 .cloud:after
@@ -674,4 +671,196 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud-1
+{
+    top: 50px;
+    transform: scale(.5);
+    animation: cloud-1 60s infinite alternate forwards;
+}
+
+.cloud-2
+{
+    top: 150px;
+    transform: scale(1.25);
+    z-index: 2;
+    animation: cloud-2 30s infinite alternate forwards;
+}
+
+.cloud-3
+{
+    top: 200px;
+    transform: scale(-.75);
+    animation: cloud-3 50s infinite alternate forwards;
+}
+
+.cloud-4
+{
+    top: 350px;
+    z-index: 2;
+    animation: cloud-4 35s infinite alternate forwards;
+}
+
+.train
+{
+    animation: train 25s infinite linear forwards;
+}
+
+.wheel
+{
+    animation: wheel 2s infinite linear forwards;
+}
+
+.wheel-joint
+{
+    animation: wheel-joint 2s infinite linear forwards;
+}
+
+.moon
+{
+    animation: moon 15s 1 linear forwards;
+}
+
+.smoke
+{
+    animation: smoke 1s infinite linear .75s forwards;
+}
+
+.smoke-2
+{
+    animation: smoke 1s infinite linear .5s forwards;
+}
+
+.smoke-3
+{
+    animation: smoke 1s infinite linear .25s forwards;
+}
+
+.smoke-4
+{
+    animation: smoke 1s infinite linear forwards;
+}
+
+@keyframes cloud-1
+{
+    0%
+    {
+        left: 700px;
+    }
+
+    100%
+    {
+        left: 30px;
+    }
+}
+
+@keyframes cloud-2
+{
+    0%
+    {
+        left: 30px;
+    }
+
+    100%
+    {
+        left: 800px;
+    }
+}
+
+@keyframes cloud-3
+{
+    0%
+    {
+        left: 150px;
+    }
+
+    100%
+    {
+        left: 800px;
+    }
+}
+
+@keyframes cloud-4
+{
+    0%
+    {
+        left: 700px;
+    }
+
+    100%
+    {
+        left: 30px;
+    }
+}
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes wheel-joint
+{
+    100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes train
+{
+    0%
+    {
+        left: 1000px;
+        transform: scale(1, 1);
+    }
+
+    50%
+    {
+        left: -500px;
+        transform: scale(1, 1);
+    }
+
+    51%
+    {
+        left: -500px;
+        transform: scale(-1, 1);
+    }
+
+    100%
+    {
+        left: 1000px;
+        transform: scale(-1, 1);
+    }
+}
+
+@keyframes moon
+{
+    0%
+    {
+        left: 0;
+        top: 350px;
+        transform: scale(1);
+    }
+
+    100%
+    {
+        left: 400px;
+        top: 25px;
+        transform: scale(.75);
+    }
+}
+
+@keyframes smoke
+{
+    100%
+    {
+        transform: translate(50px, -80px);
+        width: 200px;
+        height: 50px;
+        opacity: 0;
+    }
 }

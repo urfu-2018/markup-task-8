@@ -5,8 +5,9 @@
     <title>Задача «Мультик»</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="stars.css">
+    <script src="3d-maker.js"></script>
 </head>
-<body>
+<body onmousemove="moveCanvas(event)">
 
 <div class="center">
     <div class="canvas">
@@ -122,10 +123,10 @@
         </div>
         <div class="moon"></div>
         <div class="clouds">
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
         </div>
         <div class="h-con">
             <div class="hill2"></div>
@@ -158,11 +159,11 @@
 
             <div class="wheel-holder">
                 <div class="wheel"></div>
+                <div class="wheel wheel-3"></div>
                 <div class="wheel wheel-2">
                     <div class="wheel-joint"></div>
                     <div class="wheel-joint wheel-joint-2"></div>
                 </div>
-                <div class="wheel wheel-3"></div>
                 <div class="wheel wheel-4"></div>
                 <div class="wheel wheel-5"></div>
                 <div class="wheel wheel-6"></div>
