@@ -10,12 +10,12 @@
 {
     from
     {
-        transform: translate(100%, 0);
+        transform: translate3d(100%, 0, 50px);
     }
 
     to
     {
-        transform: translate(-250%, 0);
+        transform: translate3d(-250%, 0, 50px);
     }
 }
 
@@ -29,11 +29,6 @@
 
 @keyframes rotate
 {
-    from
-    {
-        transform: none;
-    }
-
     to
     {
         transform: rotate(-1turn);
@@ -50,11 +45,6 @@
 
 @keyframes rotate-back
 {
-    from
-    {
-        transform: none;
-    }
-
     to
     {
         transform: rotate(1turn);
@@ -87,6 +77,7 @@
     animation-name: rise;
     animation-duration: 8s;
     animation-timing-function: ease-out;
+
     animation-fill-mode: forwards;
 }
 
@@ -94,12 +85,12 @@
 {
     from
     {
-        transform: translate(0, 150px) scale(1.5, 1.5);
+        transform: translate3d(0, 150px, 10px) scale3d(1.5, 1.5, 1);
     }
 
     to
     {
-        transform: translate(0, 0) scale(1, 1);
+        transform: translate3d(0, 0, 10px) scale3d(1, 1, 1);
     }
 }
 
@@ -115,7 +106,7 @@
 {
     to
     {
-        transform: translate(150px, -500px);
+        transform: translate3d(150px, -500px, 50px);
     }
 }
 
@@ -136,24 +127,24 @@
 
 .cloud
 {
+    top: 80px;
+
     animation-name: cloud-1;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
-    top: 80px;
 }
 
 @keyframes cloud-1
 {
     from
     {
-        transform: translate(-210px, 0);
+        transform: translate3d(-210px, 0, 30px);
     }
 
     to
     {
-        transform: translate(900px, 0);
+        transform: translate3d(900px, 0, 30px);
     }
 }
 
@@ -161,63 +152,64 @@
 {
     top: 20px;
     left: -20px;
-    animation-duration: 30s;
 
     animation-name: cloud-2;
+    animation-duration: 30s;
 }
 
 @keyframes cloud-2
 {
     from
     {
-        transform: translate(900px, 0) scale(-.5, .5);
+        transform: translate3d(900px, 0, 15px) scale(-.5, .5);
     }
 
     to
     {
-        transform: translate(-210px, 0) scale(-.5, .5);
+        transform: translate3d(-210px, 0, 15px) scale(-.5, .5);
     }
 }
 
 .cloud-3
 {
     top: 100px;
+
+    transform: translate3d(-210px, 0, 0);
+    animation-name: cloud-3;
     animation-duration: 20s;
     animation-delay: 5s;
-    transform: translate(-210px, 0) scale(-.8, .8);
-
-    animation-name: cloud-3;
 }
 
 @keyframes cloud-3
 {
     from
     {
-        transform: translate(-210px, 0) scale(-.8, .8);
+        transform: translate3d(-210px, 0, 20px) scale(-.8, .8);
     }
 
     to
     {
-        transform: translate(900px, 0) scale(-.8, .8);
+        transform: translate3d(900px, 0, 20px) scale(-.8, .8);
     }
 }
 
 .cloud-4
 {
     top: 200px;
-    animation-duration: 30s;
+
     animation-name: cloud-4;
+    animation-duration: 30s;
 }
 
 @keyframes cloud-4
 {
     from
     {
-        transform: translate(-210px, 0) scale(.2, .2);
+        transform: translate3d(-210px, 0, 13px) scale(.2, .2);
     }
 
     to
     {
-        transform: translate(900px, 0) scale(.2, .2);
+        transform: translate3d(900px, 0, 13px) scale(.2, .2);
     }
 }

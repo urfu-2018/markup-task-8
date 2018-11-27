@@ -1,0 +1,95 @@
+.sides
+{
+    position: relative;
+
+    width: 900px;
+    height: 600px;
+    margin: auto;
+}
+
+.side
+{
+    position: absolute;
+    z-index: 5000;
+
+    width: 40%;
+    height: 40%;
+
+    opacity: 0;
+}
+
+.top-left-side
+{
+    top: 0;
+    left: 0;
+}
+
+.top-right-side
+{
+    top: 0;
+    right: 0;
+}
+
+.bottom-right-side
+{
+    right: 0;
+    bottom: 0;
+}
+
+.bottom-left-side
+{
+    bottom: 0;
+    left: 0;
+}
+
+.center
+{
+    perspective: 1300px;
+}
+
+.canvas
+{
+    z-index: 0;
+    transform-style: preserve-3d;
+    transition: all linear 1s;
+}
+
+.top-left-side:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 45deg);
+}
+
+.top-right-side:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 45deg);
+}
+
+.bottom-right-side:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 45deg);
+}
+
+.bottom-left-side:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 45deg);
+}
+
+.moon
+{
+    z-index: 2;
+}
+
+.h-con
+{
+    z-index: 3;
+
+    transform: translateZ(15px);
+}
+
+.bridge,
+.train
+{
+    z-index: 4;
+
+    transform: translateZ(50px);
+}
