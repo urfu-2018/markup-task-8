@@ -81,6 +81,10 @@ ul
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transform-style: preserve-3d;
+    overflow: visible;
+    perspective: 1000px;
 }
 
 .moon
@@ -174,6 +178,7 @@ ul
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+    transform: translateZ(100px);
 }
 
 .train
@@ -185,6 +190,7 @@ ul
 
     width: 44rem;
     height: 10rem;
+    transform: translateZ(100px);
 }
 
 @keyframes train
@@ -202,7 +208,8 @@ ul
 
 .train
 {
-    animation: train 10s ease-in-out infinite;
+    animation: train 10s ease-in-out infinite ;
+    
 }
 
 .engine-front,
@@ -828,7 +835,7 @@ ul
 {
     0%
     {
-        left: 50px;
+        left: -200px;
     }
 
     100%
@@ -842,7 +849,7 @@ ul
 {
     0%
     {
-        left: 150px;
+        left: -200px;
     }
 
     100%
@@ -855,7 +862,7 @@ ul
 {
     0%
     {
-        left: 600px;
+        left: -200px;
     }
 
     100%
@@ -867,28 +874,28 @@ ul
 .cloud:first-child
 {
     top: 60px;
-    animation: cloud-first 20s linear infinite;
+    animation: cloud-first 20s linear infinite ;
     transform: scale(-.85, 1);
 }
 
 .cloud:nth-child(2)
 {
     top: 120px;
-    animation: cloud-second 30s linear infinite;
+    animation: cloud-second 30s linear infinite -10s;
     transform: scale(.5) translateY(-200px);
 }
 
 .cloud:nth-child(3)
 {
     top: 200px;
-    animation: cloud-third 20s linear infinite;
+    animation: cloud-third 20s linear infinite -15s;
     transform: scale(.7) rotate(180deg);
 }
 
 .cloud:last-child
 {
     top: 100px;
-    animation: cloud-fourth 25s linear infinite;
+    animation: cloud-fourth 25s linear infinite -8s;
     transform: scale(.6);
 }
 
@@ -904,6 +911,7 @@ ul
 
     opacity: .8;
     border-radius: 200px;
+    transform: translateZ(100px);
 }
 
 @keyframes witch
@@ -968,20 +976,20 @@ ul
 
 .right-down:hover ~ .canvas
 {
-    transform: perspective(800px) skew(-5deg, 10deg);
+    transform: rotate3d(-1, 1, 0, 50deg);
 }
 
 .left-down:hover ~ .canvas
 {
-    transform: perspective(800px) skew(-15deg, -10deg);
+    transform: rotate3d(-1, -1, 0, 50deg);
 }
 
 .right-up:hover ~ .canvas
 {
-    transform: perspective(800px) skew(5deg, 10deg);
+    transform: rotate3d(1, 1, 0, 50deg);
 }
 
 .left-up:hover ~ .canvas
 {
-    transform: perspective(800px) skew(15deg, -10deg);
+    transform: rotate3d(1, -1, 0, 50deg);
 }
