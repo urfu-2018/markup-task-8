@@ -152,11 +152,16 @@ ul
 {
     position: absolute;
     z-index: 1;
-    right: 0;
+    right: 30%;
     bottom: 12.6rem;
 
     width: 44rem;
     height: 10rem;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: trainMovement;
+    animation-duration: 10s;
 }
 
 .engine-front,
@@ -347,6 +352,11 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: wheelSpin;
+    animation-duration: 2s;
 }
 
 .wheel-2
@@ -363,6 +373,8 @@ ul
     height: 3.8rem;
 
     border-width: .5rem;
+
+    animation-duration: 4s;
 }
 
 .wheel-4
@@ -524,6 +536,11 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: wheelJointSpin;
+    animation-duration: 2s;
 }
 
 .wheel-joint::before,
@@ -720,3 +737,57 @@ ul
         left: 100%;
     }
 }
+
+@keyframes trainMovement 
+{
+    from
+    {
+        right: -55%;
+    }
+    
+    to
+    {
+        right: 100%;
+    }
+}
+
+@keyframes wheelSpin 
+{
+    from
+    {
+        transform: rotate(0);
+    }
+    
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes wheelJointSpin 
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+    
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+/*@keyframes smokeMovement 
+{
+    from
+    {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    to
+    {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}*/
