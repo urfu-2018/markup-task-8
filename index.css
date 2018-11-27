@@ -24,6 +24,7 @@ body
     font-size: 1.6rem;
 
     color: #6e6e6e;
+    perspective: 1000px;
 }
 
 header,
@@ -81,10 +82,13 @@ ul
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transition-duration: 1s;
 }
 
 .moon
 {
+    z-index: 1;
     position: absolute;
     top: 100px;
     left: calc(50% - 60px);
@@ -96,6 +100,90 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    overflow: hidden;
+    animation: moon-rise 20s ease-out forwards, moon-brightness 30s infinite;
+}
+
+@keyframes moon-rise
+{
+    from
+    {
+        top: 250px;
+    }
+    
+    to
+    {
+        top: 40px;
+        transform: scale(.8);
+    }
+}
+
+@keyframes moon-brightness
+{
+    from
+    {
+        box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    }
+    
+    50%
+    {
+        box-shadow: 0 1px 30px 0 rgba(255, 255, 255, .1);
+    }
+
+    to
+    {
+        box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    }
+}
+
+.moon__earth-shadow
+{
+    position: absolute;
+
+    
+
+    width: 110px;
+    height: 110px;
+
+    opacity: .95;
+    border-radius: 50%;
+    background: #000;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,1);
+
+    animation: lunar-cycle 60s infinite linear;
+}
+
+@keyframes lunar-cycle
+{
+    from
+    {
+        right: 150px;
+        top: 30px;
+    }
+    
+    25%
+    {
+        top: 0;
+    }
+
+    50%
+    {
+        right: -150px;
+        top: 30px;
+
+    }
+
+    75%
+    {
+        top: 0;
+    }
+
+    to
+    {
+        right: 150px;
+        top: 30px;
+    }
 }
 
 .center::after
@@ -157,6 +245,21 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train-movement 15s infinite linear;
+}
+
+@keyframes train-movement
+{
+    from
+    {
+        right: -500px;
+    }
+
+    to
+    {
+        right: 900px;
+    }
 }
 
 .engine-front,
@@ -251,25 +354,86 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke-movement 1s infinite;
+}
+
+@keyframes smoke-movement
+{
+    50%
+    {
+        transform: rotate(-70deg) scale(1.2) translateX(300%);
+    }
+
+    to
+    {
+        opacity: 0;
+        transform: rotate(-50deg) scale(1.6) translateX(300%);
+        padding: 10px;
+    }
+}
+
+.smoke-1
+{
+    left: .1rem;
+
+    transform: rotate(100deg) scale(.8);
 }
 
 .smoke-2
 {
-    left: .4rem;
+    left: .3rem;
 
-    animation-delay: .1s;
+    transform: rotate(160deg) scale(1.2);
+    animation-delay: .2s;
 }
 
 .smoke-3
 {
-    left: .6rem;
+    left: .4rem;
 
-    animation-delay: .2s;
+    transform: rotate(-120deg) scale(1.5);
+    animation-delay: .4s;
 }
 
 .smoke-4
 {
-    left: .8rem;
+    left: -.3rem;
+
+    transform: rotate(335deg) scale(1.3);
+    animation-delay: .5s;
+}
+
+.smoke-5
+{
+    left: .3rem;
+
+    transform: rotate(-220deg) scale(1.1);
+    animation-delay: .6s;
+}
+
+.smoke-6
+{
+    left: -.4rem;
+
+    transform: rotate(30deg) scale(.5);
+    animation-delay: .7s;
+}
+
+.smoke-7
+{
+    left: .2rem;
+
+    transform: rotate(145deg) scale(.7);
+    animation-delay: .9s;
+}
+
+.smoke-8
+{
+    left: -.1rem;
+
+    transform: rotate(-90deg) scale(1.1);
+    animation-delay: .2s;
 }
 
 .engine-body
@@ -347,10 +511,21 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: wheel-rotation 2s infinite linear;
+}
+
+@keyframes wheel-rotation 
+{
+    0% 
+    {
+        transform: rotate(360deg);
+    }
 }
 
 .wheel-2
 {
+    
     left: 4.5rem;
 }
 
@@ -363,6 +538,8 @@ ul
     height: 3.8rem;
 
     border-width: .5rem;
+
+    z-index: 1;
 }
 
 .wheel-4
@@ -524,6 +701,16 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: wheel-joint-rotation 2s infinite linear;
+}
+
+@keyframes wheel-joint-rotation 
+{
+    0% 
+    {
+        transform: rotate(-360deg);
+    }
 }
 
 .wheel-joint::before,
@@ -561,8 +748,37 @@ ul
 
     width: 4.4rem;
 
-    transform: rotate(-15deg);
     transform-origin: 0 50%;
+
+    animation: wheel-joint-2-rotation 2s infinite linear;
+}
+
+@keyframes wheel-joint-2-rotation 
+{
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+
+    25% 
+    {
+        transform: rotate(79deg);
+    }
+    
+    50%
+    {
+        transform: rotate(175deg);
+    }
+
+    75% 
+    {
+        transform: rotate(271deg);
+    }
+
+    100% 
+    {
+        transform: rotate(360deg);
+    }
 }
 
 .wheel-joint-2::before
@@ -648,6 +864,8 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+
+    animation: cloud-movement 50s infinite linear;
 }
 
 .cloud:before,
@@ -674,4 +892,97 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+@keyframes cloud-movement
+{
+    from
+    {
+        left: -300px;
+    }
+
+    to
+    {
+        left: 900px;
+    }
+}
+
+.cloud-1
+{
+    animation-delay: -35s;
+
+    top: 50px;
+    transform: scale(.3);
+}
+
+.cloud-2
+{
+    animation-duration: 40s;
+    animation-delay: -15s;
+    
+    top: 10px;
+    transform: scale(-.4, .4);
+}
+
+.cloud-3
+{
+    animation-duration: 30s;
+    animation-delay: -20s;
+
+    top: 100px;
+    transform: scale(.5);
+}
+
+.cloud-4
+{
+    animation-duration: 20s;
+
+    top: 150px;
+    transform: scale(-.6, .6);
+}
+
+.overlay
+{
+    position: absolute;
+    /* border: 2px solid red; */
+    z-index: 10;
+    width: 40%;
+    height: 40%;
+    transition-duration: 1s;
+}
+
+.top_right-overlay
+{
+    right: 0;
+}
+
+.bottom_right-overlay
+{
+    right: 0;
+    bottom: 0;
+}
+
+.bottom_left-overlay
+{
+    bottom: 0;
+}
+
+.top_left-overlay:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 10deg);
+}
+
+.top_right-overlay:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 10deg);
+}
+
+.bottom_right-overlay:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 10deg);
+}
+
+.bottom_left-overlay:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 10deg) ;
 }
