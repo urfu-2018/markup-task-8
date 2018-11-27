@@ -717,9 +717,10 @@ div.cloud
     {
         width: 135px;
         height: 135px;
-        opacity: 0.5;
+        opacity: .5;
         transform: translateY(50px);
     }
+
     to
     {
         width: 120px;
@@ -735,6 +736,7 @@ div.cloud
     {
         opacity: 1;
     }
+
     to
     {
         opacity: 0;
