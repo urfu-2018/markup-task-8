@@ -5,9 +5,12 @@
     <title>Задача «Мультик»</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="stars.css">
+    <script src="music.js"></script>
 </head>
 <body>
-
+<input type="checkbox" class="checkbox"
+       name="music" id="music" onchange="play(this)">
+<label class="I-LIKE-TRAINS" for="music">I LIKE TRAIN</label>
 <div class="center">
     <div class="canvas">
         <div class="stars">
@@ -122,10 +125,10 @@
         </div>
         <div class="moon"></div>
         <div class="clouds">
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
-            <div class="cloud"></div>
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+            <div class="cloud cloud-4"></div>
         </div>
         <div class="h-con">
             <div class="hill2"></div>
@@ -139,6 +142,11 @@
                     <div class="smoke smoke-2"></div>
                     <div class="smoke smoke-3"></div>
                     <div class="smoke smoke-4"></div>
+                    <div class="smoke smoke-5"></div>
+                    <div class="smoke smoke-6"></div>
+                    <div class="smoke smoke-7"></div>
+                    <div class="smoke smoke-8"></div>
+                    <div class="smoke smoke-9"></div>
                 </div>
             </div>
 
@@ -157,7 +165,7 @@
             </div>
 
             <div class="wheel-holder">
-                <div class="wheel"></div>
+                <div class="wheel wheel-1"></div>
                 <div class="wheel wheel-2">
                     <div class="wheel-joint"></div>
                     <div class="wheel-joint wheel-joint-2"></div>
