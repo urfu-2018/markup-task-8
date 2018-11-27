@@ -73,9 +73,6 @@ ul
 .canvas
 {
     position: relative;
-
-    overflow: hidden;
-
     width: 900px;
     height: 600px;
     margin: auto;
