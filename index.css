@@ -676,68 +676,148 @@ ul
     height: 120px;
 }
 
+/*----------Triggers----------*/
+
+.rotate-trigger
+{
+    position: fixed;
+    width: 45%;
+    height: 40%;
+    z-index: 999;
+}
+
+.rotate-trigger-1
+{
+    left: 0;
+    top: 0;
+}
+
+.rotate-trigger-2
+{
+    right: 0;
+    top: 0;
+}
+
+.rotate-trigger-3
+{
+    right: 0;
+    bottom: 0;
+}
+
+.rotate-trigger-4
+{
+    left: 0;
+    bottom: 0;
+}
+
+/*----------Canvas Rotation----------*/
+
+.center
+{
+    perspective: 800px;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+.canvas
+{
+    transform-origin: center;
+    transform-style: preserve-3d;
+    overflow: visible;
+    transition: transform .4s ease-in;
+}
+
+.rotate-trigger-1:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.rotate-trigger-2:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 20deg);
+}
+
+.rotate-trigger-3:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 20deg);
+}
+
+.rotate-trigger-4:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 20deg);
+}
+
 /*----------Clouds----------*/
 
 @keyframes move-cloud-1
 {
     to
     {
-        transform: translateX(1000px);
+        transform: translate3d(1200px, 0, 70px);
     }
 }
 
 .cloud-1
 {
     top: 200px;
-    animation: move-cloud-1 7s linear forwards;
+    left: -200px;
+    transform: translateZ(70px);
+    animation: move-cloud-1 7s linear infinite;
 }
 
 @keyframes move-cloud-2
 {
     to
     {
-        transform: scale(-.7, .7) translateX(-1000px);
+        transform: scale(-.7, .7) translate3d(-1500px, 0, 60px);
     }
 }
 
 .cloud-2
 {
-    left: 550px;
+    left: -200px;
     top: 150px;
-    transform: scale(-.7, .7);
-    animation: move-cloud-2 8s linear forwards;
+    transform: translateZ(60px) scale(-.7, .7);
+    animation: move-cloud-2 8s linear infinite;
 }
 
 @keyframes move-cloud-3
 {
     to
     {
-        transform: scale(-.5, .5) translateX(-1000px);
+        transform: scale(-.5, .5) translate3d(-2100px, 0, 50px);
     }
 }
 
 .cloud-3
 {
-    left: 700px;
+    left: -200px;
     top: 100px;
-    transform: scale(-.5, .5);
-    animation: move-cloud-3 9s linear forwards;
+    transform: translateZ(50px) scale(-.5, .5);
+    animation: move-cloud-3 9s 3s linear infinite;
 }
 
 @keyframes move-cloud-4
 {
     to
     {
-        transform: scale(-.3, .3) translateX(-1000px);
+        transform: scale(.3, .3) translate3d(3500px, 0, 40px);
     }
 }
 
 .cloud-4
 {
-    left: 580px;
+    left: -200px;
     top: 60px;
-    transform: scale(-.3, .3);
-    animation: move-cloud-4 10s linear forwards;
+    transform: translateZ(40px) scale(.3, .3);
+    animation: move-cloud-4 10s linear infinite;
+}
+
+/*----------Bridge----------*/
+
+.bridge
+{
+    transform: translateZ(100px);
 }
 
 /*----------Train----------*/
@@ -746,12 +826,13 @@ ul
 {
     to
     {
-        transform: translateX(-400%);
+        transform: translate3d(-400%, 0, 100px);
     }
 }
 
 .train
 {
+    transform: translateZ(100px);
     right: -500px;
     animation: move-train 10s linear infinite;
 }
@@ -826,7 +907,7 @@ ul
 {
     to
     {
-        transform: translateY(-80px) scale(.8);
+        transform: translate3d(0, -80px, 20px) scale(.8);
         animation-timing-function: ease-in;
     }
 }
@@ -877,7 +958,7 @@ ul
 
 .moon
 {
-    transform: translateY(150px);
+    transform: translate3d(0, 150px, 20px);
     animation: moon-rising 10s forwards,
         blink-moon 5s 10s infinite;
 }
