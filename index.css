@@ -60,6 +60,8 @@ ul
 
     height: 100%;
     margin: auto;
+
+    perspective: 900px;
 }
 
 .center::before,
@@ -74,19 +76,22 @@ ul
 {
     position: relative;
 
-    overflow: hidden;
-
     width: 900px;
     height: 600px;
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transform-style: preserve-3d;
+    transform-origin: center;
+
+    transition: transform .25s ease-out;
 }
 
 .moon
 {
     position: absolute;
-    top: 100px;
+    top: 50px;
     left: calc(50% - 60px);
 
     width: 120px;
@@ -96,6 +101,8 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: moon 3s ease-in backwards;
 }
 
 .center::after
@@ -146,6 +153,8 @@ ul
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+
+    transform: translate3d(0, -15px, 200px) scale(.9);
 }
 
 .train
@@ -157,6 +166,8 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train 10s linear infinite;
 }
 
 .engine-front,
@@ -251,6 +262,8 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation: smoke 1.5s ease-out infinite;
 }
 
 .smoke-2
@@ -347,6 +360,8 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+
+    animation: wheel .5s ease-in infinite;
 }
 
 .wheel-2
@@ -524,6 +539,8 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+
+    animation: wheel-joint .5s ease-in infinite;
 }
 
 .wheel-joint::before,
@@ -662,6 +679,7 @@ ul
 
     content: '';
 
+
     border-radius: 100px;
     background: #fff;
 }
@@ -674,4 +692,175 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.cloud:nth-of-type(1)
+{
+    animation: cloud-1 20s linear infinite alternate;
+}
+
+.cloud:nth-of-type(2)
+{
+    animation: cloud-2 10s linear infinite alternate;
+}
+
+.cloud:nth-of-type(3)
+{
+    animation: cloud-3 15s linear infinite alternate;
+}
+
+.cloud:nth-of-type(4)
+{
+    animation: cloud-4 10s linear infinite alternate;
+}
+
+@keyframes cloud-1
+{
+    0%
+    {
+        transform: translate3d(-200px, 70px, 0) scale(.5);
+    }
+
+    100%
+    {
+        transform: translate3d(1100px, 70px, 0) scale(.5);
+    }
+}
+
+@keyframes cloud-2
+{
+    0%
+    {
+        transform: translate3d(1100px, 110px, 0);
+    }
+
+    100%
+    {
+        transform: translate3d(-200px, 110px, 0);
+    }
+}
+
+@keyframes cloud-3
+{
+    0%
+    {
+        transform: translate3d(1100px, 170px, 0) scale(.75);
+    }
+
+    100%
+    {
+        transform: translate3d(-200px, 170px, 0) scale(.75);
+    }
+}
+
+
+@keyframes cloud-4
+{
+    0%
+    {
+        transform: translate3d(-200px, 90px, 0);
+    }
+
+    100%
+    {
+        transform: translate3d(1100px, 90px, 0);
+    }
+}
+
+@keyframes train
+{
+    0%
+    {
+        transform: translate3d(0, 0, 200px) scale(.7);
+    }
+    
+    100%
+    {
+        transform: translate3d(-450px, 0, 200px) scale(.75);
+    }
+}
+
+@keyframes wheel
+{
+    100%
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes wheel-joint
+{
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes smoke
+{
+    100%
+    {
+        transform: translate(200px, -50px) scale(15, 8);
+        opacity: 0;
+    }
+}
+
+@keyframes moon
+{
+    0%
+    {
+        transform: translate(-200px, 300px) scale(.2);
+    }
+}
+
+.rotate
+{
+    position: fixed;
+    width: 33vw;
+    height: 33vh;
+    z-index: 10;
+}
+
+.left-up
+{
+    left: 0;
+    top: 0;
+}
+
+.left-down
+{
+    left: 0;
+    top: 67vh;
+}
+
+.right-up
+{
+    left: 67vw;
+    top: 0;
+}
+
+.right-down
+{
+    left: 67vw;
+    top: 67vh;
+}
+
+.right-up:hover ~ .canvas
+{
+    transform: rotate3d(1,1,0,10deg);
+}
+
+.right-down:hover ~ .canvas
+{
+    transform: rotate3d(-1,1,0,10deg);
+}
+
+.left-up:hover ~ .canvas
+{
+    transform: rotate3d(1,-1,0,10deg);
+}
+
+.left-down:hover ~ .canvas
+{
+    transform: rotate3d(-1,-1,0,10deg);
 }
