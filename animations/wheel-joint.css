@@ -13,6 +13,5 @@
 
 div.wheel-joint
 {
-    animation: joint-rotates 5s linear infinite;
-    z-index: 500;
+    animation: joint-rotates 10s linear infinite;
 }
