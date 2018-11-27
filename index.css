@@ -1,3 +1,79 @@
+@keyframes wheel-rotation
+{
+    to
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes joint-2-rotation 
+{
+    from
+    {
+        transform: rotate(-13deg);
+    }
+
+    to
+    {
+        transform: rotate(346deg);
+    }
+}
+
+@keyframes train-go 
+{
+    from
+    {
+        transform: translateX(500px);
+    }
+
+    to
+    {
+        transform: translateX(-900px);
+    }
+}
+
+@keyframes cloud-go
+{
+    from
+    {
+        left: -200px;
+    }
+
+    to
+    {
+        left: 900px;
+    }
+
+    /* Почему не работает с TranslateX? */
+}
+
+@keyframes smoking
+{
+    to
+    {
+        top: -150px;
+        left: 100px;
+        opacity: 0;
+    }
+}
+
+@keyframes moon-go
+{
+    from
+    {
+        transform: translateY(150px) scale(1.5);
+        background: #fefce6;
+        box-shadow: 0 1px 30px 0 rgba(255, 255, 255);
+    }
+
+    to
+    {
+        transform: translateY(-60px) scale(1);
+        background: #e6531a;
+        box-shadow: 0 1px 30px 0 rgb(230, 74, 35);
+    }
+}
+
 /* stylelint-disable-next-line */
 *,
 *:before,
@@ -283,6 +359,7 @@ ul
 
     border-radius: 0 0 .4rem;
     background: linear-gradient(0deg, #300, red, #900);
+    z-index: -2;
 }
 
 .engine-body::before,
@@ -363,6 +440,8 @@ ul
     height: 3.8rem;
 
     border-width: .5rem;
+
+    z-index: -1;
 }
 
 .wheel-4
@@ -674,4 +753,80 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.wheel
+{
+    animation: wheel-rotation 2s linear infinite reverse;
+}
+
+.wheel-joint
+{
+    animation: wheel-rotation 2s linear infinite;
+}
+
+.wheel-joint-2
+{
+    z-index: 1;
+    animation: joint-2-rotation 2s linear infinite;
+}
+
+.train
+{
+    animation: train-go 10s linear infinite;
+    animation-name: train-go;
+}
+
+.cloud:nth-child(1)
+{
+    top: 90px;
+    animation: cloud-go 25s linear infinite;
+    animation-delay: -10s;
+}
+
+.cloud:nth-child(2)
+{
+    top: 100px;
+    animation: cloud-go 30s linear infinite;
+}
+
+.cloud:nth-child(3)
+{
+    top: 170px;
+    animation: cloud-go 10s linear infinite;
+    transform: scale(.3);
+}
+
+.cloud:nth-child(4)
+{
+    top: 140px;
+    animation: cloud-go 12s linear infinite;
+    transform: scale(.5);
+    animation-delay: -5s;
+}
+
+.smoke
+{
+    animation: smoking 3s infinite linear;
+}
+
+.smoke-2
+{
+    animation-delay: 300ms;
+}
+
+.smoke-3
+{
+    animation-delay: 700ms;
+}
+
+.smoke-4
+{
+    animation-delay: 1000ms;
+}
+ 
+.moon
+{
+    animation: moon-go 7s linear forwards;
+
 }
