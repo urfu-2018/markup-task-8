@@ -24,7 +24,7 @@ body
     font-size: 1.6rem;
 
     color: #6e6e6e;
-    perspective: 1000px;
+
 }
 
 header,
@@ -58,16 +58,46 @@ ul
 
     display: flex;
     overflow: hidden;
-
+    
     height: 100%;
     margin: auto;
+
+    perspective: 1000px;
 }
 
 .center::before,
 .center::after
 {
     position: absolute;
+    
+    content: '';
+}
 
+.canvas::before
+{
+    position: absolute;
+    top: -100px;
+    background-color: white;
+    height: 300%;
+    width: 500px;
+    left: -420px;
+    z-index: 10;
+    transform: translateZ(90px);
+    content: '';
+}
+
+.canvas::after
+{
+    top: -100%;
+    position: absolute;
+    
+    background-color: white;
+    height: 300%;
+    
+    width: 500px;
+    right: -420px;
+    z-index: 10;
+    transform: translateZ(90px);
     content: '';
 }
 
@@ -75,15 +105,22 @@ ul
 {
     position: relative;
 
-    overflow: hidden;
-
+    
     width: 900px;
     height: 600px;
     margin: auto;
-
+    
     background: linear-gradient(#013971, #000c18 60%);
 
+    transform-style: preserve-3d;
+    transform-origin: center;
     transition-duration: 1s;
+}
+
+.container
+{
+    
+    overflow: hidden;
 }
 
 .moon
@@ -234,6 +271,9 @@ ul
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+
+    transition-duration: 1s;
+    transform: translateZ(80px);
 }
 
 .train
@@ -247,6 +287,7 @@ ul
     height: 10rem;
 
     animation: train-movement 15s infinite linear;
+    transform: translateZ(80px);
 }
 
 @keyframes train-movement
@@ -969,20 +1010,20 @@ ul
 
 .top_left-overlay:hover ~ .canvas
 {
-    transform: rotate3d(1, -1, 0, 10deg);
+    transform: rotateX(20deg) rotateY(-20deg);
 }
 
 .top_right-overlay:hover ~ .canvas
 {
-    transform: rotate3d(1, 1, 0, 10deg);
+    transform: rotateX(20deg) rotateY(20deg);
 }
 
 .bottom_right-overlay:hover ~ .canvas
 {
-    transform: rotate3d(-1, 1, 0, 10deg);
+    transform: rotateX(-20deg) rotateY(20deg);
 }
 
 .bottom_left-overlay:hover ~ .canvas
 {
-    transform: rotate3d(-1, -1, 0, 10deg) ;
+    transform: rotateX(-20deg) rotateY(-20deg);
 }
