@@ -256,6 +256,11 @@ ul
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: smokeMovement;
+    animation-duration: 1s;
 }
 
 .smoke-2
@@ -263,6 +268,7 @@ ul
     left: .4rem;
 
     animation-delay: .1s;
+    animation-duration: .8s;
 }
 
 .smoke-3
@@ -270,11 +276,13 @@ ul
     left: .6rem;
 
     animation-delay: .2s;
+    animation-duration: .7s;
 }
 
 .smoke-4
 {
     left: .8rem;
+    animation-duration: .9s;
 }
 
 .engine-body
@@ -777,17 +785,17 @@ ul
     }
 }
 
-/*@keyframes smokeMovement 
+@keyframes smokeMovement 
 {
     from
     {
-        transform: rotate(0deg);
+        top: 0;
         opacity: 1;
     }
     
     to
     {
-        transform: rotate(360deg);
+        top: -50px;
         opacity: 0;
     }
-}*/
+}
