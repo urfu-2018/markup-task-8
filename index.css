@@ -96,6 +96,11 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-name: movementMoon;
+    animation-duration: 15s;
 }
 
 .center::after
@@ -506,6 +511,11 @@ ul
     background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
     background-position: left;
     background-size: 2.4rem 100%;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: movementCompartmentWindow;
+    animation-duration: 5s;
 }
 
 .compartment-window::before,
@@ -797,5 +807,35 @@ ul
     {
         top: -50px;
         opacity: 0;
+    }
+}
+
+@keyframes movementCompartmentWindow
+{
+    from
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
+    }
+    
+    to
+    {
+        background-image: linear-gradient(90deg, transparent .8rem, #eaef1a .8rem);
+    }
+}
+
+@keyframes movementMoon
+{
+    from
+    {
+        transform: scale(.1);
+        top: 545px;
+        left: -120px;
+    }
+    
+    to
+    {
+        transform: scale(1);
+        top: 100px;
+        left: calc(50% - 60px);
     }
 }
