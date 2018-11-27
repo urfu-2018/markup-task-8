@@ -81,6 +81,9 @@ ul
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transition: 1s ease-in;
+    transform-style: preserve-3d;
 }
 
 .moon
@@ -159,7 +162,7 @@ ul
 
     width: 44rem;
     height: 10rem;
-    animation: train-move-left 10s linear infinite;
+    animation: train-move-left 20s linear infinite;
 }
 
 .engine-front,
@@ -246,33 +249,37 @@ ul
 {
     position: absolute;
     z-index: -1;
-    top: -1.5rem;
-    left: .2rem;
+    top: -.5rem;
+    left: 0;
 
     width: .8rem;
     height: 1.4rem;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation: smoke 3s linear infinite;
+
 }
 
 .smoke-2
 {
-    left: .4rem;
+    left: .6rem;
 
-    animation-delay: .1s;
+    animation-delay: .7s;
 }
 
 .smoke-3
 {
-    left: .6rem;
+    left: 0;
 
-    animation-delay: .2s;
+    animation-delay: 1.4s;
 }
 
 .smoke-4
 {
-    left: .8rem;
+    left: .6rem;
+
+    animation-delay: 2.1s;
 }
 
 .engine-body
@@ -350,7 +357,7 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
-    animation: wheel 1s linear infinite;
+    animation: wheel 2s linear infinite;
 }
 
 .wheel-2
@@ -487,9 +494,9 @@ ul
     width: 100%;
     height: 40%;
 
-    background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
-    background-position: left;
+    background: linear-gradient(90deg, transparent .8rem, skyblue .8rem) left;
     background-size: 2.4rem 100%;
+    animation: window-light 1s linear infinite;
 }
 
 .compartment-window::before,
@@ -528,6 +535,7 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+    animation: wheel-joint 2s linear infinite;
 }
 
 .wheel-joint::before,
@@ -567,6 +575,7 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
+    animation: wheel-joint-2 2s linear infinite;
 }
 
 .wheel-joint-2::before
@@ -689,92 +698,179 @@ ul
 {
     animation: cloud3-move 25s linear infinite;
 }
+
 .clouds .cloud:nth-child(2)
 {
     animation: cloud2-move 20s linear infinite;
 }
+
 .clouds .cloud:nth-child(4)
 {
     animation: cloud4-move 30s linear infinite;
 }
 
-@keyframes cloud1-move {
+.canvas-corner
+{
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    z-index: 10000;
+
+    transition: all 1s linear;
+}
+
+.right-bottom
+{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+}
+
+.right-top
+{
+    position: absolute;
+    top: 0;
+    left: 60%;
+}
+
+.left-bottom
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.left-top
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right-bottom:hover ~ .canvas
+{
+    transform: perspective(2000px) rotateX(-20deg) rotateY(10deg);
+}
+
+.left-bottom:hover ~ .canvas
+{
+    transform: perspective(2000px) rotateX(-20deg) rotateY(-10deg);
+}
+
+.right-top:hover ~ .canvas
+{
+    transform: perspective(2000px) rotateX(20deg) rotateY(10deg);
+}
+
+.left-top:hover ~ .canvas
+{
+    transform: perspective(2000px) rotateX(20deg) rotateY(-10deg);
+}
+
+.cat
+{
+    position: absolute;
+    width: 5%;
+    top: 40.5%;
+    left: 35.5%;
+    z-index: 1;
+    animation: cat 1s linear infinite;
+}
+
+@keyframes cloud1-move
+{
     0%
     {
         transform: translate(100%, 270%) scale(.8);
     }
+
     50%
     {
         transform: translate(450%, 270%) scale(.8);
     }
+
     50.000001%
     {
         transform: translate(-250%, 270%) scale(.8);
     }
+
     100%
     {
         transform: translate(100%, 270%) scale(.8);
     }
 }
 
-@keyframes cloud2-move {
+@keyframes cloud2-move
+{
     0%
     {
         transform: translate(300%, 200%) scale(-.6, .6);
     }
+
     20%
     {
         transform: translate(450%, 200%) scale(-.6, .6);
     }
+
     20.000001%
     {
         transform: translate(-100%, 200%) scale(-.6, .6);
     }
+
     100%
     {
         transform: translate(300%, 200%) scale(-.6, .6);
     }
 }
 
-@keyframes cloud3-move {
+@keyframes cloud3-move
+{
     0%
     {
         transform: translate(350%, 70%) scale(.4);
     }
+
     30%
     {
         transform: translate(800%, 70%) scale(.4);
     }
+
     30.000001%
     {
         transform: translate(-100%, 70%) scale(.4);
     }
+
     100%
     {
         transform: translate(350%, 70%) scale(.4);
     }
 }
 
-@keyframes cloud4-move {
+@keyframes cloud4-move
+{
     0%
     {
         transform: translate(300%, 10%) scale(-.3, .3);
     }
+
     20%
     {
         transform: translate(450%, 10%) scale(-.3, .3);
     }
+
     20.000001%
     {
         transform: translate(-100%, 10%) scale(-.3, .3);
     }
+
     100%
     {
         transform: translate(300%, 10%) scale(-.3, .3);
     }
 }
 
-@keyframes moon-up {
+@keyframes moon-up
+{
     to
     {
         transform: translate(0, -175%) scale(.7);
@@ -787,23 +883,103 @@ ul
     {
         transform: translate(0, 0);
     }
+
     50%
     {
         transform: translate(-250%, 0);
     }
+
     50.000001%
     {
         transform: translate(250%, 0);
     }
+
     100%
     {
         transform: translate(0, 0);
     }
 }
 
-@keyframes wheel {
+@keyframes wheel
+{
     to
     {
         transform: rotate(-1turn);
+    }
+}
+
+@keyframes wheel-joint
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes wheel-joint-2
+{
+    0%
+    {
+        transform: rotate(0);
+    }
+
+    50%
+    {
+        transform: rotate(.45turn);
+    }
+
+    100%
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes smoke
+{
+    0%
+    {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    20%
+    {
+        opacity: .8;
+        transform: translate(150%, -150%);
+    }
+
+    60%
+    {
+        opacity: .4;
+        transform: translate(400%, -350%) scale(1.3);
+    }
+
+    80%
+    {
+        opacity: .2;
+        transform: translate(500%, -400%) scale(1.5);
+    }
+
+    100%
+    {
+        opacity: 0;
+        transform: translate(550%, -480%);
+    }
+}
+
+@keyframes window-light
+{
+    from
+    {
+        /* stylelint-disable-next-line */
+        background: linear-gradient(90deg, transparent .8rem, skyblue .8rem) left;
+        background-size: 2.4rem 100%;
+    }
+
+    to
+    {
+        /* stylelint-disable-next-line */
+        background: linear-gradient(90deg, transparent .8rem, #d9cd2b .8rem) left;
+        background-size: 2.4rem 100%;
     }
 }
