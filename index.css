@@ -871,6 +871,7 @@ ul
 {
     100%
     {
+        -webkit-transform: perspective(400px) rotateY(-5deg) rotateX(5deg);
         transform: perspective(400px) rotateY(-5deg) rotateX(5deg);
         transform-style: preserve-3d;
     }
@@ -880,6 +881,7 @@ ul
 {
     100%
     {
+        -webkit-transform: perspective(400px) rotateY(5deg) rotateX(5deg);
         transform: perspective(400px) rotateY(5deg) rotateX(5deg);
         transform-style: preserve-3d;
     }
@@ -889,6 +891,7 @@ ul
 {
     100%
     {
+        -webkit-transform: perspective(400px) rotateY(-5deg) rotateX(-5deg);
         transform: perspective(400px) rotateY(-5deg) rotateX(-5deg);
         transform-style: preserve-3d;
     }
@@ -898,6 +901,7 @@ ul
 {
     100%
     {
+        -webkit-transform: perspective(400px) rotateY(5deg) rotateX(-5deg);
         transform: perspective(400px) rotateY(5deg) rotateX(-5deg);
         transform-style: preserve-3d;
     }
