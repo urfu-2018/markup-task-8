@@ -60,6 +60,7 @@ ul
 
     height: 100%;
     margin: auto;
+    z-index: 1;
 }
 
 .center::before,
@@ -844,4 +845,80 @@ ul
 .hill
 {
     animation: hill-fall 2s 12s 1 forwards;
+}
+
+.corner
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 9001;
+}
+
+.up-right,
+.down-right
+{
+    left: 50%;
+}
+
+.down-left,
+.down-right
+{
+    top: 50%;
+}
+
+@keyframes up-left
+{
+    100%
+    {
+        transform: perspective(400px) rotateY(-5deg) rotateX(5deg);
+        transform-style: preserve-3d;
+    }
+}
+
+@keyframes up-right
+{
+    100%
+    {
+        transform: perspective(400px) rotateY(5deg) rotateX(5deg);
+        transform-style: preserve-3d;
+    }
+}
+
+@keyframes down-left
+{
+    100%
+    {
+        transform: perspective(400px) rotateY(-5deg) rotateX(-5deg);
+        transform-style: preserve-3d;
+    }
+}
+
+@keyframes down-right
+{
+    100%
+    {
+        transform: perspective(400px) rotateY(5deg) rotateX(-5deg);
+        transform-style: preserve-3d;
+    }
+}
+
+.up-left:hover ~ .center .canvas
+{
+    animation: up-left 2s ease forwards;
+}
+
+.up-right:hover ~ .center .canvas
+{
+    animation: up-right 2s ease forwards;
+}
+
+.down-left:hover ~ .center .canvas
+{
+    animation: down-left 2s ease forwards;
+}
+
+.down-right:hover ~ .center .canvas
+{
+    animation: down-right 2s ease forwards;
 }
