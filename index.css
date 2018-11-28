@@ -86,16 +86,41 @@ ul
 .moon
 {
     position: absolute;
-    top: 100px;
+    top: 400px;
     left: calc(50% - 60px);
 
     width: 120px;
     height: 120px;
 
+    z-index: 1;
     opacity: 1;
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    animation: moon-move ease 20s forwards;
+}
+
+@keyframes moon-move
+{
+    0%
+    {
+        transform: rotate(-215deg) translateX(350px) scale(2);
+    }
+
+    20%
+    {
+        background: #f88;
+    }
+
+    60%
+    {
+        background: #fefce6;
+    }
+
+    100%
+    {
+        transform: rotate(-80deg) translateX(380px) scale(1);
+    }
 }
 
 .center::after
@@ -151,12 +176,21 @@ ul
 .train
 {
     position: absolute;
+    left: -500px;
     z-index: 1;
     right: 0;
     bottom: 12.6rem;
-
     width: 44rem;
     height: 10rem;
+    animation: train-move 30s linear infinite;
+}
+
+@keyframes train-move
+{
+    0%
+    {
+        transform: translateX(1500px);
+    }
 }
 
 .engine-front,
@@ -226,7 +260,7 @@ ul
 
 .chimney::before
 {
-    top: -.9rem;
+    top: -.8rem;
     left: 50%;
 
     width: 160%;
@@ -243,33 +277,39 @@ ul
 {
     position: absolute;
     z-index: -1;
-    top: -1.5rem;
-    left: .2rem;
+    top: -.8rem;
+    left: .1rem;
 
     width: .8rem;
     height: 1.4rem;
 
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
+    animation: smoke-move linear 3s infinite;
 }
 
 .smoke-2
 {
-    left: .4rem;
-
-    animation-delay: .1s;
+    animation: smoke-move linear 3s infinite .8s;
 }
 
 .smoke-3
 {
-    left: .6rem;
-
-    animation-delay: .2s;
+    animation: smoke-move linear 3s infinite 1.3s;
 }
 
 .smoke-4
 {
-    left: .8rem;
+    animation: smoke-move linear 3s infinite 2s;
+}
+
+@keyframes smoke-move
+{
+    100%
+    {
+        transform: translate(5rem, -5rem) rotate(25deg);
+        opacity: 0;
+    }
 }
 
 .engine-body
@@ -347,6 +387,15 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
+    animation: wheel-move linear 1.5s infinite;
+}
+
+@keyframes wheel-move
+{
+    0%
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-2
@@ -524,6 +573,15 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+    animation: wheel-joint-move linear 1.5s infinite;
+}
+
+@keyframes wheel-joint-move
+{
+    0%
+    {
+        transform: rotate(-1turn);
+    }
 }
 
 .wheel-joint::before,
@@ -563,6 +621,15 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
+    animation: wheel-joint-2-move linear 1.5s infinite;
+}
+
+@keyframes wheel-joint-2-move
+{
+    100%
+    {
+        transform: rotate(1turn);
+    }
 }
 
 .wheel-joint-2::before
@@ -599,6 +666,8 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+
+    animation: hill-move 30s 33s;
 }
 
 .hill2
@@ -616,6 +685,7 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+    animation: hill-move 30s 33s;
 }
 
 .hill3
@@ -633,12 +703,22 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform: rotate(45deg);
+    animation: hill-move 30s 33s;
+}
+
+@keyframes hill-move
+{
+    0%,
+    100%
+    {
+        background: #baaa87;
+    }
 }
 
 .cloud
 {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
 
@@ -648,6 +728,69 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+}
+
+.cloud:nth-child(1)
+{
+    top: 30px;
+    left: -400px;
+    transform: scale(-.5, .5);
+    animation: first-cloud-move 55s linear infinite;
+}
+
+.cloud:nth-child(2)
+{
+    top: 130px;
+    left: -600px;
+    transform: scale(-.8, .8);
+    animation: second-cloud-move 35s linear infinite;
+}
+
+.cloud:nth-child(3)
+{
+    top: 200px;
+    left: -600px;
+    transform: scale(-.7, .7);
+    animation: third-cloud-move 41s linear infinite;
+}
+
+.cloud:nth-child(4)
+{
+    top: 70px;
+    left: -500px;
+    animation: fourth-cloud-move 28s linear infinite;
+}
+
+@keyframes first-cloud-move
+{
+    100%
+    {
+        transform: translateX(1300px) scale(-.5, .5);
+    }
+}
+
+@keyframes second-cloud-move
+{
+    100%
+    {
+        transform: translateX(1500px) scale(-.8, .8);
+    }
+}
+
+@keyframes third-cloud-move
+{
+    100%
+    {
+        transform: translateX(1500px) scale(-.7, .7);
+    }
+}
+
+@keyframes fourth-cloud-move
+{
+    100%
+    {
+        transform: translateX(1500px);
+    }
 }
 
 .cloud:before,

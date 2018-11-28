@@ -7,6 +7,17 @@
     width: 100%;
     height: 875px;
     margin: 0 auto;
+    animation: background-move 30s 33s;
+}
+
+@keyframes background-move
+{
+    0%,
+    100%
+    {
+        background: url(cowboy.gif) no-repeat;
+        background-size: 100% 65%;
+    }
 }
 
 .star:nth-child(0)
