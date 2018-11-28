@@ -1,0 +1,147 @@
+.superman-1
+{
+    position: absolute;
+    top: 50px;
+    left: 150px;
+
+    background-image: url(images/superman-up.png);
+    width: 28px;
+    height: 52px;
+
+    animation: superman-moving 10s infinite;
+}
+
+@keyframes superman-moving
+{
+    from
+    {
+        transform: translateY(600px);
+    }
+
+    to
+    {
+        transform: translateY(-200px);
+    }
+}
+
+.superman-2
+{
+    position: absolute;
+    top: 500px;
+    left: 0;
+
+    background-image: url(images/superman-right-up.png);
+    width: 28px;
+    height: 52px;
+
+    animation: superman-moving-2 8s infinite;
+}
+
+@keyframes superman-moving-2
+{
+    from
+    {
+        transform: translate(0, 0);
+    }
+
+    to
+    {
+        transform: translate(900px, -900px);
+    }
+}
+
+.superman-3
+{
+    position: absolute;
+    top: 40%;
+    left: 51%;
+
+    background-image: url(images/superman-front.png);
+    width: 28px;
+    height: 52px;
+
+    animation: superman-moving-3 10s infinite;
+}
+
+@keyframes superman-moving-3
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    25%,
+    75%
+    {
+        transform: translateY(-90px);
+    }
+
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+.superman-4
+{
+    position: absolute;
+    top: 51%;
+    left: 38%;
+
+    background-image: url(images/superman-front.png);
+    width: 28px;
+    height: 52px;
+
+    animation: superman-moving-4 13s 5s infinite;
+}
+
+@keyframes superman-moving-4
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    25%,
+    75%
+    {
+        transform: translateY(-120px);
+    }
+
+    100%
+    {
+        transform: translateY(0);
+    }
+}
+
+.superman-5
+{
+    position: absolute;
+    top: 62%;
+    left: 64%;
+
+    background-image: url(images/superman-front.png);
+    width: 28px;
+    height: 52px;
+
+    animation: superman-moving-5 16s 3s infinite;
+}
+
+@keyframes superman-moving-5
+{
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    25%,
+    75%
+    {
+        transform: translateY(-150px);
+    }
+
+    100%
+    {
+        transform: translateY(0);
+    }
+}

@@ -123,20 +123,24 @@ ul
 
 .top-left:hover ~ .canvas
 {
+    transition-duration: 1.6s;
     transform: perspective(1000px) rotateX(-20deg) rotateY(20deg);
 }
 
 .top-right:hover ~ .canvas
 {
+    transition-duration: 1.6s;
     transform: perspective(1000px) rotateX(-20deg) rotateY(-20deg);
 }
 
 .bottom-left:hover ~ .canvas
 {
+    transition-duration: 1.6s;
     transform: perspective(1000px) rotateX(20deg) rotateY(20deg);
 }
 
 .bottom-right:hover ~ .canvas
 {
+    transition-duration: 1.6s;
     transform: perspective(1000px) rotateX(20deg) rotateY(-20deg);
 }

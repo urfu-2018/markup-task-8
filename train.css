@@ -117,19 +117,21 @@
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
 
-    animation: smoke-move-1 7s linear infinite;
+    animation: smoke-move-1 .3s linear infinite;
 }
 
 @keyframes smoke-move-1
 {
     from
     {
-        transform: translate(0, 0);
+        transform: rotate(45deg) translate(0, 0);
+        opacity: 1;
     }
 
     to
     {
-        transform: translate(500px, -60px) rotate(90deg);
+        transform: translate(30px, -60px);
+        opacity: 0;
     }
 }
 
