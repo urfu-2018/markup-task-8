@@ -639,8 +639,6 @@ ul
 {
     position: absolute;
     z-index: 1;
-    top: 0;
-    left: 0;
 
     width: 200px;
     height: 60px;
@@ -648,6 +646,40 @@ ul
     opacity: .8;
     border-radius: 200px;
     background: #fff;
+
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.cloud:first-child
+{
+    top: 60px;
+    left: -150px;
+
+    transform: scale(.9);
+}
+
+.cloud:nth-child(2)
+{
+    top: 180px;
+    right: 0;
+
+    transform: scale(-1, 1);
+}
+
+.cloud:nth-child(3)
+{
+    top: 50px;
+    right: 10px;
+
+    transform: scale(-.7, .7);
+}
+
+.cloud:last-child
+{
+    top: 130px;
+    left: 0;
+
+    transform: scale(1.35);
 }
 
 .cloud:before,
@@ -674,4 +706,128 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.canvas:hover .train
+{
+    transform: translate(-230%, 0);
+    transition-duration: 10s;
+    transition-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.canvas:hover .smoke
+{
+    transition-duration: 10s;
+    transform: translate(1000px, -600px) scale(20, 2);
+    transition-timing-function: ease-out;
+}
+
+.canvas:hover .smoke-2
+{
+    transition-delay: 1.5s;
+}
+
+.canvas:hover .smoke-3
+{
+    transition-delay: 3s;
+}
+
+.canvas:hover .smoke-4
+{
+    transition-delay: 4.5s;
+}
+
+.canvas:hover .cloud:first-child
+{
+    transition-duration: 10s;
+    transform: translate(355%, 40%) scale(.9);
+}
+
+.canvas:hover .cloud:nth-child(2)
+{
+    transition-duration: 9s;
+    transform: translate(-500%, 250%) scale(-1, 1);
+}
+
+.canvas:hover .cloud:nth-child(3)
+{
+    transition-duration: 10s;
+    transform: translate(-250%, 60%) scale(-.7, .7);
+}
+
+.canvas:hover .cloud:last-child
+{
+    transition-duration: 5s;
+    transform: translate(500%, 90%) scale(1.35);
+}
+
+.canvas:hover .moon
+{
+    transition-duration: 5s;
+    transform: translate(0, -100px) scale(.8);
+}
+
+.canvas:hover .wheel-holder > .wheel
+{
+    animation-name: wheelMovement;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.canvas:hover .wheel .wheel-joint
+{
+    animation-name: pistonWork;
+    animation-duration: 10s;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+
+.canvas:hover .starAnimation
+{
+    animation-name: sta;
+    animation-duration: 1s;
+    animation-delay: 10;
+}
+
+@keyframes starAnimation
+{
+    0% 
+    {
+        transform: scale(1);
+    }
+
+    50% 
+    {
+        transform: scale(1.6);
+    }
+
+    100% 
+    {
+        transform: scale(1);
+    }
+}
+
+@keyframes pistonWork
+{
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+
+    100% 
+    {
+        transform: rotate(2160deg);
+    }
+}
+
+@keyframes wheelMovement
+{
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+
+    100% 
+    {
+        transform: rotate(-2160deg);
+    }
 }
