@@ -72,11 +72,24 @@
     50%
     {
         transform: translate(450%, 150%) scale(.6);
+        opacity: .8;
     }
 
-    50.000001%
+    51%
+    {
+        transform: translate(450%, 150%) scale(.6);
+        opacity: 0;
+    }
+
+    52%
     {
         transform: translate(-100%, 150%) scale(.6);
+        opacity: 0;
+    }
+
+    53%
+    {
+        opacity: .8;
     }
 
     100%
@@ -118,11 +131,24 @@
     70%
     {
         transform: translate(450%, 250%) scale(-.8, .8);
+        opacity: .8;
     }
 
-    70.000001%
+    71%
+    {
+        transform: translate(450%, 250%) scale(-.8, .8);
+        opacity: 0;
+    }
+
+    72%
     {
         transform: translate(-100%, 250%) scale(-.8, .8);
+        opacity: 0;
+    }
+
+    73%
+    {
+        opacity: .8;
     }
 
     100%

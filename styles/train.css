@@ -1,6 +1,6 @@
 .train
 {
-    animation: train 50s linear infinite;
+    animation: train 20s linear infinite;
 }
 
 @keyframes train
@@ -8,12 +8,26 @@
     50%
     {
         transform: translateX(-210%);
+        opacity: 1;
     }
 
-    50.0000001%,
+    51%,
+    52%
+    {
+        opacity: 0;
+        transform: translateX(-210%);
+    }
+
+    53%,
     60%
     {
+        opacity: 0;
         transform: translateX(190%);
+    }
+
+    61%
+    {
+        opacity: 1;
     }
 }
 
