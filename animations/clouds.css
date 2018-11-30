@@ -7,7 +7,7 @@
 
     to
     {
-        left: 900px;
+        left: 1100px;
     }
 }
 
@@ -15,7 +15,7 @@
 {
     from
     {
-        left: 900px;
+        left: 1100px;
     }
 
     to
@@ -51,3 +51,10 @@ div.cloud:nth-child(4)
     animation: cloud-floats-backward 10s linear infinite;
     opacity: .7;
 }
+
+/*
+div.cloud
+{
+    background: green;
+}
+*/

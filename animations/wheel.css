@@ -8,5 +8,5 @@
 
 div.wheel-holder > div.wheel
 {
-    animation: wheel-rotates 10s linear infinite;
+    animation: wheel-rotates 2s linear infinite;
 }
