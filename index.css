@@ -72,6 +72,10 @@ ul
 
 .canvas
 {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: 1s;
+
     position: relative;
 
     overflow: hidden;
@@ -236,7 +240,7 @@ ul
 
 .chimney::before
 {
-    top: -.9rem;
+    top: -.8rem;
     left: 50%;
 
     width: 160%;
@@ -334,6 +338,11 @@ ul
 
     border-radius: .2rem;
     background: #b3e0f2;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-name: movementEnginetWindow;
+    animation-duration: 5s;
 }
 
 .wheel::before,
@@ -511,11 +520,6 @@ ul
     background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
     background-position: left;
     background-size: 2.4rem 100%;
-
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-name: movementCompartmentWindow;
-    animation-duration: 5s;
 }
 
 .compartment-window::before,
@@ -622,7 +626,7 @@ ul
 .hill
 {
     position: absolute;
-    z-index: 130;
+    z-index: 140;
 
     width: 700px;
     height: 1000px;
@@ -656,7 +660,7 @@ ul
 .hill3
 {
     position: absolute;
-    z-index: 130;
+    z-index: 150;
 
     width: 600px;
     height: 1000px;
@@ -717,30 +721,140 @@ ul
 
 .cloud__further-slow
 {
-    animation-duration: 10s;
+    animation-duration: 30s;
     transform: scale(.7);
     top: 20px;
 }
 
 .cloud__further-fast
 {
-    animation-duration: 8s;
+    animation-duration: 23s;
     transform: scale(1.5, .7);
     top: 45px;
 }
 
 .cloud__near-slow
 {
-    animation-duration: 7s;
+    animation-duration: 20s;
     top: 150px;
-    transform: rotate(180deg) scale(1.3);
+    transform: scale(1.3);
+    z-index: 135;
 }
 
 .cloud__near-fast
 {
-    animation-duration: 5s;
+    animation-duration: 15s;
     top: 250px;
     transform: scale(-1, 1);
+    z-index: 145;
+}
+
+.item-area
+{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+}
+
+.item-area1
+{
+    top: calc(50% - 200px);
+    left: calc(50% - 300px);
+}
+
+.item-area1:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(-1, 1, 0, 30deg);
+}
+
+.item-area2
+{
+    top: calc(50% - 200px);
+    left: 50%;
+}
+
+.item-area2:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(-1, 0, 0, 30deg);
+}
+
+.item-area3
+{
+    top: calc(50% - 200px);
+    left: calc(50% + 300px);
+}
+
+.item-area3:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(-1, -1, 0, 30deg);
+}
+
+.item-area4
+{
+    top: 50%;
+    left: calc(50% - 300px);
+}
+
+.item-area4:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(0, 1, 0, 30deg);
+}
+
+.item-area5
+{
+    top: 50%;
+    left: 50%;
+}
+
+.item-area5:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(0, 0, 0, 30deg);
+}
+
+.item-area6
+{
+    top: 50%;
+    left: calc(50% + 300px);
+}
+
+.item-area6:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(0, -1, 0, 30deg);
+}
+
+.item-area7
+{
+    top: calc(50% + 200px);
+    left: calc(50% - 300px);
+}
+
+.item-area7:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(1, 1, 0, 30deg);
+}
+
+.item-area8
+{
+    top: calc(50% + 200px);
+    left: 50%;
+}
+
+.item-area8:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(1, 0, 0, 30deg);
+}
+
+.item-area9
+{
+    top: calc(50% + 200px);
+    left: calc(50% + 300px);
+}
+
+.item-area9:hover ~ .canvas
+{
+    transform: perspective(1000px) rotate3d(1, -1, 0, 30deg);
 }
 
 @keyframes cloudMovement 
@@ -810,16 +924,16 @@ ul
     }
 }
 
-@keyframes movementCompartmentWindow
+@keyframes movementEnginetWindow
 {
     from
     {
-        background-image: linear-gradient(90deg, transparent .8rem, skyblue .8rem);
+        background: #b3e0f2;
     }
     
     to
     {
-        background-image: linear-gradient(90deg, transparent .8rem, #eaef1a .8rem);
+        background: #eaef1a;
     }
 }
 
