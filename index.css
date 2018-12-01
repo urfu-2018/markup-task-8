@@ -56,7 +56,6 @@ ul
     position: relative;
 
     display: flex;
-    overflow: hidden;
 
     height: 100%;
     margin: auto;
@@ -73,8 +72,7 @@ ul
 .canvas
 {
     position: relative;
-
-    overflow: hidden;
+    transition: linear .5s;
 
     width: 900px;
     height: 600px;
@@ -93,6 +91,7 @@ ul
     top: 100px;
     left: calc(50% - 60px);
 
+    transform: translate3d(0, 0, 25px) scale3d(.5, .5, .5);
     width: 120px;
     height: 120px;
 
@@ -110,6 +109,7 @@ ul
 
 .stars
 {
+    transform: translate3d(0, 0, 0);
     position: relative;
 
     overflow: hidden;
@@ -136,6 +136,7 @@ ul
 
 .bridge
 {
+    transform: translate3d(0, 0, 100px);
     position: absolute;
     z-index: 1;
     bottom: 10rem;
@@ -151,6 +152,7 @@ ul
 
 .train
 {
+    transform: translate3d(0, 0, 100px);
     position: absolute;
     z-index: 1;
     right: 0;
@@ -193,7 +195,7 @@ ul
     height: 70%;
 
     content: '';
-    transform: translate(0, -50%);
+    transform: translate3d(0, -50%, 0);
 }
 
 .engine-front::after
@@ -231,7 +233,7 @@ ul
 
     width: 160%;
 
-    transform: translate(-50%, 0);
+    transform: translate3d(-50%, 0, 0);
 
     border-top: .8rem solid orange;
     border-right: .5rem solid transparent;
@@ -292,7 +294,7 @@ ul
     left: 50%;
 
     content: '';
-    transform: translate(-50%, 0);
+    transform: translate3d(-50%, 0, 0);
 }
 
 .engine-body::before
@@ -323,7 +325,7 @@ ul
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    transform: translate3d(-50%, -50%, 0);
 }
 
 .wheel-holder
@@ -502,7 +504,7 @@ ul
     width: 110%;
     height: .6rem;
 
-    transform: translate(-50%, 0);
+    transform: translate3d(-50%, 0, 0);
 
     border-radius: 50% 50% 0 0;
     background: #104b63;
@@ -534,7 +536,7 @@ ul
     height: .8rem;
 
     content: '';
-    transform: translate(0, -50%);
+    transform: translate3d(0, -50%, 0);
 
     border: .1rem solid white;
     border-radius: 50%;
@@ -558,7 +560,7 @@ ul
 
     width: 4.4rem;
 
-    transform: rotate(-15deg);
+    transform: rotate3d(0, 0, 1, -15deg);
     transform-origin: 0 50%;
 }
 
@@ -585,13 +587,11 @@ ul
 {
     position: absolute;
     z-index: 130;
-
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 45deg);
     width: 700px;
     height: 1000px;
     margin-top: 140px;
     margin-left: -100px;
-
-    transform: rotate(45deg);
 
     border-radius: 30px;
     background: linear-gradient(to bottom right, #002142, #27435f);
@@ -608,7 +608,7 @@ ul
     margin-top: 140px;
     margin-left: 0;
 
-    transform: rotate(45deg);
+    transform: translate3d(0, 0, 1000px) rotate3d(0, 0, 1, 45deg);
 
     border-radius: 30px;
     background: linear-gradient(to top right, #002142, #27435f);
@@ -625,7 +625,7 @@ ul
     margin-top: 140px;
     margin-left: 150px;
 
-    transform: rotate(45deg);
+    transform: translate3d(0, 0, 1000px) rotate3d(0, 0, 1, 45deg);
 
     border-radius: 30px;
     background: linear-gradient(to bottom right, #002142, #27435f);
@@ -677,21 +677,25 @@ ul
 
 .cloud-1
 {
+    transform: translate3d(0, 0, 25px);
     top: 25px;
 }
 
 .cloud-4
 {
+    transform: translate3d(0, 0, 85px);
     top: 175px;
 }
 
 .cloud-3
 {
+    transform: translate3d(0, 0, 60px);
     top: 100px;
 }
 
 .cloud-2
 {
+    transform: translate3d(0, 0, 45px);
     top: 50px;
 }
 
@@ -721,12 +725,12 @@ ul
 {
     from
     {
-        transform: scale(-.3, .3);
+        transform: scale3d(-.3, .3, .3);
     }
 
     to
     {
-        transform: translateX(1050px) scale(-.3, .3);
+        transform: translate3d(1050px, 0, 0) scale3d(-.3, .3, .3);
     }
 }
 
@@ -734,12 +738,12 @@ ul
 {
     from
     {
-        transform: scale(.6, .6);
+        transform: scale3d(.6, .6, .6);
     }
 
     to
     {
-        transform: translateX(1060px) scale(.6, .6);
+        transform: translate3d(1060px, 0, 0) scale3d(.6, .6, .6);
     }
 }
 
@@ -747,12 +751,12 @@ ul
 {
     from
     {
-        transform: scale(-.8, .8);
+        transform: scale3d(-.8, .8, .8);
     }
 
     to
     {
-        transform: translateX(1080px) scale(-.8, .8);
+        transform: translate3d(1080px, 0, 0) scale3d(-.8, .8, .8);
     }
 }
 
@@ -760,7 +764,7 @@ ul
 {
     to
     {
-        transform: translateX(1100px);
+        transform: translate3d(1100px, 0, 0);
     }
 }
 
@@ -768,6 +772,7 @@ ul
 
 .train
 {
+    transform: translate3d(0, 0, 100px);
     position: absolute;
     right: -475px;
 
@@ -778,7 +783,7 @@ ul
 {
     to
     {
-        transform: translateX(-1400px);
+        transform: translate3d(-1400px, 0, 0);
     }
 }
 
@@ -787,13 +792,15 @@ ul
     animation: spin 1.5s linear infinite;
 }
 
-.wheel-joint
+.wheel-joint-1
 {
     animation: spin2 1.5s linear infinite;
 }
 
 .wheel-joint-2
 {
+    animation: spin3 1.5s linear infinite;
+
     z-index: 2;
 }
 
@@ -801,7 +808,15 @@ ul
 {
     to
     {
-        transform: rotate(360deg);
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes spin3
+{
+    to
+    {
+        transform: rotate3d(0, 0, 1, 360deg) rotate3d(0, 0, 1, -15deg);
     }
 }
 
@@ -809,7 +824,7 @@ ul
 {
     to
     {
-        transform: rotate(-360deg);
+        transform: rotate3d(0, 0, 1, -360deg);
     }
 }
 
@@ -857,7 +872,7 @@ ul
 
     to
     {
-        transform: translate(50px, -100px) scale(5, 3);
+        transform: translate3d(50px, -100px, 0) scale3d(5, 3, 3);
 
         opacity: 0;
     }
@@ -867,8 +882,7 @@ ul
 
 .moon
 {
-    transform: scale(1.5, 1.5);
-    animation: moon-movement 60s linear  1 forwards;
+    animation: moon-movement 20s linear forwards;
 }
 
 @keyframes moon-movement
@@ -879,12 +893,13 @@ ul
         top: 300px;
         left: 0;
 
-        transform: scale(.5, .5);
+        transform: scale3d(1.5, 1.5, 1.5);
     }
 
     to
     {
-        transform: rotate(75deg) scale(1.5, 1.5);
+        top: 100px;
+        left: calc(50% - 60px);
     }
 }
 
@@ -934,20 +949,24 @@ ul
 
 .top-left:hover ~ .canvas
 {
-    transform: rotateX(30deg) rotateY(-30deg);
+    transition: linear .5s;
+    transform: rotate3d(1, -1, 0, 30deg);
 }
 
 .top-right:hover ~ .canvas
 {
-    transform: rotateX(30deg) rotateY(30deg);
+    transition: linear .5s;
+    transform: rotate3d(1, 1, 0, 30deg);
 }
 
 .bot-left:hover ~ .canvas
 {
-    transform: rotateX(-30deg) rotateY(-30deg);
+    transition: linear .5s;
+    transform: rotate3d(-1, -1, 0, 30deg);
 }
 
 .bot-right:hover ~ .canvas
 {
-    transform: rotateX(-30deg) rotateY(30deg);
+    transition: linear .5s;
+    transform: rotate3d(-1, 1, 0, 30deg);
 }
