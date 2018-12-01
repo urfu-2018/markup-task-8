@@ -953,8 +953,8 @@ ul
 
 .h-con
 {
-    -webkit-transform: rotateX(15deg) translateZ(80px);
-    transform: rotateX(15deg) translateZ(80px);
+    -webkit-transform: rotate3d(1, 0, 0, 15deg) translate3d(0, 0, 80px);
+    transform: rotate3d(1, 0, 0, 15deg) translate3d(0, 0, 80px);
 }
 
 .hill,
@@ -968,8 +968,8 @@ ul
 .hill2::before,
 .hill3::before
 {
-    -webkit-animation: hill 18s ease-out forwards;
-    animation: hill 18s ease-out forwards;
+    -webkit-animation: hill 30s ease-out -7s forwards;
+    animation: hill 30s ease-out -7s forwards;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -979,15 +979,17 @@ ul
     height: 50%;
     position: absolute;
     left: -50%;
-    top: 50%;
+    top: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
     width: 50%;
 }
 
 .wolf
 {
     margin-left: 30px;
-    -webkit-transform: rotateX(-10deg) translateZ(59px);
-    transform: rotateX(-10deg) translateZ(59px);
+    -webkit-transform: rotate3d(1, 0, 0, -10deg) translate3d(0, 0, 59px);
+    transform: rotate3d(1, 0, 0, -10deg) translate3d(0, 0, 59px);
     position: absolute;
     left: 50%;
     bottom: 320px;
@@ -1169,9 +1171,9 @@ ul
     0%
     {
         /* stylelint-disable-next-line */
-        -webkit-transform: rotate3d(0, 0, 1, -90deg) translateZ(20px) scale3d(1.3, 1.3, 1);
+        -webkit-transform: rotate3d(0, 0, 1, -90deg) translate3d(0, 0, 20px) scale3d(1.3, 1.3, 1);
         /* stylelint-disable-next-line */
-        transform: rotate3d(0, 0, 1, -90deg) translateZ(20px) scale3d(1.3, 1.3, 1);
+        transform: rotate3d(0, 0, 1, -90deg) translate3d(0, 0, 20px) scale3d(1.3, 1.3, 1);
     }
 
     12%
@@ -1182,8 +1184,8 @@ ul
     100%
     {
         opacity: 1;
-        -webkit-transform: translateZ(20px);
-        transform: translateZ(20px);
+        -webkit-transform: translate3d(0, 0, 20px);
+        transform: translate3d(0, 0, 20px);
     }
 }
 
@@ -1191,6 +1193,7 @@ ul
 {
     100%
     {
-        top: -30%;
+        -webkit-transform: translate3d(0, -50%, 0);
+        transform: translate3d(0, -50%, 0);
     }
 }
