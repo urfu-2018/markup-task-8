@@ -70,19 +70,6 @@ ul
     content: '';
 }
 
-.canvas
-{
-    position: relative;
-
-    overflow: hidden;
-
-    width: 900px;
-    height: 600px;
-    margin: auto;
-
-    background: linear-gradient(#013971, #000c18 60%);
-}
-
 .moon
 {
     position: absolute;
@@ -828,21 +815,25 @@ ul
     0%
     {
         right: 0;
+        transform: translateZ(100px);
     }
 
     65%
     {
         right: 100%;
+        transform: translateZ(100px);
     }
 
     65.000001%
     {
         right: -500px;
+        transform: translateZ(100px);
     }
 
     100%
     {
         right: 0;
+        transform: translateZ(100px);
     }
 }
 
@@ -853,6 +844,11 @@ ul
     animation-fill-mode: forwards;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+
+.bridge
+{
+    transform: translateZ(100px);
 }
 
 @keyframes wheel-rotate
@@ -1000,8 +996,8 @@ ul
         background-color: yellow;
         color: yellow;
         border-radius: 20px;
-        transform: scale(20);
-        box-shadow: 0 0 50px 50px yellow;
+        transform: scale(20) translateZ(300px);
+        box-shadow: 0 0 70px 70px yellow;
         margin-top: 500px;
         margin-left: 500px;
     }
@@ -1027,9 +1023,29 @@ ul
 
 /* 3D-effect */
 
+.canvas-wrapper
+{
+    position: relative;
+    width: 1000px;
+    height: 700px;
+    margin: auto;
+    overflow: hidden;
+    background-color: wheat;
+}
+
 .canvas
 {
+    position: relative;
+    perspective: 2500px;
     transform-style: preserve-3d;
+
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    top: 50px;
+    vertical-align: middle;
+
+    background: linear-gradient(#013971, #000c18 60%);
 }
 
 .hover-helper
@@ -1067,26 +1083,26 @@ ul
     z-index: 2;
 }
 
-.top-left:hover ~ .canvas
+.top-left:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(1, -1, 0, 25deg);
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 
-.top-right:hover ~ .canvas
+.top-right:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(1, 1, 0, 25deg);
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 
-.bottom-left:hover ~ .canvas
+.bottom-left:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(-1, -1, 0, 25deg);
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
 
-.bottom-right:hover ~ .canvas
+.bottom-right:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(-1, 1, 0, 25deg);
-    transition-duration: .5s;
+    transition-duration: 1s;
 }
