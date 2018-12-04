@@ -172,8 +172,10 @@ ul
 
     border-top: .3rem solid white;
     border-bottom: .3rem solid white;
-    /* stylelint-disable-next-line */
-    background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+    background: linear-gradient(55deg, transparent 46%, white 46%,
+    white 54%, transparent 54%) left/1.6rem 2.2rem,
+        linear-gradient(-55deg, transparent 46%, white 46%,
+    white 54%, transparent 54%) left/1.6rem 2.2rem;
 
     transform: translateZ(30px);
 }
