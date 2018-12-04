@@ -145,7 +145,7 @@ ul
     animation-delay: 0s;
 
     transform-style: preserve-3d;
-    transform: perspective(0px) translate3d(0px, 0px, 30px);
+    transform: perspective(0) translate3d(0, 0, 30px);
 }
 
 .bridge
@@ -163,7 +163,7 @@ ul
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
 
     transform-style: preserve-3d;
-    transform: perspective(0px) translate3d(0px, 0px, 75px);
+    transform: perspective(0) translate3d(0, 0, 75px);
 }
 
 .train
@@ -182,7 +182,7 @@ ul
     animation-duration: 10s;
 
     transform-style: preserve-3d;
-    transform: perspective(0px) translate3d(0px, 0px, 75px);
+    transform: perspective(0) translate3d(0, 0, 75px);
 }
 
 .engine-front,
@@ -650,7 +650,7 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform-style: preserve-3d;
-    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 40px);
+    transform: perspective(0) rotate(45deg) translate3d(0, 0, 40px);
 }
 
 .hill2
@@ -668,7 +668,7 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform-style: preserve-3d;
-    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 20px);
+    transform: perspective(0) rotate(45deg) translate3d(0, 0, 20px);
 }
 
 .hill3
@@ -686,7 +686,7 @@ ul
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
     transform-style: preserve-3d;
-    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 60px);
+    transform: perspective(0) rotate(45deg) translate3d(0, 0, 60px);
 }
 
 .cloud
@@ -739,7 +739,7 @@ ul
     animation-duration: 30s;
     top: 20px;
     transform-style: preserve-3d;
-    transform: perspective(0px) scale(.7) translate3d(0px, 0px, 60px);
+    transform: perspective(0) scale(.7) translate3d(0, 0, 60px);
 }
 
 .cloud__further-fast
@@ -747,7 +747,7 @@ ul
     animation-duration: 23s;
     top: 45px;
     transform-style: preserve-3d;
-    transform: perspective(0px) scale(1.5, .7) translate3d(0px, 0px, 70px);
+    transform: perspective(0) scale(1.5, .7) translate3d(0, 0, 70px);
 }
 
 .cloud__near-slow
@@ -756,7 +756,7 @@ ul
     top: 150px;
     z-index: 135;
     transform-style: preserve-3d;
-    transform: perspective(0px) scale(1.3) translate3d(0px, 0px, 80px);
+    transform: perspective(0) scale(1.3) translate3d(0, 0, 80px);
 }
 
 .cloud__near-fast
@@ -765,7 +765,7 @@ ul
     top: 250px;
     z-index: 145;
     transform-style: preserve-3d;
-    transform: perspective(0px) scale(-1, 1) translate3d(0px, 0px, 90px);
+    transform: perspective(0) scale(-1, 1) translate3d(0, 0, 90px);
 }
 
 .main-border
@@ -802,7 +802,6 @@ ul
 {
     transform: perspective(1000px) rotate3d(-1, 1, 0, 30deg);
 }
-
 
 .item-area1:hover ~ .main-border
 {
