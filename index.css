@@ -78,7 +78,7 @@ ul
 
     position: relative;
 
-    overflow: hidden;
+    /*overflow: hidden;*/
 
     width: 900px;
     height: 600px;
@@ -100,11 +100,14 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+    transform: scale(.4);
 
     animation-iteration-count: 1;
     animation-timing-function: linear;
     animation-name: movementMoon;
     animation-duration: 15s;
+
+    
 }
 
 .center::after
@@ -140,6 +143,9 @@ ul
 
     animation: twinkle-0 1s linear infinite;
     animation-delay: 0s;
+
+    transform-style: preserve-3d;
+    transform: perspective(0px) translate3d(0px, 0px, 30px);
 }
 
 .bridge
@@ -155,6 +161,9 @@ ul
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
+
+    transform-style: preserve-3d;
+    transform: perspective(0px) translate3d(0px, 0px, 75px);
 }
 
 .train
@@ -171,6 +180,9 @@ ul
     animation-timing-function: linear;
     animation-name: trainMovement;
     animation-duration: 10s;
+
+    transform-style: preserve-3d;
+    transform: perspective(0px) translate3d(0px, 0px, 75px);
 }
 
 .engine-front,
@@ -637,7 +649,8 @@ ul
     background: linear-gradient(to bottom right, #002142, #27435f);
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
-    transform: rotate(45deg);
+    transform-style: preserve-3d;
+    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 40px);
 }
 
 .hill2
@@ -654,7 +667,8 @@ ul
     background: linear-gradient(to top right, #002142, #27435f);
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
-    transform: rotate(45deg);
+    transform-style: preserve-3d;
+    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 20px);
 }
 
 .hill3
@@ -671,7 +685,8 @@ ul
     background: linear-gradient(to bottom right, #002142, #27435f);
     box-shadow: 0 1px 30px 0 rgba(0, 0, 0, .5);
 
-    transform: rotate(45deg);
+    transform-style: preserve-3d;
+    transform: perspective(0px) rotate(45deg) translate3d(0px, 0px, 60px);
 }
 
 .cloud
@@ -722,31 +737,50 @@ ul
 .cloud__further-slow
 {
     animation-duration: 30s;
-    transform: scale(.7);
     top: 20px;
+    transform-style: preserve-3d;
+    transform: perspective(0px) scale(.7) translate3d(0px, 0px, 60px);
 }
 
 .cloud__further-fast
 {
     animation-duration: 23s;
-    transform: scale(1.5, .7);
     top: 45px;
+    transform-style: preserve-3d;
+    transform: perspective(0px) scale(1.5, .7) translate3d(0px, 0px, 70px);
 }
 
 .cloud__near-slow
 {
     animation-duration: 20s;
     top: 150px;
-    transform: scale(1.3);
     z-index: 135;
+    transform-style: preserve-3d;
+    transform: perspective(0px) scale(1.3) translate3d(0px, 0px, 80px);
 }
 
 .cloud__near-fast
 {
     animation-duration: 15s;
     top: 250px;
-    transform: scale(-1, 1);
     z-index: 145;
+    transform-style: preserve-3d;
+    transform: perspective(0px) scale(-1, 1) translate3d(0px, 0px, 90px);
+}
+
+.main-border
+{
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: 1000px solid #fff;
+    z-index: 9999;
+    transform-style: preserve-3d;
+    transition: 1s;
+    perspective: 1000px;
 }
 
 .item-area
@@ -769,6 +803,14 @@ ul
     transform: perspective(1000px) rotate3d(-1, 1, 0, 30deg);
 }
 
+
+.item-area1:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(-1, 1, 0, 30deg);
+    top: 20%;
+    left: 14%;
+}
+
 .item-area2
 {
     top: calc(50% - 200px);
@@ -778,6 +820,13 @@ ul
 .item-area2:hover ~ .canvas
 {
     transform: perspective(1000px) rotate3d(-1, 0, 0, 30deg);
+}
+
+.item-area2:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(-1, 0, 0, 30deg);
+    top: 20%;
+    left: 14%;
 }
 
 .item-area3
@@ -791,6 +840,13 @@ ul
     transform: perspective(1000px) rotate3d(-1, -1, 0, 30deg);
 }
 
+.item-area3:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(-1, -1, 0, 30deg);
+    top: 20%;
+    left: 14%;
+}
+
 .item-area4
 {
     top: 50%;
@@ -800,6 +856,13 @@ ul
 .item-area4:hover ~ .canvas
 {
     transform: perspective(1000px) rotate3d(0, 1, 0, 30deg);
+}
+
+.item-area4:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(0, 1, 0, 30deg);
+    top: 20%;
+    left: 14%;
 }
 
 .item-area5
@@ -813,6 +876,13 @@ ul
     transform: perspective(1000px) rotate3d(0, 0, 0, 30deg);
 }
 
+.item-area5:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(0, 0, 0, 30deg);
+    top: 20%;
+    left: 14%;
+}
+
 .item-area6
 {
     top: 50%;
@@ -822,6 +892,13 @@ ul
 .item-area6:hover ~ .canvas
 {
     transform: perspective(1000px) rotate3d(0, -1, 0, 30deg);
+}
+
+.item-area6:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(0, -1, 0, 30deg);
+    top: 20%;
+    left: 14%;
 }
 
 .item-area7
@@ -835,6 +912,13 @@ ul
     transform: perspective(1000px) rotate3d(1, 1, 0, 30deg);
 }
 
+.item-area7:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(1, 1, 0, 30deg);
+    top: 20%;
+    left: 14%;
+}
+
 .item-area8
 {
     top: calc(50% + 200px);
@@ -846,6 +930,13 @@ ul
     transform: perspective(1000px) rotate3d(1, 0, 0, 30deg);
 }
 
+.item-area8:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(1, 0, 0, 30deg);
+    top: 20%;
+    left: 14%;
+}
+
 .item-area9
 {
     top: calc(50% + 200px);
@@ -855,6 +946,13 @@ ul
 .item-area9:hover ~ .canvas
 {
     transform: perspective(1000px) rotate3d(1, -1, 0, 30deg);
+}
+
+.item-area9:hover ~ .main-border
+{
+    transform: perspective(1000px) rotate3d(1, -1, 0, 30deg);
+    top: 20%;
+    left: 14%;
 }
 
 @keyframes cloudMovement 
@@ -941,14 +1039,14 @@ ul
 {
     from
     {
-        transform: scale(.1);
+        transform: scale(1);
         top: 545px;
         left: -120px;
     }
     
     to
     {
-        transform: scale(1);
+        transform: scale(.4);
         top: 100px;
         left: calc(50% - 60px);
     }
