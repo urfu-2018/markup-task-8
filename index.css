@@ -898,22 +898,22 @@ ul
     right: 0;
 }
 
-.top-left-edge:hover ~ .wrapper .canvas
+.top-left-edge:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(1, -1, 0, 45deg);
 }
 
-.top-right-edge:hover ~ .wrapper .canvas
+.top-right-edge:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(1, 1, 0, 45deg);
 }
 
-.bottom-left-edge:hover ~ .wrapper .canvas
+.bottom-left-edge:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(-1, -1, 0, 45deg);
 }
 
-.bottom-right-edge:hover ~ .wrapper .canvas
+.bottom-right-edge:hover ~ .canvas-wrapper .canvas
 {
     transform: rotate3d(-1, 1, 0, 45deg);
 }
