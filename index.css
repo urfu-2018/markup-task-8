@@ -53,6 +53,7 @@ ul
 
 .center
 {
+    transition: 5s linear all;
     position: relative;
 
     display: flex;
@@ -60,6 +61,8 @@ ul
 
     height: 100%;
     margin: auto;
+    perspective-origin: 0 100%;
+    perspective: 100px;
 }
 
 .center::before,
@@ -72,6 +75,8 @@ ul
 
 .canvas
 {
+    transition: linear 1s;
+    transform-style: preserve-3d;
     position: relative;
 
     overflow: hidden;
@@ -83,49 +88,35 @@ ul
     background: linear-gradient(#013971, #000c18 60%);
 }
 
-.center:hover .canvas
+.rotate-block
 {
-    transform-origin: 50% 50%;
-    animation: scene-rotate 8s linear 1 alternate forwards;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50%;
 }
 
-@keyframes scene-rotate
+.rotate-block:hover + .canvas
 {
-    to
-    {
-        transform: rotateX(3deg) rotateY(3deg) translateZ(-10px) scale(1.1);
-    }
+    transform: rotate3d(1, 1, 0, 3deg);
 }
 
-.center
+.middle-perspective,
+.close-perspective
 {
-    transform-style: preserve-3d;
+    transition: transform 1s linear;
 }
 
-.center:hover
+.rotate-block:hover ~ .canvas .close-perspective
 {
-    perspective: 100px;
-    animation: global-rotate 8s ease 1 alternate forwards;
+    transform: translate(20px, -40px) translateZ(40px);
 }
 
-.center:hover .close-perspective
+.rotate-block:hover ~ .canvas .middle-perspective
 {
-    transition: transform 8s linear;
-    transform: translate(20px,-40px);
-}
-
-.center:hover .middle-perspective
-{
-    transition: transform 8s linear;
-    transform: translate(10px,-20px);
-}
-
-@keyframes global-rotate
-{
-    to
-    {
-        perspective-origin: 20% 100%;
-    }
+    transform: translate(10px, -20px) translateZ(20px);
 }
 
 .moon
@@ -142,7 +133,7 @@ ul
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
 
-    animation: moon-up 8s linear 1 alternate forwards;
+    animation: moon-up 7s linear 1 alternate forwards;
 }
 
 .center::after
@@ -398,7 +389,7 @@ ul
     border: .3rem solid rgba(0, 0, 0, .6);
     border-radius: 50%;
     background: orange;
-    animation: rotate-left 2s linear infinite;
+    animation: rotate-left 2s linear infinite forwards;
 }
 
 .wheel-2
@@ -691,7 +682,7 @@ ul
 .cloud
 {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 
     opacity: .8;
     border-radius: 200px;
@@ -828,15 +819,20 @@ ul
 {
     to
     {
-        transform: rotate(-360deg);
+        transform: rotate(-1turn);
     }
 }
 
 @keyframes rotate-right
 {
-    to
+    0%
     {
-        transform: rotate(360deg);
+        transform: rotate(0turn);
+    }
+
+    100%
+    {
+        transform: rotate(1turn);
     }
 }
 
@@ -865,7 +861,6 @@ ul
 {
     0%
     {
-        transform: scale(.6);
         top: 300px;
         left: -5%;
     }
@@ -884,6 +879,6 @@ ul
 
     100%
     {
-        transform: translateY(-50px);
+        transform: translateY(-50px) scale(.6);
     }
 }
