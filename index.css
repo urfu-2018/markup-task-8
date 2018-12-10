@@ -814,6 +814,7 @@ ul
     transform: translate(-200px, -200px);
     animation: cloudMove4 30s linear infinite;
     animation-delay: 1s;
+    z-index: 2;
 }
 
 @keyframes cloudMove4
