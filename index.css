@@ -81,6 +81,61 @@ ul
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+
+    transform-style: preserve-3d;
+    transition: all linear 1s;
+}
+
+.rotate-trigger
+{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    z-index: 100;
+}
+
+.rotate-trigger-tl
+{
+    top: 0;
+    left: 0;
+}
+
+.rotate-trigger-tr
+{
+    top: 0;
+    right: 0;
+}
+
+.rotate-trigger-bl
+{
+    bottom: 0;
+    left: 0;
+}
+
+.rotate-trigger-br
+{
+    bottom: 0;
+    right: 0;
+}
+
+.rotate-trigger-tl:hover ~ .canvas
+{
+    transform: perspective(400px) rotate3d(1, -1, 0, 10deg);
+}
+
+.rotate-trigger-tr:hover ~ .canvas
+{
+    transform: perspective(400px) rotate3d(1, 1, 0, 10deg);
+}
+
+.rotate-trigger-bl:hover ~ .canvas
+{
+    transform: perspective(400px) rotate3d(-1, -1, 0, 10deg);
+}
+
+.rotate-trigger-br:hover ~ .canvas
+{
+    transform: perspective(400px) rotate3d(-1, 1, 0, 10deg);
 }
 
 .moon
