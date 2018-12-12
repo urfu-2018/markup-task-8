@@ -726,7 +726,7 @@ ul
     animation: hill-moving 12s infinite linear;
 }
 
-.clouds
+.cloud
 {
     position: absolute;
     z-index: 1;
@@ -767,11 +767,6 @@ ul
 
     width: 120px;
     height: 120px;
-}
-
-.clouds
-{
-    z-index: 100;
 }
 
 .clouds-1
