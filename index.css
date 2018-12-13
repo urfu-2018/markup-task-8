@@ -70,6 +70,12 @@ ul
     content: '';
 }
 
+.wrapper
+{
+    margin: auto;
+    perspective: 1000px;
+}
+
 .canvas
 {
     position: relative;
@@ -118,24 +124,24 @@ ul
     right: 0;
 }
 
-.rotate-trigger-tl:hover ~ .canvas
+.rotate-trigger-tl:hover ~ .wrapper .canvas
 {
-    transform: perspective(400px) rotate3d(1, -1, 0, 10deg);
+    transform: rotate3d(1, -1, 0, 40deg);
 }
 
-.rotate-trigger-tr:hover ~ .canvas
+.rotate-trigger-tr:hover ~ .wrapper .canvas
 {
-    transform: perspective(400px) rotate3d(1, 1, 0, 10deg);
+    transform: rotate3d(1, 1, 0, 40deg);
 }
 
-.rotate-trigger-bl:hover ~ .canvas
+.rotate-trigger-bl:hover ~ .wrapper .canvas
 {
-    transform: perspective(400px) rotate3d(-1, -1, 0, 10deg);
+    transform: rotate3d(-1, -1, 0, 40deg);
 }
 
-.rotate-trigger-br:hover ~ .canvas
+.rotate-trigger-br:hover ~ .wrapper .canvas
 {
-    transform: perspective(400px) rotate3d(-1, 1, 0, 10deg);
+    transform: rotate3d(-1, 1, 0, 40deg);
 }
 
 .moon
