@@ -837,6 +837,7 @@ ul
 {
     from
     {
+        /* stylelint-disable-next-line */
         transform: rotateZ(-45deg) translate3d(-800px, 0, 10px) scale3d(1.6, 1.6, 1);
     }
 
@@ -945,4 +946,3 @@ ul
         transform: rotateZ(345deg);
     }
 }
-
