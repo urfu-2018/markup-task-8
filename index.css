@@ -679,7 +679,6 @@ ul
 
     content: '';
 
-
     border-radius: 100px;
     background: #fff;
 }
@@ -752,7 +751,6 @@ ul
         transform: translate3d(-200px, 170px, 0) scale(.75);
     }
 }
-
 
 @keyframes cloud-4
 {
