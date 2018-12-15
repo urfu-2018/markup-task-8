@@ -26,16 +26,45 @@
     animation: rotateWheel 2s linear infinite;
 }
 
-.wheel.wheel-3
-{
-    animation: rotateWheel 2.5s linear infinite;
-}
-
 @keyframes rotateWheelJoint
 {
+    from
+    {
+        transform: rotate(0deg);
+    }
+
     to
     {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes rotateWheelJoint2
+{
+    0%
+    {
+        transform: rotate(-15deg);
+    }
+
+    25%
+    {
+        transform: rotate(82deg);
+    }
+
+    50%
+    {
+        transform: rotate(170deg);
+    }
+
+    75%
+    {
+        transform: rotate(267deg);
+    }
+
+    100%
+    {
+        transform: rotate(345deg);
     }
 
 }
@@ -43,6 +72,11 @@
 .wheel-joint
 {
     animation: rotateWheelJoint 2s linear infinite;
+}
+
+.wheel-joint-2
+{
+    animation: rotateWheelJoint2 2s linear infinite;
 }
 
 @keyframes smoke
