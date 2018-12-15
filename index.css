@@ -690,9 +690,11 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
+}
 
+.wheel-joint-1
+{
     animation: wheelJointAnimation 2s linear infinite forwards;
-
 }
 
 @keyframes wheelJointAnimation
@@ -705,6 +707,24 @@ ul
     to
     {
         transform: rotate(1turn);
+    }
+}
+
+@keyframes wheelJoint2Animation
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+
+    50%
+    {
+        transform: rotate(160deg);
+    }
+
+    100%
+    {
+        transform: rotate(360deg);
     }
 }
 
@@ -745,6 +765,9 @@ ul
 
     transform: rotate(-15deg);
     transform-origin: 0 50%;
+
+    animation: wheelJoint2Animation 2s linear infinite forwards;
+
 }
 
 .wheel-joint-2::before
