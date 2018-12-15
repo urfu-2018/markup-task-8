@@ -699,9 +699,14 @@ ul
     animation: wheel-movement 2s linear infinite;
 }
 
-.wheel-joint
+.wheel-joint-1
 {
-    animation: spin 2s linear infinite;
+    animation: spin-1 2s linear infinite;
+}
+
+.wheel-joint-2
+{
+    animation: spin-2 2s linear infinite;
 }
 
 .train
@@ -832,12 +837,12 @@ ul
 {
     from
     {
-        transform: rotateZ(-45deg) translate3d(-800px, 0, 10px) scale(1.6);
+        transform: rotateZ(-45deg) translate3d(-800px, 0, 10px) scale3d(1.6, 1.6, 1);
     }
 
     to
     {
-        transform: rotateZ(0) translate3d(0, 0, 10px) scale(1);
+        transform: rotateZ(0) translate3d(0, 0, 10px) scale3d(1, 1, 1);
     }
 }
 
@@ -845,12 +850,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 180px, 50px) scale(1.1);
+        transform: translate3d(-200px, 180px, 50px) scale3d(1.1, 1.1, 1);
     }
 
     to
     {
-        transform: translate3d(900px, 180px, 50px) scale(1.1);
+        transform: translate3d(900px, 180px, 50px) scale3d(1.1, 1.1, 1);
     }
 }
 
@@ -858,12 +863,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 90px, 10px) scale(.4);
+        transform: translate3d(-200px, 90px, 10px) scale3d(.4, .4, 1);
     }
 
     to
     {
-        transform: translate3d(900px, 90px, 10px) scale(.4);
+        transform: translate3d(900px, 90px, 10px) scale3d(.4, .4, 1);
     }
 }
 
@@ -871,12 +876,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 130px, 35px) scale(-.75, .75);
+        transform: translate3d(-200px, 130px, 35px) scale3d(-.75, .75, 1);
     }
 
     to
     {
-        transform: translate3d(900px, 130px, 35px) scale(-.75, .75);
+        transform: translate3d(900px, 130px, 35px) scale3d(-.75, .75, 1);
     }
 }
 
@@ -884,12 +889,12 @@ ul
 {
     from
     {
-        transform: translate3d(-200px, 50px, 20px) scale(-.62, .62);
+        transform: translate3d(-200px, 50px, 20px) scale3d(-.62, .62, 1);
     }
 
     to
     {
-        transform: translate3d(900px, 50px, 20px) scale(-.62, .62);
+        transform: translate3d(900px, 50px, 20px) scale3d(-.62, .62, 1);
     }
 }
 
@@ -911,7 +916,7 @@ ul
 {
     to
     {
-        transform: scale(3, 2) translate3d(2rem, -5rem, 100px);
+        transform: scale3d(3, 2, 1) translate3d(2rem, -5rem, 100px);
         opacity: 0;
     }
 
@@ -921,14 +926,23 @@ ul
 {
     to
     {
-        transform: rotateZ(-1turn);
+        transform: rotateZ(-360deg);
     }
 }
 
-@keyframes spin
+@keyframes spin-1
 {
     to
     {
-        transform: rotateZ(1turn);
+        transform: rotateZ(360deg);
     }
 }
+
+@keyframes spin-2
+{
+    to
+    {
+        transform: rotateZ(345deg);
+    }
+}
+
