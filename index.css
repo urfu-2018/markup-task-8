@@ -96,7 +96,7 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
-    animation: moon-up 25s linear infinite;
+    animation: moon-up 15s linear forwards;
 }
 
 .center::after
@@ -762,13 +762,13 @@ ul
 .cloud-left
 {
     left: -30em;
-    animation: move-right cubic-bezier(.45,.05,.55,.95) infinite;
+    animation: move-right linear infinite;
 }
 
 .cloud-right
 {
     right: -30em;
-    animation: move-left cubic-bezier(.45,.05,.55,.95) infinite;
+    animation: move-left linear infinite;
 }
 
 .slow
@@ -849,45 +849,32 @@ ul
         left: -10%;
     }
 
-    15%
+    25%
     {
         transform: scale(1);
         top: 190px;
         left: 15%;
     }
 
-    30%
-    {
-        transform: scale(.8);
-        top: 100px;
-        left: 45%;
-    }
-
     50%
     {
-        transform: scale(.7);
-        top: 70px;
-        left: 45%;
+        transform: scale(.8);
+        top: 150px;
+        left: 25%;
     }
 
-    70%
+
+    75%
     {
         transform: scale(.8);
         top: 100px;
         left: 45%;
-    }
-
-    85%
-    {
-        transform: scale(1);
-        top: 190px;
-        left: 75%;
     }
 
     100%
     {
-        transform: scale(1.2);
-        top: 370px;
-        left: 100%;
+        transform: scale(.7);
+        top: 70px;
+        left: 45%;
     }
 }
