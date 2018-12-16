@@ -708,82 +708,91 @@ ul
     height: 120px;
 }
 
-.canvas:hover .train
+html:hover .train
 {
     transform: translate(-230%, 0);
     transition-duration: 10s;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 
-.canvas:hover .smoke
+@keyframes smoke
 {
-    transition-duration: 10s;
-    transform: translate(1000px, -600px) scale(20, 2);
-    transition-timing-function: ease-out;
+    to
+    {
+        top: -150px;
+        left: 300px;
+        opacity: 0;
+        transform: scaleX(20) scaleY(2);
+    }
 }
 
-.canvas:hover .smoke-2
+html:hover .smoke
 {
-    transition-delay: 1.5s;
+    animation: smoke 2s linear infinite;
 }
 
-.canvas:hover .smoke-3
+html:hover .smoke-2
 {
-    transition-delay: 3s;
+    animation: smoke 2s linear .5s infinite;
 }
 
-.canvas:hover .smoke-4
+html:hover .smoke-3
 {
-    transition-delay: 4.5s;
+    animation: smoke 2s linear 1s infinite;
 }
 
-.canvas:hover .cloud:first-child
+html:hover .smoke-4
+{
+    animation: smoke 2s linear 1.5s infinite;
+}
+
+html:hover .cloud:first-child
 {
     transition-duration: 10s;
     transform: translate(355%, 40%) scale(.9);
 }
 
-.canvas:hover .cloud:nth-child(2)
+html:hover .cloud:nth-child(2)
 {
     transition-duration: 9s;
     transform: translate(-500%, 250%) scale(-1, 1);
 }
 
-.canvas:hover .cloud:nth-child(3)
+html:hover .cloud:nth-child(3)
 {
     transition-duration: 10s;
     transform: translate(-250%, 60%) scale(-.7, .7);
 }
 
-.canvas:hover .cloud:last-child
+html:hover .cloud:last-child
 {
     transition-duration: 5s;
     transform: translate(500%, 90%) scale(1.35);
 }
 
-.canvas:hover .moon
+html:hover .moon
 {
     transition-duration: 5s;
     transform: translate(0, -100px) scale(.8);
 }
 
-.canvas:hover .wheel-holder > .wheel
+html:hover .wheel-holder > .wheel
 {
     animation-name: wheelMovement;
     animation-duration: 10s;
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 
-.canvas:hover .wheel .wheel-joint
+html:hover .wheel .wheel-joint
 {
     animation-name: pistonWork;
     animation-duration: 10s;
     animation-timing-function: cubic-bezier(0, 0, 1, 1);
 }
 
-.canvas:hover .starAnimation
+html:hover .star
 {
-    animation-name: sta;
+    animation-name: starAnimation;
     animation-duration: 1s;
     animation-delay: 10;
 }
