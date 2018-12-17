@@ -70,20 +70,40 @@ ul
     content: '';
 }
 
-.canvas
+.center::after
+{
+    width: 100%;
+    height: 100%;
+}
+
+.canvas-wrap
 {
     position: relative;
 
+    margin: auto;
     overflow: hidden;
+}
 
+.canvas
+{
+    position: relative;
     width: 900px;
     height: 600px;
     margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
+    
+    transform-origin: center;
+    perspective-origin: center;
+}
 
-    transition: all 300ms ease-out;
-    /* perspective: 400; */
+.center,
+.canvas-wrap,
+.canvas
+{
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    perspective: 900px;
 }
 
 .moon
@@ -99,14 +119,8 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
-
+    
     animation: move-moon 15s linear 0s forwards;
-}
-
-.center::after
-{
-    width: 100%;
-    height: 100%;
 }
 
 .stars
@@ -146,7 +160,7 @@ ul
 
     width: 100%;
     height: 2.6rem;
-
+    transform: translate3d(0, 0, 50px);
     border-top: .3rem solid white;
     border-bottom: .3rem solid white;
     /* stylelint-disable-next-line */
@@ -162,8 +176,8 @@ ul
 
     width: 44rem;
     height: 10rem;
-
-    animation: move-train 20s linear infinite;
+    transform: translate3d(0, 0, 50px);
+    animation: move-train 5s linear infinite;
 }
 
 .engine-front,
@@ -259,26 +273,25 @@ ul
     border-radius: 50%;
     background: rgba(255, 255, 255, .8);
 
-    animation: move-smoke 2s linear infinite;
+    animation: move-smoke .3s linear infinite;
 }
 
 .smoke-2
 {
     left: .4rem;
-    animation-delay: .3s;
+    animation-delay: .1s;
 }
 
 .smoke-3
 {
     left: .6rem;
 
-    animation-delay: .4s;
+    animation-delay: .2s;
 }
 
 .smoke-4
 {
     left: .8rem;
-    animation-delay: .6s;
 }
 
 .engine-body
@@ -357,7 +370,7 @@ ul
     border-radius: 50%;
     background: orange;
 
-    animation: spin 3s linear infinite;
+    animation: spin .3s linear infinite;
 }
 
 .wheel-2
@@ -535,7 +548,7 @@ ul
     background: white;
 
     transform-origin: 100% 50%;
-    animation: spin-reverse 3s linear infinite;
+    animation: spin-reverse .3s linear infinite;
 }
 
 .wheel-joint::before,
@@ -652,15 +665,15 @@ ul
     position: absolute;
     z-index: 1;
     top: 0;
-    left: 0;
-
+    left: -190px;
     width: 200px;
     height: 60px;
 
     opacity: .8;
     border-radius: 200px;
     background: #fff;
-    
+
+    animation: move-cloud linear infinite;
 }
 
 .cloud:before,
@@ -689,38 +702,35 @@ ul
     height: 120px;
 }
 
-.clouds .cloud:nth-child(1),
-.clouds .cloud:nth-child(2),
-.clouds .cloud:nth-child(3),
-.clouds .cloud:nth-child(4)
-{
-    animation: move-cloud linear infinite;
-}
-
 .clouds .cloud:nth-child(1)
 {
-    transform: translate(0, 150px) scale(-1, 1);
-    animation-duration: 15s;
-    z-index: 5;
+    transform: translate3d(0, 150px, 50px) scale(-1, 1);
+
+    animation-duration: 10s;
+    animation-delay: 10s;
+    z-index: 2;
 }
   
 .clouds .cloud:nth-child(2)
 {
-    transform: translate(0, 100px) scale(.8);
-    animation-duration: 25s;
+    transform: translate3d(0, 100px, 50px)  scale(.8);
+    animation-duration: 15s;
 }
 
 .clouds .cloud:nth-child(3)
 {
-    transform: translate(0, 80px) scale(.6) scale(-1, 1);
-    animation-duration: 35s;
+    transform: translate3d(0, 80px, 50px) scale(.6) scale(-1, 1) scale(.9);
+    animation-duration: 20s;
+    animation-delay: 5s;
 }
 
 .clouds .cloud:nth-child(4)
 {
-    transform: translate(0, 10px) scale(.4);
-    animation-duration: 40s;
+    transform: translate3d(0, 40px, 50px) scale(.4);
+    animation-duration: 25s;
 }
+
+/* animation */
 
 @keyframes move-cloud
 {
@@ -739,12 +749,12 @@ ul
 {
     0%
     {
-        transform: scale(1.5);
+        transform: translate3d(0, 0, 50px) scale(1.5);
     }
 
     100%
     {
-        transform: scale(1);
+        transform: translate3d(0, 0, 50px) scale(1);
         top: 50px;
     }
 }
@@ -753,12 +763,25 @@ ul
 {
     0%
     {
-        right: -44rem;
+        transform: translate3d(44rem, 0, 50px);
     }
 
     100%
     {
-        right: 100%;
+        transform: translate3d(-900px, 0, 50px);
+    }
+}
+
+@keyframes body-upDown
+{
+    0%
+    {
+        height: 5rem;
+    }
+
+    100%
+    {
+        height: 4.5rem;
     }
 }
 
@@ -782,82 +805,119 @@ ul
 {
     100%
     {
-        top: -10rem;
+        top: -9rem;
         opacity: 0;
-        width: 3rem;
+        width: 5rem;
         height: 3.6rem;
     }
 }
 
-.center > a
+/* turn of the scene */
+
+.rotate
 {
     opacity: 0;
     position: absolute;
     z-index: 200;
-    width: 50%;
-    height: 50%;
-    background: #600;
+    width: 450px;
+    height: 300px;
+    cursor: pointer;
 }
 
-.center > a:hover,
-.center > a:active
+.rotate:hover
 {
-    transform: translateZ(50px);
+    transition: transform 1s linear;
 }
 
-.center > a:nth-child(1)
+.center-center
 {
-    top: 0;
-    left: 0;
+    z-index: 300;
+    width: 300px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 150px);
 }
 
-.center > a:nth-child(1):hover ~ .canvas,
-.center > a:nth-child(1):active ~ .canvas
+.top-left
 {
-    transform-origin: right bottom;
-    perspective-origin: right bottom;
-    transform: rotateX(15deg) rotateY(-15deg) translateZ(0);
+    top: calc(50% - 300px);
+    left: calc(50% - 450px);
 }
 
-.center > a:nth-child(2)
+.top-left:hover
 {
-    top: 0;
-    right: 0;
+    transform: rotateX(-10deg) rotateY(10deg) translateZ(100px);
 }
 
-.center > a:nth-child(2):hover ~ .canvas,
-.center > a:nth-child(2):active ~ .canvas
+.top-left:hover ~ .canvas-wrap
 {
-    transform-origin: left bottom;
-    perspective-origin: left bottom;
-    transform: rotateX(15deg) rotateY(15deg) translateZ(0);
+    transform: rotateX(-10deg) rotateY(10deg) translateZ(0);
 }
 
-.center > a:nth-child(3)
+.top-left:hover ~ .canvas-wrap .canvas
 {
-    bottom: 0;
-    right: 0;
-}
-
-.center > a:nth-child(3):hover ~ .canvas,
-.center > a:nth-child(3):active ~ .canvas
-{
-    transform-origin: left top;
     perspective-origin: left top;
-    transform: rotateX(-15deg) rotateY(15deg) translateZ(0);
 }
 
-.center > a:nth-child(4)
+.top-right
 {
-    bottom: 0;
-    left: 0;
+    top: calc(50% - 300px);
+    right: calc(50% - 450px);
 }
 
-.center > a:nth-child(4):hover ~ .canvas,
-.center > a:nth-child(4):active ~ .canvas
+.top-right:hover
 {
-    transform-origin: right top;
+    transform: rotateX(-10deg) rotateY(-10deg) translateZ(100px);
+}
+
+.top-right:hover ~ .canvas-wrap
+{
+    transform: rotateX(-10deg) rotateY(-10deg) translateZ(0);
+}
+
+.top-right:hover ~ .canvas-wrap .canvas
+{
     perspective-origin: right top;
-    transform: rotateX(-15deg) rotateY(-15deg) translateZ(0);
-    
+}
+
+.bottom-left
+{
+    bottom: calc(50% - 300px);
+    left: calc(50% - 450px);
+}
+
+.bottom-left:hover
+{
+    transform: rotateX(10deg) rotateY(10deg) translateZ(100px);
+}
+
+.bottom-left:hover ~ .canvas-wrap
+{
+    transform: rotateX(10deg) rotateY(10deg) translateZ(0);
+}
+
+.bottom-left:hover ~ .canvas-wrap .canvas
+{
+    perspective-origin: left bottom;
+}
+
+.bottom-right
+{
+    bottom: calc(50% - 300px);
+    right: calc(50% - 450px);
+}
+
+.bottom-right:hover
+{
+    transform: rotateX(10deg) rotateY(-10deg) translateZ(100px);
+}
+
+.bottom-right:hover ~ .canvas-wrap
+{
+    transform: rotateX(10deg) rotateY(-10deg) translateZ(0);
+}
+
+.bottom-right:hover ~ .canvas-wrap .canvas
+{
+    perspective-origin: right bottom;
 }
