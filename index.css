@@ -934,7 +934,8 @@ ul
     z-index: 1;
 }
 
-.hover-area:hover ~ .canvas {
+.hover-area:hover ~ .canvas
+{
     overflow: visible;
 }
 
@@ -960,7 +961,8 @@ ul
 
 .top-right:hover ~ .canvas
 {
-    transform: perspective(900px) rotateX(-12deg) rotateY(-22deg) rotateZ(-20deg);
+    transform: perspective(900px) rotateX(-12deg)
+        rotateY(-22deg) rotateZ(-20deg);
 }
 
 .bottom-left:hover ~ .canvas
@@ -970,6 +972,6 @@ ul
 
 .bottom-right:hover ~ .canvas
 {
-    transform: perspective(900px) rotateX(12deg) rotateY(-22deg) rotateZ(-20deg);
-
+    transform: perspective(900px) rotateX(12deg)
+        rotateY(-22deg) rotateZ(-20deg);
 }
