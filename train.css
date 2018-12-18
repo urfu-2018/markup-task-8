@@ -1,0 +1,133 @@
+.train
+{
+    animation: train 10s linear infinite, bridge 2s ease-in-out infinite;
+}
+
+@keyframes train
+{
+    from
+    {
+        right: -500px;
+    }
+
+    to
+    {
+        right: 900px;
+    }
+}
+
+.wheel
+{
+    animation: wheel 2s infinite linear;
+}
+
+.wheel-joint
+{
+    animation: wheel-inv 2s infinite linear;
+}
+
+.wheel-joint-2
+{
+    animation: big-wheel-joint 2s infinite linear;
+}
+
+.wheel-3
+{
+    animation: wheel 3s infinite linear;
+}
+
+@keyframes wheel
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(-359deg);
+    }
+}
+
+@keyframes wheel-inv
+{
+    from
+    {
+        transform: rotate(0deg);
+    }
+
+    to
+    {
+        transform: rotate(359deg);
+    }
+}
+
+@keyframes big-wheel-joint
+{
+    0%
+    {
+        transform: rotate(-15deg);
+    }
+
+    75%
+    {
+        transform: rotate(270deg);
+    }
+
+    100%
+    {
+        transform: rotate(345deg);
+    }
+}
+
+.smoke
+{
+    animation: smoke 3s infinite linear;
+}
+
+.smoke:nth-of-type(1)
+{
+    animation-delay: 2s;
+}
+
+.smoke:nth-of-type(2)
+{
+    animation-delay: 4s;
+}
+
+.smoke:nth-of-type(3)
+{
+    animation-delay: 6s;
+}
+
+@keyframes smoke
+{
+    30%
+    {
+        transform: translate(30px, -1.5rem);
+    }
+
+    100%
+    {
+        opacity: 0;
+        transform: translate(100px, -1.5rem);
+    }
+}
+
+.bridge
+{
+    animation: bridge 2s ease-in-out infinite;
+}
+
+@keyframes bridge
+{
+    50%
+    {
+        transform: translateY(3px);
+    }
+
+    100%
+    {
+        transform: translateY(0);
+    }
+}

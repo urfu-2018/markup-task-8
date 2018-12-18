@@ -1,0 +1,76 @@
+.cloud:nth-child(1)
+{
+    animation: cloud-1 20s linear infinite;
+    top: 40%;
+}
+
+.cloud:nth-child(2)
+{
+    animation: cloud-2 25s linear infinite;
+    top: 30%;
+    transform: rotateY(180deg);
+}
+
+.cloud:nth-child(3)
+{
+    animation: cloud-3 50s linear infinite;
+    top: 20%;
+}
+
+.cloud:nth-child(4)
+{
+    animation: cloud-4 35s linear infinite;
+    transform: rotateY(180deg);
+}
+
+@keyframes cloud-1
+{
+    from
+    {
+        left: -40%;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+@keyframes cloud-2
+{
+    from
+    {
+        left: -20%;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+@keyframes cloud-3
+{
+    from
+    {
+        left: -50%;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}
+
+@keyframes cloud-4
+{
+    from
+    {
+        left: -70%;
+    }
+
+    to
+    {
+        left: 100%;
+    }
+}

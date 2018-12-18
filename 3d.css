@@ -1,0 +1,103 @@
+.canvas
+{
+    perspective: 800px;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right
+{
+    position: fixed;
+    width: 60%;
+    height: 60%;
+    z-index: 2;
+}
+
+.top-left
+{
+    top: 0;
+    left: 0;
+}
+
+.top-right
+{
+    top: 0;
+    left: 50%;
+}
+
+.bottom-left
+{
+    top: 50%;
+    left: 0;
+}
+
+.bottom-right
+{
+    top: 50%;
+    left: 50%
+}
+
+.top-left:hover ~ .canvas
+{
+    animation: top-left-rotate 1s linear forwards;
+}
+
+@keyframes top-left-rotate
+{
+    to
+    {
+        transform: rotateX(-20deg) rotateY(20deg);
+    }
+}
+
+.top-right:hover ~ .canvas
+{
+    animation: top-right-rotate 1s linear forwards;
+}
+
+@keyframes top-right-rotate
+{
+    to
+    {
+        transform: rotateX(20deg) rotateY(20deg);
+    }
+}
+
+.bottom-left:hover ~ .canvas
+{
+    animation: bottom-left-rotate 1s linear forwards;
+}
+
+@keyframes bottom-left-rotate
+{
+    to
+    {
+        transform: rotateX(20deg) rotateY(-20deg);
+    }
+}
+
+.bottom-right:hover ~ .canvas
+{
+    animation: bottom-right-rotate 1s linear forwards;
+}
+
+@keyframes bottom-right-rotate
+{
+    to
+    {
+        transform: rotateX(-20deg) rotateY(-20deg);
+    }
+}
+
+.hill,
+.hill2,
+.hill3,
+.engine-body,
+.engine-front,
+.compartment,
+.compartment-two,
+.compartment-three
+{
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,.5);
+}
