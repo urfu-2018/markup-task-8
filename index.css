@@ -72,10 +72,18 @@ ul
     content: '';
 }
 
+.scene
+{
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
 .canvas
 {
     position: relative;
-
     width: 900px;
     height: 600px;
     margin: auto;
@@ -85,7 +93,7 @@ ul
     transform-style: preserve-3d;
     transform-origin: center;
 
-    transition: transform .25s ease-out;
+    transition: transform .3s ease-out;
 }
 
 .moon
@@ -146,7 +154,8 @@ ul
     z-index: 1;
     bottom: 10rem;
 
-    width: 100%;
+    width: 150%;
+    left: -25%;
     height: 2.6rem;
 
     border-top: .3rem solid white;
@@ -154,7 +163,7 @@ ul
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
 
-    transform: translate3d(0, -15px, 200px) scale(.9);
+    transform: translate3d(0, -15px, 150px);
 }
 
 .train
@@ -361,7 +370,7 @@ ul
     border-radius: 50%;
     background: orange;
 
-    animation: wheel .5s ease-in infinite;
+    animation: wheel .5s linear infinite;
 }
 
 .wheel-2
@@ -540,7 +549,7 @@ ul
 
     transform-origin: 100% 50%;
 
-    animation: wheel-joint .5s ease-in infinite;
+    animation: wheel-joint .5s linear infinite;
 }
 
 .wheel-joint::before,
@@ -769,12 +778,12 @@ ul
 {
     0%
     {
-        transform: translate3d(0, 0, 200px) scale(.7);
+        transform: translate3d(500px, -15px, 150px);
     }
     
     100%
     {
-        transform: translate3d(-450px, 0, 200px) scale(.75);
+        transform: translate3d(-900px, -15px, 150px);
     }
 }
 
@@ -798,7 +807,7 @@ ul
 {
     100%
     {
-        transform: translate(200px, -50px) scale(15, 8);
+        transform: translate(200px, -50px) scale(4, 2);
         opacity: 0;
     }
 }
@@ -843,22 +852,22 @@ ul
     top: 67vh;
 }
 
-.right-up:hover ~ .canvas
+.right-up:hover ~ .scene > .canvas
 {
-    transform: rotate3d(1,1,0,10deg);
+    transform: rotate3d(1,1,0,15deg) scale(0.99);
 }
 
-.right-down:hover ~ .canvas
+.right-down:hover ~ .scene > .canvas
 {
-    transform: rotate3d(-1,1,0,10deg);
+    transform: rotate3d(-1,1,0,15deg) scale(0.99);
 }
 
-.left-up:hover ~ .canvas
+.left-up:hover ~ .scene > .canvas
 {
-    transform: rotate3d(1,-1,0,10deg);
+    transform: rotate3d(1,-1,0,15deg) scale(0.99);
 }
 
-.left-down:hover ~ .canvas
+.left-down:hover ~ .scene > .canvas
 {
-    transform: rotate3d(-1,-1,0,10deg);
+    transform: rotate3d(-1,-1,0,15deg) scale(0.99);
 }
