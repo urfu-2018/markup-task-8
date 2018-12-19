@@ -163,7 +163,7 @@ ul
     /* stylelint-disable-next-line */
     background: linear-gradient(55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem, linear-gradient(-55deg, transparent 46%, white 46%, white 54%, transparent 54%) left/1.6rem 2.2rem;
 
-    transform: translate3d(0, -15px, 150px);
+    transform: translate3d(0, -15px, 100px);
 }
 
 .train
@@ -778,12 +778,12 @@ ul
 {
     0%
     {
-        transform: translate3d(500px, -15px, 150px);
+        transform: translate3d(500px, -15px, 100px);
     }
     
     100%
     {
-        transform: translate3d(-900px, -15px, 150px);
+        transform: translate3d(-900px, -15px, 100px);
     }
 }
 
@@ -854,20 +854,20 @@ ul
 
 .right-up:hover ~ .scene > .canvas
 {
-    transform: rotate3d(1,1,0,15deg) scale(0.99);
+    transform: rotate3d(1,1,0,25deg) scale(.97);
 }
 
 .right-down:hover ~ .scene > .canvas
 {
-    transform: rotate3d(-1,1,0,15deg) scale(0.99);
+    transform: rotate3d(-1,1,0,25deg) scale(.97);
 }
 
 .left-up:hover ~ .scene > .canvas
 {
-    transform: rotate3d(1,-1,0,15deg) scale(0.99);
+    transform: rotate3d(1,-1,0,25deg) scale(.97);
 }
 
 .left-down:hover ~ .scene > .canvas
 {
-    transform: rotate3d(-1,-1,0,15deg) scale(0.99);
+    transform: rotate3d(-1,-1,0,25deg) scale(.97);
 }
