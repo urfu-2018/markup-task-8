@@ -1,6 +1,12 @@
+.cloud
+{
+    transform: translateZ(20px);
+}
+
 .cloud:nth-child(1)
 {
     animation: cloud-1 20s linear infinite;
+    transform: scale(.8) translateZ(60px);
     top: 40%;
 }
 
@@ -15,6 +21,7 @@
 {
     animation: cloud-3 50s linear infinite;
     top: 20%;
+    transform: scale(.8) translateZ(80px);
 }
 
 .cloud:nth-child(4)

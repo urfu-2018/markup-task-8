@@ -1,6 +1,12 @@
+body
+{
+    background-color: blue;
+}
+
 .canvas
 {
     perspective: 800px;
+    transform-style: preserve-3d;
 }
 
 .top-left,
@@ -38,7 +44,7 @@
     left: 50%;
 }
 
-.top-left:hover ~ .canvas
+.top-left:hover ~ .canvas-wrapper .canvas
 {
     animation: top-left-rotate 1s linear forwards;
 }
@@ -51,7 +57,7 @@
     }
 }
 
-.top-right:hover ~ .canvas
+.top-right:hover ~ .canvas-wrapper .canvas
 {
     animation: top-right-rotate 1s linear forwards;
 }
@@ -64,7 +70,7 @@
     }
 }
 
-.bottom-left:hover ~ .canvas
+.bottom-left:hover ~ .canvas-wrapper .canvas
 {
     animation: bottom-left-rotate 1s linear forwards;
 }
@@ -77,7 +83,7 @@
     }
 }
 
-.bottom-right:hover ~ .canvas
+.bottom-right:hover ~ .canvas-wrapper .canvas
 {
     animation: bottom-right-rotate 1s linear forwards;
 }

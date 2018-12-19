@@ -1,6 +1,12 @@
 .moon
 {
-    animation: moon 15s linear;
+    animation: moon 10s linear;
+    transform: translateZ(10px);
+}
+
+.moon-wrapper
+{
+    animation: moon-wrapper 10s linear;
 }
 
 @keyframes moon
@@ -8,14 +14,29 @@
     from
     {
         top: 250px;
-        width: 180px;
-        height: 180px;
+        transform: translateZ(10px) scale(2);
     }
 
     to
     {
         top: 100px;
-        width: 120px;
-        height: 120px;
+    }
+}
+
+@keyframes moon-wrapper
+{
+    from
+    {
+        top: 250px;
+        /*transform: scale(1.5);*/
+        /*width: 180px;*/
+        /*height: 180px;*/
+    }
+
+    to
+    {
+        top: 100px;
+        /*width: 120px;*/
+        /*height: 120px;*/
     }
 }

@@ -1,6 +1,7 @@
 .train
 {
-    animation: train 10s linear infinite, bridge 2s ease-in-out infinite;
+    animation: train 10s linear infinite;
+    transform: translateZ(80px);
 }
 
 @keyframes train
@@ -117,17 +118,18 @@
 .bridge
 {
     animation: bridge 2s ease-in-out infinite;
+    transform: translateZ(80px);
 }
 
 @keyframes bridge
 {
     50%
     {
-        transform: translateY(3px);
+        transform: translateY(3px) translateZ(80px);
     }
 
     100%
     {
-        transform: translateY(0);
+        transform: translateY(0) translateZ(80px);
     }
 }
