@@ -78,21 +78,22 @@ ul
 
 .canvas-wrap
 {
-    position: relative;
-
-    margin: auto;
     overflow: hidden;
+}
+
+.control-wrap
+{
+    position: relative;
+    margin: auto;
 }
 
 .canvas
 {
-    position: relative;
     width: 900px;
     height: 600px;
-    margin: auto;
 
     background: linear-gradient(#013971, #000c18 60%);
-    
+
     transform-origin: center;
     perspective-origin: center;
 }
@@ -104,6 +105,13 @@ ul
     transition: all 1s linear;
     transform-style: preserve-3d;
     perspective: 900px;
+}
+
+.canvas,
+.control-wrap
+{
+    width: 900px;
+    height: 600px;
 }
 
 .moon
@@ -119,7 +127,7 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
-    
+
     animation: move-moon 15s linear 0s forwards;
 }
 
@@ -710,7 +718,7 @@ ul
     animation-delay: 10s;
     z-index: 2;
 }
-  
+
 .clouds .cloud:nth-child(2)
 {
     transform: translate3d(0, 100px, 50px)  scale(.8);
@@ -774,11 +782,6 @@ ul
 
 @keyframes body-upDown
 {
-    0%
-    {
-        height: 5rem;
-    }
-
     100%
     {
         height: 4.5rem;
@@ -805,7 +808,7 @@ ul
 {
     100%
     {
-        top: -9rem;
+        top: -80px;
         opacity: 0;
         width: 5rem;
         height: 3.6rem;
@@ -840,16 +843,12 @@ ul
 
 .top-left
 {
-    top: calc(50% - 300px);
-    left: calc(50% - 450px);
+    top: 0;
+    left: 0;
 }
 
+.top-left:hover ~ .canvas-wrap,
 .top-left:hover
-{
-    transform: rotateX(-10deg) rotateY(10deg) translateZ(100px);
-}
-
-.top-left:hover ~ .canvas-wrap
 {
     transform: rotateX(-10deg) rotateY(10deg) translateZ(0);
 }
@@ -861,16 +860,12 @@ ul
 
 .top-right
 {
-    top: calc(50% - 300px);
-    right: calc(50% - 450px);
+    top: 0;
+    right: 0;
 }
 
+.top-right:hover ~ .canvas-wrap,
 .top-right:hover
-{
-    transform: rotateX(-10deg) rotateY(-10deg) translateZ(100px);
-}
-
-.top-right:hover ~ .canvas-wrap
 {
     transform: rotateX(-10deg) rotateY(-10deg) translateZ(0);
 }
@@ -882,16 +877,12 @@ ul
 
 .bottom-left
 {
-    bottom: calc(50% - 300px);
-    left: calc(50% - 450px);
+    bottom: 0;
+    left: 0;
 }
 
+.bottom-left:hover ~ .canvas-wrap,
 .bottom-left:hover
-{
-    transform: rotateX(10deg) rotateY(10deg) translateZ(100px);
-}
-
-.bottom-left:hover ~ .canvas-wrap
 {
     transform: rotateX(10deg) rotateY(10deg) translateZ(0);
 }
@@ -903,16 +894,12 @@ ul
 
 .bottom-right
 {
-    bottom: calc(50% - 300px);
-    right: calc(50% - 450px);
+    bottom: 0;
+    right: 0;
 }
 
+.bottom-right:hover ~ .canvas-wrap,
 .bottom-right:hover
-{
-    transform: rotateX(10deg) rotateY(-10deg) translateZ(100px);
-}
-
-.bottom-right:hover ~ .canvas-wrap
 {
     transform: rotateX(10deg) rotateY(-10deg) translateZ(0);
 }
