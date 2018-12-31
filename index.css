@@ -74,8 +74,7 @@ ul
 {
     position: relative;
 
-    overflow: hidden;
-
+    /*overflow: hidden;*/
     width: 900px;
     height: 600px;
     margin: auto;
@@ -674,4 +673,284 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.center
+{
+    transform-style: preserve-3d;
+}
+
+.cloud-1
+{
+    animation: move-cloud-1 40s linear 1 forwards;
+    top: 150px;
+    left: 650px;
+}
+
+.cloud-2
+{
+    animation: move-cloud-2 35s linear 1 forwards;
+    top: 70px;
+    left: 250px;
+}
+
+.cloud-3
+{
+    animation: move-cloud-3 60s linear 1 forwards;
+    top: 90px;
+    left: 500px;
+}
+
+.cloud-4
+{
+    animation: move-cloud-4 45s linear 1 forwards;
+    top: 60px;
+    left: -200px;
+}
+
+@keyframes move-cloud-1
+{
+    from
+    {
+        transform: translateZ(35px) scale(.7);
+    }
+
+    to
+    {
+        transform: translate3d(1200px, 0, 35px) scale(.7);
+    }
+}
+
+@keyframes move-cloud-2
+{
+    from
+    {
+        transform: translateZ(40px) scale(-.8, .8);
+    }
+
+    to
+    {
+        transform: translate3d(1200px, 0, 40px) scale(-.8, .8);
+    }
+}
+
+@keyframes move-cloud-3
+{
+    from
+    {
+        transform: translateZ(25px) scale(-.4, .4);
+    }
+
+    to
+    {
+        transform: translate3d(1200px, 0, 25px) scale(-.4, .4);
+    }
+}
+
+@keyframes move-cloud-4
+{
+    from
+    {
+        transform: translateZ(30px) scale(.6);
+    }
+
+    to
+    {
+        transform: translate3d(1200px, 0, 30px) scale(.6);
+    }
+}
+
+.train
+{
+    animation: move-train 60s linear 1 forwards;
+}
+
+@keyframes move-train
+{
+    to
+    {
+        transform: translate3d(-1200px, 0, 50px);
+    }
+}
+
+.wheel
+{
+    animation: rotate-wheel 3s linear infinite;
+}
+
+.wheel-joint
+{
+    animation: rotate-wheel-joint 3s linear infinite;
+}
+
+.wheel-joint-2
+{
+    animation: rotate-wheel-joint-2 3s linear infinite;
+}
+
+@keyframes rotate-wheel
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes rotate-wheel-joint
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes rotate-wheel-joint-2
+{
+    50%
+    {
+        transform: rotate(180deg);
+    }
+
+    100%
+    {
+        transform: rotate(345deg);
+    }
+}
+
+.smoke
+{
+    animation: move-smoke 3.73s linear infinite;
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+@keyframes move-smoke
+{
+    to
+    {
+        transform: translate(80px, -20px);
+    }
+}
+
+.moon
+{
+    animation: move-moon 20s ease-in-out 1 forwards;
+}
+
+@keyframes move-moon
+{
+    from
+    {
+        transform: translate3d(0, 70px, 10px) scale(.7);
+    }
+
+    to
+    {
+        transform: translate3d(0, 0, 10px) scale(1.2);
+    }
+}
+
+.canvas-wrapper
+{
+    position: relative;
+    margin: auto;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.left-top-corner
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 50%;
+    z-index: 1;
+}
+
+.left-bottom-corner
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    z-index: 1;
+}
+
+.right-top-corner
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 50%;
+    z-index: 1;
+}
+
+.right-bottom-corner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.center
+{
+    transform-style: preserve-3d;
+}
+
+.canvas
+{
+    transition: all .5s ease-in;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    perspective: 900px;
+}
+
+.bridge
+{
+    transform: translateZ(50px);
+}
+
+.train
+{
+    transform: translateZ(50px);
+}
+
+.left-top-corner:hover ~ .canvas
+{
+    transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+.right-top-corner:hover ~ .canvas
+{
+    transform: rotate3d(-1, -1, 0, 30deg);
+}
+
+.left-bottom-corner:hover ~ .canvas
+{
+    transform: rotate3d(1, 1, 0, 30deg);
+}
+
+.right-bottom-corner:hover ~ .canvas
+{
+    transform: rotate3d(1, -1, 0, 30deg);
 }
