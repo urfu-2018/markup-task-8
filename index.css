@@ -792,7 +792,7 @@ ul
 {
     to
     {
-        transform: rotate(-1turn);
+        transform: rotate(-360deg);
     }
 }
 
@@ -800,7 +800,7 @@ ul
 {
     to
     {
-        transform: rotate(1turn);
+        transform: rotate(360deg);
     }
 }
 
@@ -937,20 +937,20 @@ ul
 
 .left-top-corner:hover ~ .canvas
 {
-    transform: rotate3d(-1, 1, 0, 30deg);
+    transform: rotate3d(-900, 600, 0, 30deg);
 }
 
 .right-top-corner:hover ~ .canvas
 {
-    transform: rotate3d(-1, -1, 0, 30deg);
+    transform: rotate3d(900, 600, 0, -30deg);
 }
 
 .left-bottom-corner:hover ~ .canvas
 {
-    transform: rotate3d(1, 1, 0, 30deg);
+    transform: rotate3d(900, 600, 0, 30deg);
 }
 
 .right-bottom-corner:hover ~ .canvas
 {
-    transform: rotate3d(1, -1, 0, 30deg);
+    transform: rotate3d(-900, 600, 0, -30deg);
 }
