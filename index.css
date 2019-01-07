@@ -854,12 +854,12 @@ ul
 {
     from
     {
-        transform: translate3d(0, 70px, 10px) scale(.7);
+        transform: translateY(70px) scale(.7);
     }
 
     to
     {
-        transform: translate3d(0, 0, 10px) scale(1.2);
+        transform: translateY(0) scale(1.2);
     }
 }
 
