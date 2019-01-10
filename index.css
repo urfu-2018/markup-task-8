@@ -85,26 +85,25 @@ ul
 {
     position: relative;
     margin: auto;
+    /* perspective: 900px; */
 }
 
 .canvas
 {
     width: 900px;
     height: 600px;
-
     background: linear-gradient(#013971, #000c18 60%);
 
-    transform-origin: center;
-    perspective-origin: center;
+    perspective: 900px;
+
 }
 
 .center,
 .canvas-wrap,
 .canvas
 {
-    transition: all 1s linear;
+    transition: all .6s linear;
     transform-style: preserve-3d;
-    perspective: 900px;
 }
 
 .canvas,
@@ -850,7 +849,7 @@ ul
 .top-left:hover ~ .canvas-wrap,
 .top-left:hover
 {
-    transform: rotateX(-10deg) rotateY(10deg) translateZ(0);
+    transform: rotateX(-15deg) rotateY(15deg) translateZ(0);
 }
 
 .top-left:hover ~ .canvas-wrap .canvas
@@ -867,7 +866,7 @@ ul
 .top-right:hover ~ .canvas-wrap,
 .top-right:hover
 {
-    transform: rotateX(-10deg) rotateY(-10deg) translateZ(0);
+    transform: rotateX(-15deg) rotateY(-15deg) translateZ(0);
 }
 
 .top-right:hover ~ .canvas-wrap .canvas
@@ -884,7 +883,7 @@ ul
 .bottom-left:hover ~ .canvas-wrap,
 .bottom-left:hover
 {
-    transform: rotateX(10deg) rotateY(10deg) translateZ(0);
+    transform: rotateX(15deg) rotateY(15deg) translateZ(0);
 }
 
 .bottom-left:hover ~ .canvas-wrap .canvas
@@ -901,7 +900,7 @@ ul
 .bottom-right:hover ~ .canvas-wrap,
 .bottom-right:hover
 {
-    transform: rotateX(10deg) rotateY(-10deg) translateZ(0);
+    transform: rotateX(15deg) rotateY(-15deg) translateZ(0);
 }
 
 .bottom-right:hover ~ .canvas-wrap .canvas
