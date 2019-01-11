@@ -96,6 +96,22 @@ ul
     border-radius: 50%;
     background: #fefce6;
     box-shadow: 0 1px 30px 0 rgba(255, 255, 255, 1);
+
+    animation: moon-rise 30s ease;
+}
+
+@keyframes moon-rise
+{
+    from
+    {
+        transform: scale(.2) rotate(-90deg);
+        transform-origin: 0 200px;
+    }
+
+    to
+    {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 .center::after
@@ -157,6 +173,21 @@ ul
 
     width: 44rem;
     height: 10rem;
+
+    animation: train-move 30s linear infinite;
+}
+
+@keyframes train-move
+{
+    from
+    {
+        transform: translateX(600px);
+    }
+
+    to
+    {
+        transform: translateX(-1000px);
+    }
 }
 
 .engine-front,
@@ -250,7 +281,18 @@ ul
     height: 1.4rem;
 
     border-radius: 50%;
-    background: rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .5);
+
+    animation: smoke .5s ease infinite;
+}
+
+@keyframes smoke
+{
+    to
+    {
+        background-color: rgba(255, 255, 255, 1);
+        transform: scale(2) translate(20px, -20px);
+    }
 }
 
 .smoke-2
@@ -638,7 +680,7 @@ ul
 .cloud
 {
     position: absolute;
-    z-index: 1;
+    z-index: 999;
     top: 0;
     left: 0;
 
@@ -674,4 +716,102 @@ ul
 
     width: 120px;
     height: 120px;
+}
+
+.wheel
+{
+    animation: wheel-rotate-left 2s linear infinite;
+}
+
+.wheel-joint
+{
+    animation: wheel-rotate-right 2s linear infinite;
+}
+
+@keyframes wheel-rotate-right
+{
+    to
+    {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes wheel-rotate-left
+{
+    to
+    {
+        transform: rotate(-1turn);
+    }
+}
+
+.cloud-1
+{
+    animation: cloud-1 30s linear infinite;
+}
+
+@keyframes cloud-1
+{
+    from
+    {
+        transform: scale(.2) translate(4500px, 100px);
+    }
+
+    to
+    {
+        transform: scale(.2) translate(-1000px, 100px);
+    }
+}
+
+.cloud-2
+{
+    animation: cloud-2 25s linear infinite;
+}
+
+@keyframes cloud-2
+{
+    from
+    {
+        transform: scale(-.3,.3) translate(-3000px, 150px);
+    }
+
+    to
+    {
+        transform: scale(-.3,.3) translate(700px, 150px);
+    }
+}
+
+.cloud-3
+{
+    animation: cloud-3 15s linear infinite;
+}
+
+@keyframes cloud-3
+{
+    from
+    {
+        transform: scale(.7) translate(-500px, 200px);
+    }
+
+    to
+    {
+        transform: scale(.7) translate(1400px, 200px);
+    }
+}
+
+.cloud-4
+{
+    animation: cloud-4 10s linear infinite;
+}
+
+@keyframes cloud-4
+{
+    from
+    {
+        transform: translate(-300px, 250px);
+    }
+
+    to
+    {
+        transform: translate(1000px, 250px);
+    }
 }
