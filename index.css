@@ -85,7 +85,6 @@ ul
 {
     position: relative;
     margin: auto;
-    /* perspective: 900px; */
 }
 
 .canvas
@@ -95,6 +94,7 @@ ul
     background: linear-gradient(#013971, #000c18 60%);
 
     perspective: 900px;
+    transform-style: preserve-3d;
 
 }
 
@@ -103,7 +103,6 @@ ul
 .canvas
 {
     transition: all .6s linear;
-    transform-style: preserve-3d;
 }
 
 .canvas,
