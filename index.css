@@ -675,3 +675,208 @@ ul
     width: 120px;
     height: 120px;
 }
+
+.moon
+{
+    animation-name: moonAnimation;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moonAnimation
+{
+    from
+    {
+        transform: translate(0, 100%) scale(1);
+    }
+
+    to
+    {
+        transform: translate(0, -10%) scale(.6);
+    }
+}
+
+.train
+{
+    animation-name: trainAnimation;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes trainAnimation
+{
+    from
+    {
+        transform: translate(100%, 0);
+    }
+
+    to
+    {
+        transform: translate(-200%, 0);
+    }
+}
+
+.wheel:not(.wheel-2)
+{
+    animation-name: wheelAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes wheelAnimation
+{
+    to
+    {
+        transform: rotate(-360deg);
+    }
+}
+
+.smoke
+{
+    animation-name: smokeAnimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes smokeAnimation
+{
+    to
+    {
+        transform: translate(100px, -50px);
+        opacity: 0;
+    }
+}
+
+.smoke-2
+{
+    animation-delay: 1s;
+}
+
+.smoke-3
+{
+    animation-delay: 2s;
+}
+
+.smoke-4
+{
+    animation-delay: 3s;
+}
+
+.cloud:nth-child(1)
+{
+    animation: cloud-1Animation 9s linear infinite forwards;
+}
+
+.cloud:nth-child(2)
+{
+    animation: cloud-2Animation 10s linear infinite forwards;
+}
+
+.cloud:nth-child(3)
+{
+    animation: cloud-3Animation 14s linear infinite forwards;
+}
+
+.cloud:nth-child(4)
+{
+    animation: cloud-4Animation 18s linear infinite forwards;
+}
+
+@keyframes cloud-1Animation
+{
+    from
+    {
+        transform: scale(-1, 1) translate(200px, 180px);
+    }
+
+    to
+    {
+        transform: scale(-1, 1) translate(-1000px, 180px);
+    }
+}
+
+@keyframes cloud-2Animation
+{
+    from
+    {
+        transform: scale(.9) translate(-200px, 150px);
+    }
+
+    to
+    {
+        transform: scale(.9) translate(1000px, 150px);
+    }
+}
+
+@keyframes cloud-3Animation
+{
+    from
+    {
+        transform: scale(.7) translate(-300px, 120px);
+    }
+
+    to
+    {
+        transform: scale(.7) translate(1300px, 120px);
+    }
+}
+
+@keyframes cloud-4Animation
+{
+    from
+    {
+        transform: scale(-.5, .5) translate(300px, 100px);
+    }
+
+    to
+    {
+        transform: scale(-.5, .5) translate(-2000px, 100px);
+    }
+}
+
+.bridge
+{
+    animation: bridgeLight 5s linear 2s infinite forwards;
+}
+
+@keyframes bridgeLight
+{
+    0%,
+    15%,
+    25%
+    {
+        -moz-box-shadow: 0 0 10px #fff;
+        -webkit-box-shadow: 0 0 10px #fff;
+        box-shadow: 0 0 10px #fff;
+    }
+
+    10%,
+    20%,
+    30%
+    {
+        -moz-box-shadow: 0 0 20px #ff6;
+        -webkit-box-shadow: 0 0 20px #ff6;
+        box-shadow: 0 0 20px #ff6;
+    }
+}
+
+.engine-body,
+.compartment,
+.compartment-two,
+.compartment-three
+{
+    animation: trainSpeedAnimation 1s linear 2s forwards;
+}
+
+@keyframes trainSpeedAnimation
+{
+    to
+    {
+        transform: skew(-15deg);
+    }
+}
