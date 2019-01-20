@@ -718,19 +718,29 @@ ul
     }
 }
 
-.wheel:not(.wheel-2)
+.wheel
 {
-    animation-name: wheelAnimation;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation: wheelAnimation 1.5s linear infinite forwards;
 }
 
 @keyframes wheelAnimation
 {
     to
     {
-        transform: rotate(-360deg);
+        transform: rotate(-1turn);
+    }
+}
+
+.wheel-joint
+{
+    animation: wheel-joint-animation 1.5s linear infinite forwards;
+}
+
+@keyframes wheel-joint-animation
+{
+    to
+    {
+        transform: rotate(1turn);
     }
 }
 
