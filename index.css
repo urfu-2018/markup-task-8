@@ -678,13 +678,13 @@ ul
 
 .moon
 {
-    animation-name: moonAnimation;
+    animation-name: moon-animation;
     animation-duration: 8s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
-@keyframes moonAnimation
+@keyframes moon-animation
 {
     from
     {
@@ -699,13 +699,13 @@ ul
 
 .train
 {
-    animation-name: trainAnimation;
+    animation-name: train-animation;
     animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
 
-@keyframes trainAnimation
+@keyframes train-animation
 {
     from
     {
@@ -720,10 +720,10 @@ ul
 
 .wheel
 {
-    animation: wheelAnimation 1.5s linear infinite forwards;
+    animation: wheel-animation 1.5s linear infinite forwards;
 }
 
-@keyframes wheelAnimation
+@keyframes wheel-animation
 {
     to
     {
@@ -746,14 +746,14 @@ ul
 
 .smoke
 {
-    animation-name: smokeAnimation;
+    animation-name: smoke-animation;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 }
 
-@keyframes smokeAnimation
+@keyframes smoke-animation
 {
     to
     {
@@ -779,25 +779,25 @@ ul
 
 .cloud:nth-child(1)
 {
-    animation: cloud-1Animation 9s linear infinite forwards;
+    animation: cloud-1-animation 9s linear infinite forwards;
 }
 
 .cloud:nth-child(2)
 {
-    animation: cloud-2Animation 10s linear infinite forwards;
+    animation: cloud-2-animation 10s linear infinite forwards;
 }
 
 .cloud:nth-child(3)
 {
-    animation: cloud-3Animation 14s linear infinite forwards;
+    animation: cloud-3-animation 14s linear infinite forwards;
 }
 
 .cloud:nth-child(4)
 {
-    animation: cloud-4Animation 18s linear infinite forwards;
+    animation: cloud-4-animation 18s linear infinite forwards;
 }
 
-@keyframes cloud-1Animation
+@keyframes cloud-1-animation
 {
     from
     {
@@ -810,7 +810,7 @@ ul
     }
 }
 
-@keyframes cloud-2Animation
+@keyframes cloud-2-animation
 {
     from
     {
@@ -823,7 +823,7 @@ ul
     }
 }
 
-@keyframes cloud-3Animation
+@keyframes cloud-3-animation
 {
     from
     {
@@ -836,7 +836,7 @@ ul
     }
 }
 
-@keyframes cloud-4Animation
+@keyframes cloud-4-animation
 {
     from
     {
@@ -851,10 +851,10 @@ ul
 
 .bridge
 {
-    animation: bridgeLight 5s linear 2s infinite forwards;
+    animation: bridge-light-animation 5s linear 2s infinite forwards;
 }
 
-@keyframes bridgeLight
+@keyframes bridge-light-animation
 {
     0%,
     15%,
@@ -880,10 +880,10 @@ ul
 .compartment-two,
 .compartment-three
 {
-    animation: trainSpeedAnimation 1s linear 2s forwards;
+    animation: train-speed-animation 1s linear 2s forwards;
 }
 
-@keyframes trainSpeedAnimation
+@keyframes train-speed-animation
 {
     to
     {
